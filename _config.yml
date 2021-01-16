@@ -1,4 +1,4 @@
-title: CSCI-UA.0480 Fall 2020, Section 034
+title: CSCI-UA.0480 Fall 2021, Section 034
 
 baseurl: ""
 resource_prefix: "resources/"
@@ -66,20 +66,23 @@ vars:
   contact_label: forums
   contact_note: (the best way to contact me!) 
 
+ AM Tu Th
+Online Loc: Online
   course_number: "CSCI-UA.0480"
   course_section: "034"
   # course_section_2: "003"
   course_name: "Applied Internet Technology"
-  course_semester: "Fall 2020"
-  course_time: "Mon and Wed, 12:30PM - 1:45PM"
+  course_semester: "Spring 2021"
+  # 1/28/2021 - 5/10/2021
+  course_time: "Tu and Thu, 09:30AM - 10:45AM"
   # course_time_2: "Tue and Thur, 11:00AM - 12:15PM"
   course_room: Remote
   # course_room_2: Silver 411
-  course_url: https://cs.nyu.edu/courses/fall20/CSCI-UA.0480-008/
+  course_url: https://cs.nyu.edu/courses/spring21/CSCI-UA.0480-008/
   course_site_alt: http://cs.nyu.edu/~jversoza
 
   # office hours
-  office_hours: "Wednesday 7:45am - 9:15am EDT, Thursday: 4:15pm - 5:45pm EDT"
+  office_hours: "TBD"
   office_hours_room: Remote
 
   # finals
