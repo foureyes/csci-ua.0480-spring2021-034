@@ -1,5 +1,5 @@
 draft,type,num,date,day,topics,slides,readings,assignments,
-,,1,Sep-2,Wed,"* Introductions 
+y,,1,Jan-28,Thu,"* Introductions 
 * JavaScript Basics
 * Variables
 * Functions","In Class
@@ -62,8 +62,7 @@ Installation
  * [Install Node {{ site.node_version }}](https://nodejs.org/en/)
  * (you can also use homebrew on MacOS or apt/yum/etc. on Linux) 
 ",
-,holiday,,Sep-7,Mon,Labor Day,,,,
-,,2,Sep-9,Wed,"* Objects
+y,,2,Feb-02,Tue,"* Objects
 * Node
 * Modules and Require
 * Static Analysis Tools
@@ -102,7 +101,7 @@ Installation
 
 * [Homework #1](homework/01.html)
 ",
-,,3,Sep-14,Mon,* Higher Order Functions,"* [Higher Order Functions](slides/js/higher-order-functions.html) 
+y,,3,Feb-04,Thu,* Higher Order Functions,"* [Higher Order Functions](slides/js/higher-order-functions.html) 
 * [Higher Order Functions Continued](slides/js/higher-order-functions-continued.html) 
 * [Objects Revisited, Arrow Functions with ""this""](slides/js/objects-prototypes.html)
 * [A Detour: Globals, Methods, and This](slides/js/globals-methods-this.html)","[{{ site.book_js }}]({{ site.book_js_link }})
@@ -117,7 +116,7 @@ Installation
  [{{ site.book_js_5 }}]({{ site.book_js_5_link }})
  
  * [Chapter 5 - Higher Order Functions](http://eloquentjavascript.net/05_higher_order.html)",,
-,,4,Sep-16,Wed,* Objects and Prototypes,"* [Objects and Prototypes, Classes](slides/05/prototypes.html)
+y,,4,Feb-09,Tue,* Objects and Prototypes,"* [Objects and Prototypes, Classes](slides/05/prototypes.html)
 * [Objects in JavaScript Summary](slides/05/objects-review.html)
 * [Where Not to Use Arrow Functions](slides/05/not-arrow.html)","[{{ site.book_js }}]({{ site.book_js_link }})
  
@@ -137,7 +136,7 @@ Installation
  <!-- * [Homework #2](homework/02.html) -->
 
  ",
-,,5,Sep-21,Mon,"* Networking Primer
+y,,5,Feb-11,Thu,"* Networking Primer
 * Network Programming
 * Streams / Buffers / File IO
 * HTTP
@@ -174,7 +173,7 @@ Net Module Review
  __Due Monday 9/28 at 11pm:__
 
 *  [Homework #2](homework/02.html)",
-,,6,Sep-23,Wed,"* A Simple Web Server Continued / Our ""Framework""
+y,,6,Feb-16,Tue,"* A Simple Web Server Continued / Our ""Framework""
 * Routing
 * Node HTTP Module","* [HTTP Summary](slides/07/http-summary.html)
 * [Sockets Review](slides/07/sockets-review.html)
@@ -209,7 +208,8 @@ Example Set 1
 * [Node's HTTP Module](slides/07/node-http.html)
 * [Project Setup](slides/08/setup.html)
 -->",See previous classes on HTTP and network programming,,
-,,7,Sep-28,Mon,"* Server-side Web Framework
+y,,,Feb-18,Thu,Legislative Day,,,,
+y,,7,Feb-23,Tue,"* Server-side Web Framework
 * Project Layout","Administrative
 
 * [NYU Votes](https://www.nyu.edu/students/student-information-and-resources/nyu-votes.html)
@@ -241,7 +241,7 @@ __Due Tuesday 10/6 at 11pm:__
  
  * [Homework #03](homework/03.html)
 ",
-,,8,Sep-30,Wed,"* Server-side Web Framework Continued
+y,,8,Feb-25,Thu,"* Server-side Web Framework Continued
 * Templating","* (See previous slides on Express)
 * [Templating](slides/09/templating.html)
 * [Middleware](slides/09/middleware.html)
@@ -260,7 +260,7 @@ Express Documentation
  
  * Quiz #6 
 ",
-,,9,Oct-5,Mon,* Forms,"* Review Middleware
+y,,9,Mar-02,Tue,* Forms,"* Review Middleware
 * [Express Request and Response](slides/09/request-response.html) (start [With Web Server/Web App](slides/09/request-response.html#/7))
 * GET and POST / Request and Response 
 * [Form Handling](slides/10/forms.html)
@@ -281,7 +281,7 @@ __Due Monday 10/12 at 11pm__
  
 * [Homework #4](homework/04.html)
 -->",
-,,10,Oct-7,Wed,"* Cookies
+y,,10,¾,¾,"* Cookies
 * Sessions 
 * NoSQL Database
 ","* Review form handling, middleware
@@ -311,7 +311,7 @@ MongoDB Documentation
 __Due Monday 10/14 at 11pm__
  
 * [Homework #4](homework/04.html)",
-,,11,Oct-12,Mon,,"* [More Mongoose](slides/12/mongoose.html)
+y,,11,Mar-09,Tue,,"* [More Mongoose](slides/12/mongoose.html)
 * NoSQL Injection Example
 
 __Midterm Practice__
@@ -354,7 +354,7 @@ __Due Monday 10/19 at 11pm__
  * hw 6 – saving to db (short!)
  * [Homework #05](homework/05.html) 
 -->",
-,,12,Oct-14,Wed,"* Object Document Mapper Continued
+y,,12,Mar-11,Thu,"* Object Document Mapper Continued
 * URL Parameters
 * Validation","
 * MongoDB, Mongoose from Previous Classes
@@ -364,13 +364,13 @@ __Due Monday 10/19 at 11pm__
 
 ","* [Express Routing - Route Parameters](https://expressjs.com/en/guide/routing.html)
 * [Mongoose - Validation](https://mongoosejs.com/docs/validation.html)",,
-y,,13,Oct-19,Mon,* Review,"* Exam Review: format, sample assignment",,,
-y,exam,14,Oct-21,Wed,EXAM #1,"
+y,,13,Mar-16,Tue,* Review,"* Exam Review: format, sample assignment",,,
+y,exam,14,Mar-18,Thu,EXAM #1,"
 ",,"__Due Wednesday April 1st__
 
 * [Final Project Miletsone #01](final-project.html#milestone1)
 * [Homework #06](homework/06.html) ",
-,,15,Oct-26,Mon,"
+y,,15,Mar-23,Tue,"
 * Authentication
 * Final Project / Deployment
 ","
@@ -404,7 +404,7 @@ Using Passport JS
 
 * Quiz 4 and 5: Auth and Sessions/Cookies, HTML and CSS (to be posted)
 -->",
-,,16,Oct-28,Wed,"* HTML Primer
+y,,16,Mar-25,Thu,"* HTML Primer
 * Accessibility on the Web
 * JavaScript and the Browser
 * The Document Object Model
@@ -428,7 +428,7 @@ HTML Tutorials
 * [MDN - Accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
 * [HTML and CSS from shayhowe.com](http://learn.shayhowe.com/html-css/getting-to-know-html/)
 ",,
-,,17,Nov-2,Mon,* CSS,"* [JavaScript Timers](slides/19/timers.html)
+y,,17,Mar-30,Tue,* CSS,"* [JavaScript Timers](slides/19/timers.html)
 * [CSS](slides/19/css.html)
 * (Optional / Briefly) Flexbox
 * (Optional / Briefly) Grids
@@ -446,7 +446,7 @@ HTML Tutorials
  * [Final Project Milestone #02](final-project.html#milestone2)
 
 ",
-,,18,Nov-4,Wed,"* CSS Continued
+y,,18,Apr-01,Thu,"* CSS Continued
 * Events / Timers","* [Selectors, JS and CSS](slides/19/js-css.html)
 * [Events](slides/19/events.html)
 
@@ -460,7 +460,7 @@ HTML Tutorials
 * Final Project Milestone #03](final-project.html#milestone03)
 
 --->",
-,,19,Nov-9,Mon,"* AJAX
+y,,19,Apr-06,Tue,"* AJAX
 * Same Origin Policy
 * Cross Site Scripting
 * Working with APIs","* Events / Timers Review
@@ -498,7 +498,7 @@ __Due Wednesday 11/13 at 11pm:__
 -->
 
 ",m1 due
-,,20,Nov-11,Wed,"* AJAX Continued
+y,,20,Apr-08,Thu,"* AJAX Continued
 * Polling
 * Promises","* [Ajax Part 2](slides/21/ajax-express.html)
 * [Promises](slides/21/promises.html)
@@ -523,7 +523,7 @@ __Due Tuesday 4/21 at 11pm:__
 
 * [Final Project Milestone #03](final-project.html#milestone03)
 -->",
-,,21,Nov-16,Mon,"* Promises Continued
+y,,21,Apr-13,Tue,"* Promises Continued
 * fetch 
 * async / await","* Example Code for AJAX and Promises
 * [app.js](examples/ajax-promises/app.js)
@@ -560,7 +560,7 @@ HW 8 AJAX
  * [Homework #9](homework/09.html)
 
 -->",m2 due
-,,22,Nov-18,Wed,* Realtime Web Applications,"* Revisit Polling
+y,,22,Apr-15,Thu,* Realtime Web Applications,"* Revisit Polling
 * [Websockets and socket.io](slides/23/socketio.html)
 * In-Class Workshop Tomorrow
 * [Rooms](slides/25/socketio-rooms.html)
@@ -575,11 +575,11 @@ HW 8 AJAX
  
 
 ",
-,,23,Nov-23,Mon,* Realtime Web Applications Continued,* See lab instructions,See previous class,"Due __today__ while you're in class:
+y,,23,Apr-20,Tue,* Realtime Web Applications Continued,* See lab instructions,See previous class,"Due __today__ while you're in class:
  
  * [Socket.IO Lab](homework/socket-io-lab.html)
  * [Form to submit](https://forms.gle/ejC5HyQiz9FJvxy68)",m3 due
-,,24,Nov-25,Wed,"
+y,,24,Apr-22,Thu,"
 
 * Frontend Framework","* [React Basics](slides/26/react.html)
 * Final Exam Reminder
@@ -597,7 +597,7 @@ HW 8 AJAX
 * [Build With React](http://buildwithreact.com/)
 * [React Events](https://facebook.github.io/react/docs/events.html#supported-events)
 * [React Using create-react-app](https://github.com/facebookincubator/create-react-app/blob/master/README.md#getting-started)",,
-,,25,Nov-30,Mon,* Frontend Framework Continued,* See slides from previous class,"
+y,,25,Apr-27,Tue,* Frontend Framework Continued,* See slides from previous class,"
 
 Practice Questions
  
@@ -609,7 +609,7 @@ __Due Sunday 5/3 at 11pm:__
  
  * [Homework #8](homework/08.html)
 -->",
-,,26,Dec-2,Wed,"* Frontend Framework Continued
+y,,26,Apr-29,Thu,"* Frontend Framework Continued
 
 <!--
 * Build tools 
@@ -621,5 +621,5 @@ __Due Sunday 5/3 at 11pm:__
 -->",,"Due __today__ (12/2) while you're in class:
 
  * [React Lab](homework/react-lab.html)",
-y,,27,Dec-7,Mon,* Review,,,,
-y,exam,28,Dec-9,Wed,EXAM #2,,,,
+y,,27,May-04,Tue,* Review,,,,
+y,exam,28,May-06,Thu,EXAM #2,,,,
