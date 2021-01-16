@@ -1,0 +1,45 @@
+	<td markdown="block">
+{% comment %}
+* [About Class #7, Homework, Quizzes, Survey Results](slides/07/meta.html)
+{% endcomment %}
+
+
+* [HTTP Summary](slides/07/http-summary.html)
+* [Sockets Review](slides/07/sockets-review.html)
+* Coding Demo: [Echo Server](examples/net/echoServer.js)
+* Coding Demo: [Web Server / Routing / Dispatching](examples/net/webServer.js)
+
+
+{% comment %}
+* Live Coding Demo: [Routing / Dispatching](https://github.com/nyu-csci-ua-0480-001-fall-2016/examples)
+* Live Coding Demo: [Binding Methods](https://github.com/nyu-csci-ua-0480-001-fall-2016/examples)
+{% endcomment %}
+
+</td>
+	<td markdown="block">
+
+* [Node docs on net module](https://nodejs.org/api/net.html)
+* [Tangled Web - Chapter 3  -  Hypertext Transfer Protocol (available online via NYU Library)](https://getit.library.nyu.edu/go/9409104)
+
+(Readings Below are Same as previous class)
+
+MDN Documentation on HTTP
+
+* [An overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
+* [A typical HTTP session](https://developer.mozilla.org/en-US/docs/Web/HTTP/Session)
+* [HTTP Messages](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages) (HTTP/2 is not covered in the course, so those parts are optional)
+* Reference for HTTP [methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) and [status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+
+
+
+</td>
+	<td markdown="block">
+
+Due Thursday, 10/5, by 11PM
+
+* [Homework #03](homework/03.html)
+
+<!--
+* [](assignments/.html)
+-->
+</td>

@@ -1,0 +1,68 @@
+	<td markdown="block">
+
+{% comment %}
+* [About Class #17](slides/17/meta.html)
+	* nodemon demo
+	* checkboxes and hidden inputs
+	* homework
+	* quiz demo
+	* final projects
+	* midterm
+{% endcomment %}
+
+
+* [HTML Primer, JavaScript and the Browser](slides/17/javascript-browser.html)
+* [The Document Object Model](slides/17/dom.html)
+* [DOM Continued sample markup](code/dom-continued.html)
+* [Attributes](slides/17/attributes.html)
+* [Modifying and Adding Elements](slides/18/modifying-creating.html)
+
+
+{% comment %}
+Midterm Exam - Solution Sets
+ 
+* [Midterm Solutions (Coffee)](resources/handouts/midterm/midterm_001_coffee_solutions.pdf)
+* [Midterm Solutions (Evergreen)](resources/handouts/midterm/midterm_001_evergreen_solutions.pdf )
+{% endcomment %}
+
+<!-- 
+* [](slides//.html)
+* [](slides//.html)
+
+-->
+</td>
+	<td markdown="block">
+
+{% comment %}
+* Midterm Exam Results
+    * grading software
+    * distribution / curve
+    * final
+* Homework extra credit
+    * late penalty counts for entire score
+    * can exceed 100 for a single homework
+    * but points only applied to total homework grade
+{% endcomment %}
+
+* {{site.book_js_5}} - Chapter 12 - JavaScript and the Browser
+* {{site.book_js_5}} - Chapter 13 - The Document Object Model
+* [HTML and CSS from shayhowe.com](http://learn.shayhowe.com/html-css/getting-to-know-html/)
+</td>
+	<td markdown="block">
+
+
+{% comment %}
+In class activity
+
+* [Form to submit talksAbout function](https://docs.google.com/a/nyu.edu/forms/d/e/1FAIpQLSdco44OeatQZ8JcA6ozTavVWQLT4oQHGQ3KKNMbgAr42ji20w/viewform)
+* [Instructions / slides](slides/17/dom.html#/14)
+{% endcomment %}
+
+{% comment %}
+Due Saturday, April 8th at 11PM
+
+* [Homework #06](homework/06.html)
+* [Milestone #2 (Deployment)](final-project.html#milestone2)
+{% endcomment %}
+
+</td>

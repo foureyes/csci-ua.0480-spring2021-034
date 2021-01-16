@@ -1,0 +1,30 @@
+	<td markdown="block">
+
+* Webpack Perhaps?
+* MOAR REVIEW
+* Internship
+* Grading
+
+{% comment %}
+Review based on your questions!
+{% endcomment %}
+
+{% comment %}
+* <strike>[Flexbox](slides/22/flexbox.html)</strike> (skipped)
+
+* Previous class on React
+* [Form to submit](https://docs.google.com/a/nyu.edu/forms/d/e/1FAIpQLSdORjpmFxMqgYubKcDUJwRHrIUmh-iyKmviuq41pcVHNo2qCw/viewform)
+{% endcomment %}
+
+</td>
+	<td markdown="block">
+<!--
+* Chapter 
+* Chapter 
+-->
+</td>
+	<td markdown="block">
+<!--
+* [](assignments/.html)
+-->
+</td>

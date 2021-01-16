@@ -1,0 +1,44 @@
+	<td markdown="block">
+{% comment %}
+* [About Class #9](slides/09/meta.html)
+{% endcomment %}
+
+* [Express (from previous slides)](slides/08/express.html#/26)
+* [Templating](slides/09/templating.html)
+* [Express Request and Response](slides/09/request-response.html) (start [With Web Server/Web App](slides/09/request-response.html#/7))
+* Homework #4 Demo
+
+<!-- 
+* [Forms](slides/09/forms-2.markdown)
+* [](slides//.html)
+* [](slides//.html)
+-->
+</td>
+	<td markdown="block">
+
+* [Express Hello World](https://expressjs.com/en/starter/hello-world.html)
+* [Express Basic Routing](https://expressjs.com/en/starter/basic-routing.html)
+* [Express Routing](https://expressjs.com/en/guide/routing.html) (up to, but not including route paths)
+* [Express Static Files](https://expressjs.com/en/starter/static-files.html)
+* [Handlebars Basics](http://handlebarsjs.com/expressions.html) (Basic Usage Section Only)
+* [Handlebars Loops/Conditionals](http://handlebarsjs.com/block_helpers.html) (Up to Hash Arguments, Ignore blocks with `registerHelper`)
+
+<!--
+* Chapter 
+* Chapter 
+-->
+</td>
+	<td markdown="block">
+Homework #4 Due 10/12 at 11pm
+
+* [Homework #4](homework/04.html) 
+
+{% comment %}
+(Depending on what we get through today!)
+
+Due Thursday 3/2, 11PM (Maybe ^^^)
+
+Homework #4 To be Posted Thursday Evening, 2/23
+* [Homework #4](homework/04.html)
+{% endcomment %}
+</td>

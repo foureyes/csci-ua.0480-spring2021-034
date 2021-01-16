@@ -1,0 +1,43 @@
+	<td markdown="block">
+
+{% comment %}
+* Out-of-Class Review times! (See piazza)
+    * 2 reviews
+    * time pending room bookings
+* Final project is due on Tonight at 11pm!
+    * [rubric](final-project.html)
+    * [full submission details](final-project.html#final_submit)
+    * late submissions allowed with no penalty, up to 24 hours after due date
+{% endcomment %}
+* [React Basics](slides/26/react.html)
+* [React Revisited](slides/26/react-state-parent.html)
+* (Optional) [React and Express / Using Webpack](slides/26/react-webpack-continued.html)
+
+
+{% comment %}
+* [Binary Calculator Example Code](https://github.com/nyu-csci-ua-0480-001-fall-2016/examples/blob/master/class27/binary-calculator/src/index.js)
+{% endcomment %}
+
+</td>
+	<td markdown="block">
+
+* [Hello World](https://facebook.github.io/react/docs/hello-world.html) and [Official Tutorial](https://facebook.github.io/react/tutorial/tutorial.html)
+* [Build With React](http://buildwithreact.com/)
+* [React Events](https://facebook.github.io/react/docs/events.html#supported-events)
+* [Using create-react-app](https://github.com/facebookincubator/create-react-app/blob/master/README.md#getting-started)
+* __See the reminders__ &rarr;
+
+<!--
+* Chapter 
+* Chapter 
+-->
+</td>
+	<td markdown="block">
+
+__Reminders__: 
+
+* __Final Project Due Tonight, 12/4 at 11pm__
+* React Lab on Wednesday, 12/6
+* Final Exam 12/13
+
+</td>

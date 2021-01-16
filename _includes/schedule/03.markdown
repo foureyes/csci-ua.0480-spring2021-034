@@ -1,0 +1,56 @@
+	<td markdown="block">
+
+
+* [Objects](slides/js/js-objects.html)
+* [Functions Some More!](slides/js/js-functions-addendum.html)
+* [Strings, Arrays, Mutability and Variable Parameters](slides/js/js-strings-arrays.html)
+* [Node, NPM, and git](slides/js/js-node-npm-debug-git.html)
+
+
+{% comment %}
+* [Node, NPM, and git](slides/02/node-npm-debug-git.html)
+* [Higher Order Functions](slides/02/higher-order-functions.html) 
+* [Higher Order Functions Continued](slides/04/higher-order-functions-continued.html) 
+* [Console.log](slides/02/questions-log.html)
+
+{% endcomment %}
+
+</td>
+	<td markdown="block">
+
+
+[{{ site.book_js }}]({{ site.book_js_link }})
+
+* [Chapter 17 - Objects (up to "Converting Any Value to an Object")](http://speakingjs.com/es5/ch17.html)
+* [Chapter 18 - Arrays)](http://speakingjs.com/es5/ch18.html)
+
+[{{ site.book_js_6 }}]({{ site.book_js_6_link }})
+
+* [Chapter 3. Building Robust Node Applications](http://chimera.labs.oreilly.com/books/1234000001808/ch03.html) (excluding "Using Multiple Processors")
+
+{% comment %}
+* [{{ site.book_js }}]({{ site.book_js_link }}) <br> Chapter 20 - node.js
+* [{{ site.book_js }}]({{ site.book_js_link }}) <br> Chapter 5 - Higher Order Functions
+* [Node.js Modules (Official Node Docs)](https://nodejs.org/api/modules.html)
+{% endcomment %}
+
+</td>
+	<td markdown="block">
+
+<strike>Due Wednesday, 9/20, by 11pm</strike>
+
+__Due Thursday, 9/21, by 11pm__
+
+* [Homework #1](homework/01.html) 
+
+
+{% comment %}
+In-class programming activity:
+
+* [forEach, filter, reduce](https://docs.google.com/a/nyu.edu/forms/d/e/1FAIpQLSfvbcstf1-IKNVD-YFK77X_zr4ph3f8dYLlo1jBwdNswTwVaQ/viewform)
+
+{% endcomment %}
+<!--
+* [](assignments/.html)
+-->
+</td>

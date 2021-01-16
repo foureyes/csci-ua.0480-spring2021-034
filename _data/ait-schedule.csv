@@ -1,0 +1,625 @@
+draft,type,num,date,day,topics,slides,readings,assignments,
+,,1,Sep-2,Wed,"* Introductions 
+* JavaScript Basics
+* Variables
+* Functions","In Class
+ 
+ * [Intro](slides/intro/intro.html#/10)
+ * [Values, Types, and Operators](slides/js/js-values-types-operators.html#/9) (skim)
+ * [Variables, Built-in Functions](slides/js/js-variables-functions.html)
+ * [Control Structures](slides/js/js-conditionals-loops.html) (skim)
+ * [Functions](slides/js/js-functions.html)
+ * [Hoisting](slides/js/js-hoisting.html) (skim)
+ * [Objects](slides/js/js-objects.html)
+ * [Functions Some More!](slides/js/js-functions-addendum.html)
+ * [Strings, Arrays, Mutability and Variable Parameters](slides/js/js-strings-arrays.html) (skim)
+ * Arriving on Time
+ * Survey / Consent to Use GitHub
+ * Piazza
+ * Node Installation
+ 
+ Home
+ 
+ * [About JavaScript](slides/js/js-intro.html)","For an in-depth JavaScript introduction, __skim__ these chapters in [{{ site.book_js }}]({{ site.book_js_2_link }})
+ 
+ * [Chapter 7 - JavaScript's Syntax (the section on ""Strict Mode"" can be skipped)](http://speakingjs.com/es5/ch07.html) 
+ * [Chapter 8 - Values](http://speakingjs.com/es5/ch08.html)
+ * [Chapter 9 - Operators (""Comma Operator"" and everything after can be skipped)](http://speakingjs.com/es5/ch09.html)
+ * [Chapter 10 - Booleans](http://speakingjs.com/es5/ch10.html)
+ * [Chapter 11 - Numbers](http://speakingjs.com/es5/ch11.html)
+ * [Chapter 12 - Strings](http://speakingjs.com/es5/ch12.html)
+ * [Chapter 13 - Statements](http://speakingjs.com/es5/ch13.html)
+ * [Chapter 15 - Functions (up to ""More Control over Function Calls"")](http://speakingjs.com/es5/ch15.html)
+ * [Chapter 16 -Variables: Scopes, Environments, and Closures (up to ""Global Variables"")](http://speakingjs.com/es5/ch16.html)
+ 
+ [{{ site.book_js_2 }}]({{ site.book_js_2_link }})
+ 
+ * [Chapter 9 - Variables and scoping](http://exploringjs.com/es6/ch_variables.html)
+ For a more gentle introduction to JavaScript, read the first 3 chapters of [{{ site.book_js_5 }}]({{ site.book_js_5_link }}) 
+ 
+ * Chapter 1 - Values, Types, and Operators
+ * Chapter 2 - Program Structure
+ * Chapter 3 - Functions","__Due Friday 9/4, by 11am__  
+
+Homework #0
+ 
+ * [Fill out this survey / use of GitHub consent form]({{ site.survey_intro }})
+ * (Must be logged in to NYU Google Drive)
+ * (Required for future homeworks! ^^^)
+ * [Sign up for piazza]({{ site.forum }})
+
+ 
+ 
+__Due Wednesday morning 9/9, by 11am__ 
+ 
+Quizzes
+
+ * Quizzes #2 and #3 
+ * (Quizz #1 will be posted later and is optional)
+ 
+Installation
+
+ * [Install Node {{ site.node_version }}](https://nodejs.org/en/)
+ * (you can also use homebrew on MacOS or apt/yum/etc. on Linux) 
+",
+,holiday,,Sep-7,Mon,Labor Day,,,,
+,,2,Sep-9,Wed,"* Objects
+* Node
+* Modules and Require
+* Static Analysis Tools
+ * Introduction to Higher Order Functions (Maybe?)","Discussion
+ 
+* Academic Integrity
+* Tutoring and Workshops!
+ 
+ Slides
+ 
+* [Node, NPM, and git](slides/js/js-node-npm-debug-git.html)
+* package.json, package-lock.json, npm (init, install, list)
+* [Objects](slides/js/js-objects.html)
+* constructor / holes, mutability, slice
+* [Functions Some More!](slides/js/js-functions-addendum.html)
+* [Strings, Arrays, Mutability and Variable Parameters](slides/js/js-strings-arrays.html)
+* File IO","[{{ site.book_js }}]({{ site.book_js_link }})
+ 
+ * [Chapter 17 - Objects (up to ""Converting Any Value to an Object"")](http://speakingjs.com/es5/ch17.html)
+ * [Chapter 18 - Arrays)](http://speakingjs.com/es5/ch18.html)
+ 
+ [{{ site.book_js_6 }}]({{ site.book_js_6_link }})
+ 
+ * [Chapter 3. The Event Loop](https://www.oreilly.com/library/view/node-up-and/9781449332235/ch03.html#chap3_id35941348)
+ * [Chapter 4. Core APIs](https://www.oreilly.com/library/view/node-up-and/9781449332235/ch04s03.html#chap6_id35817320) - Only Section on I/O
+
+ [{{ site.book_js_5 }}]({{ site.book_js_5_link }})
+
+*  [Chapter 11 - Asynchronous Programming](http://eloquentjavascript.net/11_async.html) (Only read up to Promises)","
+ __Due Monday morning 9/14, by 11am__ 
+ 
+ * Quiz #4 
+
+ __Due Monday 9/21, by 11pm__
+
+
+* [Homework #1](homework/01.html)
+",
+,,3,Sep-14,Mon,* Higher Order Functions,"* [Higher Order Functions](slides/js/higher-order-functions.html) 
+* [Higher Order Functions Continued](slides/js/higher-order-functions-continued.html) 
+* [Objects Revisited, Arrow Functions with ""this""](slides/js/objects-prototypes.html)
+* [A Detour: Globals, Methods, and This](slides/js/globals-methods-this.html)","[{{ site.book_js }}]({{ site.book_js_link }})
+ 
+ * [Chapter 15 - Functions (up to ""More Control over Function Calls"")](http://speakingjs.com/es5/ch15.html)
+ 
+ [{{ site.book_js_2 }}]({{ site.book_js_2_link }})
+ 
+ * 4.9 From arguments to rest parameters in [Core ES6 Features](http://exploringjs.com/es6/ch_core-features.html)
+ * 13.1 Overview and 13.2.4 ECMAScript 6 solution: arrow functions in [Arrow Functions](http://exploringjs.com/es6/ch_arrow-functions.html#ch_arrow-functions)
+ 
+ [{{ site.book_js_5 }}]({{ site.book_js_5_link }})
+ 
+ * [Chapter 5 - Higher Order Functions](http://eloquentjavascript.net/05_higher_order.html)",,
+,,4,Sep-16,Wed,* Objects and Prototypes,"* [Objects and Prototypes, Classes](slides/05/prototypes.html)
+* [Objects in JavaScript Summary](slides/05/objects-review.html)
+* [Where Not to Use Arrow Functions](slides/05/not-arrow.html)","[{{ site.book_js }}]({{ site.book_js_link }})
+ 
+ * [Chapter 17 -Layer 2: The Prototype Relationship Between Objects](http://speakingjs.com/es5/ch17.html#prototype_relationship)
+ 
+ [{{ site.book_js_2 }}]({{ site.book_js_2_link }}])
+ 
+ * [Chapter 10 - Destructuring](http://exploringjs.com/es6/ch_destructuring.html)
+ * [Chapter 15 - Classes](http://exploringjs.com/es6/ch_classes.html)
+
+ [{{ site.book_js_5 }}]({{ site.book_js_5_link }}) (Optional, similar content to Speaking JS chapter above)
+ 
+ * [Chapter 6 - The Secret Life of Objects](http://eloquentjavascript.net/06_object.html)
+ * [Chapter 8 - Bugs and Error Handling](http://eloquentjavascript.net/08_error.html)","
+
+
+ <!-- * [Homework #2](homework/02.html) -->
+
+ ",
+,,5,Sep-21,Mon,"* Networking Primer
+* Network Programming
+* Streams / Buffers / File IO
+* HTTP
+* A Simple Web Server","* [Intro to Web Development](slides/05/web.html)
+* [Networking and Sockets](slides/06/sockets.html)
+* [A Webserver](slides/06/webserver.html)","A Networking Zine!
+ 
+* [Networking ACK!](https://jvns.ca/zines/#networking-ack) by Julia Evans
+
+[{{ site.book_js_6 }}]({{ site.book_js_6_link }})
+ 
+* [Chapter 2. Doing Interesting Things](https://www.oreilly.com/library/view/node-up-and/9781449332235/ch02.html#I_sect12_d1e1211) - Only Section on ""Building a Chat Server""
+ 
+MDN Articles on HTTP 
+
+* [MDN An overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
+* [MDN A typical HTTP session](https://developer.mozilla.org/en-US/docs/Web/HTTP/Session)
+* [MDN HTTP Messages](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages)
+* [MDN HTTP methods ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+* [MDN status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) 
+ 
+ [{{ site.book_js_5 }}]({{ site.book_js_5_link }}) (Optional, same content as above)
+ 
+ * [Chapter 13 - JavaScript and the Browser](http://eloquentjavascript.net/13_browser.html) (up to HTML)
+ * [Chapter 17 - HTTP and Forms](http://eloquentjavascript.net/18_http.html) (up to Fetch)
+
+Net Module Review
+ 
+ * [Create Server](https://nodejs.org/api/net.html#net_net_createserver_options_connectionlistener)
+","__Due Wednesday morning 9/23, by 11am__ 
+ 
+ * Quiz #5 
+
+ __Due Monday 9/28 at 11pm:__
+
+*  [Homework #2](homework/02.html)",
+,,6,Sep-23,Wed,"* A Simple Web Server Continued / Our ""Framework""
+* Routing
+* Node HTTP Module","* [HTTP Summary](slides/07/http-summary.html)
+* [Sockets Review](slides/07/sockets-review.html)
+
+Coding Demo
+ 
+* [echoServer.js](examples/class07/echoServer.js) (simple tcp/ip server)
+* [demo.js](examples/sp19-class07/demo.js) (basic http server built on top of net module)
+ 
+ Sample Code With File I/O
+ 
+* [webServer.js](examples/class07b/webServer.js) (same as demo.js, but reads file from file system!)
+* public/[harry.html](examples/class07b/public/harry.html)
+* public/[mouse.html](examples/class07b/public/mouse.html)
+ 
+ <!--
+Coding Demo fa19
+ * routing
+* sending a text file
+* sending an image
+* post
+* redirect
+* this, bind, arrow + ES6 classes
+ 
+Example Set 1
+ 
+* [echoServer.js](examples/class07/echoServer.js)
+* [webServer.js](examples/class07/webServer.js)
+* public/[homer.html](examples/class07/public/homer.html)
+* public/[pika.html](examples/class07/public/pika.html)
+  
+* [Node's HTTP Module](slides/07/node-http.html)
+* [Project Setup](slides/08/setup.html)
+-->",See previous classes on HTTP and network programming,,
+,,7,Sep-28,Mon,"* Server-side Web Framework
+* Project Layout","Administrative
+
+* [NYU Votes](https://www.nyu.edu/students/student-information-and-resources/nyu-votes.html)
+* Academic Integrity
+
+
+Review net Module 
+
+* demo creating HTTP server
+
+Slides
+ 
+ * [Express](slides/08/express.html) 
+
+ Coding Demo
+ 
+ * [Express Basics](examples/class08/express-basics.zip)","[{{ site.book_js_6 }}]({{ site.book_js_6_link }})
+
+* [Chapter 7. Important External Modules - Express - A Basic Express App and Setting Up Routes in Express](https://www.oreilly.com/library/view/node-up-and/9781449332235/ch07.html#id3219848)
+
+Express Documentation
+
+* [Express Hello World](https://expressjs.com/en/starter/hello-world.html)
+* [Express Basic Routing](https://expressjs.com/en/starter/basic-routing.html)
+* [Express Routing](https://expressjs.com/en/guide/routing.html) (up to, but not including route paths)
+* [Express Static Files](https://expressjs.com/en/starter/static-files.html)","<strike>Due Monday 10/5 at 11pm:</strike>
+
+__Due Tuesday 10/6 at 11pm:__
+ 
+ * [Homework #03](homework/03.html)
+",
+,,8,Sep-30,Wed,"* Server-side Web Framework Continued
+* Templating","* (See previous slides on Express)
+* [Templating](slides/09/templating.html)
+* [Middleware](slides/09/middleware.html)
+","Handlebars Documentation
+
+* [Handlebars Basics](http://handlebarsjs.com/expressions.html) (Basic Usage Section Only)
+* [Handlebars Loops/Conditionals](http://handlebarsjs.com/block_helpers.html) (Up to Hash Arguments, Ignore blocks with `registerHelper`)
+
+Express Documentation
+
+* [Middleware](https://expressjs.com/en/guide/writing-middleware.html)
+
+[{{ site.book_js_6 }}]({{ site.book_js_6_link }})
+
+* [Chapter 7. Important External Modules - Express - Middleware](https://www.oreilly.com/library/view/node-up-and/9781449332235/ch07.html#id3221848) ","__Due Monday morning 10/12, by 11am__ 
+ 
+ * Quiz #6 
+",
+,,9,Oct-5,Mon,* Forms,"* Review Middleware
+* [Express Request and Response](slides/09/request-response.html) (start [With Web Server/Web App](slides/09/request-response.html#/7))
+* GET and POST / Request and Response 
+* [Form Handling](slides/10/forms.html)
+ 
+ Coding Demo
+ 
+* [Middleware and Forms](examples/class09/middleware-forms.zip)
+
+","[{{ site.book_js_6 }}]({{ site.book_js_6_link }})
+
+* [Chapter 7. Important External Modules - Express - Handling Forms](https://www.oreilly.com/library/view/node-up-and/9781449332235/ch07.html#id3220880
+)
+ 
+MDN Articles on Express
+
+* [Forms](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms) (up to validation)","<!--
+__Due Monday 10/12 at 11pm__
+ 
+* [Homework #4](homework/04.html)
+-->",
+,,10,Oct-7,Wed,"* Cookies
+* Sessions 
+* NoSQL Database
+","* Review form handling, middleware
+* [Sessions and Cookies](slides/10/sessions.html)
+* Exam in Just over a Week!
+* [Introduction to Databases / Mongo DB](slides/14/mongo.html)
+ 
+<!--
+ 
+(???)
+ Coding Demo
+ 
+ * [creating middleware, sessions](examples/class10/middleware-sessions.zip)
+ 
+-->","MDN / nczonline Articles
+
+* [MDN on Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
+* nczonline articles on [Cookies](https://www.nczonline.net/blog/2009/05/05/http-cookies-explained/) and [Cookies and Security](https://www.nczonline.net/blog/2009/05/12/cookies-and-security/)
+
+MongoDB Documentation
+
+* [MongoDB Databases and Collections](https://docs.mongodb.com/manual/core/databases-and-collections/)
+* [MongoDB Types](https://docs.mongodb.com/manual/core/documen://docs.mongodb.com/manual/reference/bson-types/)
+* [MongoDB Query Documents](https://docs.mongodb.com/manual/tutorial/query-documents/)
+* [MongoDB Create, Read, Update, Delete](https://docs.mongodb.com/manual/crud/)
+* [MongoDB Insert](https://docs.mongodb.com/manual/tutorial/insert-documents/)","
+__Due Monday 10/14 at 11pm__
+ 
+* [Homework #4](homework/04.html)",
+,,11,Oct-12,Mon,,"* [More Mongoose](slides/12/mongoose.html)
+* NoSQL Injection Example
+
+__Midterm Practice__
+ 
+* [midterm practice questions](resources/handouts/midterm/midterm_1_practice.pdf)
+* [midterm practice questions with solutions](resources/handouts/midterm/midterm_1_practice_solutions.pdf)
+  
+<!--
+
+ * Example Data (from CSCI-UA.60)
+ * [book fields](resources/data/books_fields.txt)
+ * [books](resources/data/books.csv)
+ * [wifi](resources/data/wifi3.json) (NYC Open Data)
+
+-->","[{{ site.book_js_6 }}]({{ site.book_js_6_link }})
+
+* [Node: Up and Running by Mike Wilson, Tom Hughes-Croucher, Part 2 Chapter 6 Data Access (NoSQL and Document Stores,  MongoDB,  mongoose)](https://www.oreilly.com/library/view/node-up-and/9781449332235/ch06.html#id3216759)
+
+OWASP
+
+* [OWASP NoSQL Injection](https://www.owasp.org/index.php/Testing_for_NoSQL_injection)
+
+MongoDB Documentation 
+
+* [MongoDB Data Modeling Intro](https://docs.mongodb.com/manual/core/data-modeling-introduction/)
+* [MongoDB Data Model Design](https://docs.mongodb.com/v3.2/core/data-model-design/)
+* [MongoDB Embedded](https://docs.mongodb.com/manual/tutorial/model-embedded-one-to-many-relationships-between-documents/#data-modeling-example-one-to-many)
+* [MongoDB Document References](https://docs.mongodb.com/manual/tutorial/model-referenced-one-to-many-relationships-between-documents/#data-modeling-publisher-and-books)
+* [MongoDB Modeling Relationships / Examples](https://docs.mongodb.com/v3.2/applications/data-models-relationships/)
+* [Mongoose Embedded Documents - Sub Docs](http://mongoosejs.com/docs/subdocs.html) 
+* [Mongoose Document References - Mongoose Population](http://mongoosejs.com/docs/populate.html) 
+* [MDN TLS](https://developer.mozilla.org/en-US/docs/Web/Security/Transport_Layer_Security)","<!--
+__Due Monday 10/19 at 11pm__
+ 
+* [Homework #5](homework/05.html)
+
+
+ __Due Wednesday 10/16 at 11pm__ 
+
+ * hw 6 – saving to db (short!)
+ * [Homework #05](homework/05.html) 
+-->",
+,,12,Oct-14,Wed,"* Object Document Mapper Continued
+* URL Parameters
+* Validation","
+* MongoDB, Mongoose from Previous Classes
+* [Router Objects](slides/14/routers.html)
+* [URL Parameters](slides/14/params.html)
+* [Validation](slides/15/validation.html)
+
+","* [Express Routing - Route Parameters](https://expressjs.com/en/guide/routing.html)
+* [Mongoose - Validation](https://mongoosejs.com/docs/validation.html)",,
+y,,13,Oct-19,Mon,* Review,"* Exam Review: format, sample assignment",,,
+y,exam,14,Oct-21,Wed,EXAM #1,"
+",,"__Due Wednesday April 1st__
+
+* [Final Project Miletsone #01](final-project.html#milestone1)
+* [Homework #06](homework/06.html) ",
+,,15,Oct-26,Mon,"
+* Authentication
+* Final Project / Deployment
+","
+* [Final Project](final-project.html)
+* Review MongoDB and Mongoose
+* [Authentication](slides/16/auth.html)
+* [High-Level Description of SSL/TLS](slides/16/ssl.html)","Programming JavaScript Applications by Eric Elliott 
+
+* [Chapter 6 Access Control (Authentication)](https://www.oreilly.com/library/view/programming-javascript-applications/9781491950289/ch06.html#passwords)
+
+Various Online Articles on Authentication
+
+* [OWASP - Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
+* [NIST – Recommendation for Password-Based Key Derivation](http://csrc.nist.gov/publications/nistpubs/800-132/nist-sp800-132.pdf)
+* [How to securely hash passwords](http://security.stackexchange.com/questions/211/how-to-securely-hash-passwords)
+* [Salted Password Hashing - Doing it Right](https://crackstation.net/hashing-security.htm)
+
+Using Passport JS
+
+* [PassportJS Documentation](http://passportjs.org/docs)
+* [From passport-local-mongoose](https://github.com/saintedlama/passport-local-mongoose/tree/master/examples/login)
+* [From mherman.org](http://mherman.org/blog/2015/01/31/local-authentication-with-passport-and-express-4/#.VjGSOq6rSRs)
+* [From scotch.io](http://scotch.io/tutorials/javascript/easy-node-authentication-setup-and-local)","__Due Monday 11/02 at 11pm__
+ 
+* [Homework #5](homework/05.html)
+* [Final Project Milestone #01](final-project.html#milestone1)
+
+<!--__Due Monday 10/28 at 11pm:__
+ 
+* hw 7 – authentication
+
+* Quiz 4 and 5: Auth and Sessions/Cookies, HTML and CSS (to be posted)
+-->",
+,,16,Oct-28,Wed,"* HTML Primer
+* Accessibility on the Web
+* JavaScript and the Browser
+* The Document Object Model
+* Manipulating Elements","
+* [HTML Primer, JavaScript and the Browser](slides/17/javascript-browser.html)
+ * [The Document Object Model](slides/17/dom.html)
+ * [DOM Continued sample markup](code/dom-continued.html)
+ * [Attributes](slides/17/attributes.html)
+ * [Modifying and Adding Elements](slides/18/modifying-creating.html)
+ * [Some Sample Markup](code/class18.html)
+ * [Layout and Style](slides/19/layout-style.html)
+","{{ site.book_js_5 }}
+
+* [Chapter 13 - JavaScript and the Browser](http://eloquentjavascript.net/13_browser.html)
+* [Chapter 14 - The Document Object Model](http://eloquentjavascript.net/14_dom.html)
+
+HTML Tutorials
+
+* [MDN - Introduction to the DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
+* [MDN - Introduction to HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML)
+* [MDN - Accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
+* [HTML and CSS from shayhowe.com](http://learn.shayhowe.com/html-css/getting-to-know-html/)
+",,
+,,17,Nov-2,Mon,* CSS,"* [JavaScript Timers](slides/19/timers.html)
+* [CSS](slides/19/css.html)
+* (Optional / Briefly) Flexbox
+* (Optional / Briefly) Grids
+","
+
+* [HTML and CSS from shayhowe.com](http://learn.shayhowe.com/html-css/getting-to-know-html/)
+* [MDN - Introduction to CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS#Guides)","Due Monday MORNING __11/9, by 11am before class__ 
+ 
+ * Quiz #7 and #8
+ * will remain open until Dec 7th if you need to focus on deployment
+
+
+ Due Monday EVENING __11/9 at 11pm:__
+
+ * [Final Project Milestone #02](final-project.html#milestone2)
+
+",
+,,18,Nov-4,Wed,"* CSS Continued
+* Events / Timers","* [Selectors, JS and CSS](slides/19/js-css.html)
+* [Events](slides/19/events.html)
+
+","{{ site.book_js_5 }} 
+
+* [Chapter 15 Events](http://eloquentjavascript.net/15_event.html)
+","<!--
+
+  __Due Monday 11/11 at 11pm:__
+* hw 8 – frontend
+* Final Project Milestone #03](final-project.html#milestone03)
+
+--->",
+,,19,Nov-9,Mon,"* AJAX
+* Same Origin Policy
+* Cross Site Scripting
+* Working with APIs","* Events / Timers Review
+* [Ajax Part 1](slides/20/ajax.html)","Programming JavaScript Applications by Eric Elliott
+
+* [Chapter 8 Building Restful APIs](https://www.oreilly.com/library/view/programming-javascript-applications/9781491950289/ch08.html)
+
+MDN Articles on AJAX
+
+* [MDN - AJAX Getting Started](https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started)
+* [MDN - Same Origin Policy](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy)
+* [MDN - Cross Site Scripting](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting)
+
+OWASP
+
+* [OWASP - Cross Site Scripting](https://www.owasp.org/index.php/Cross-site_Scripting_(XSS))","
+  __Due Monday 11/16 at 11pm:__
+
+* [Homework #06](homework/06.html) 
+* [Final Project Milestone #03](final-project.html#milestone03)
+
+<!--
+__Due 4/13 at 11am__
+
+* Quizzes 7 and 8 on NYU Classes
+
+* Quizzes posted on NYU Classes
+-->
+
+<!--
+__Due Wednesday 11/13 at 11pm:__
+
+  
+ * [Homework #6](homework/06.html)
+-->
+
+",m1 due
+,,20,Nov-11,Wed,"* AJAX Continued
+* Polling
+* Promises","* [Ajax Part 2](slides/21/ajax-express.html)
+* [Promises](slides/21/promises.html)
+* AJAX Polling
+* [Example Code for AJAX Polling / Chat](code/chat.zip)
+","{{ site.book_js_5 }} 
+
+* [Chapter 11 Asynchronous Programming (Promises)](http://eloquentjavascript.net/11_async.html#h_sdRy5CTAP/_)
+
+{{ site.book_js_2 }} 
+
+* [Chapters 25 Promises for asynchronous programming](https://exploringjs.com/es6/ch_promises.html)
+
+MDN
+
+* [MDN - Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)","<!--
+__Due Monday 4/20 at 11pm:__
+ 
+* [Homework #7](homework/07.html)
+
+__Due Tuesday 4/21 at 11pm:__
+
+* [Final Project Milestone #03](final-project.html#milestone03)
+-->",
+,,21,Nov-16,Mon,"* Promises Continued
+* fetch 
+* async / await","* Example Code for AJAX and Promises
+* [app.js](examples/ajax-promises/app.js)
+* [package.json](examples/ajax-promises/package.json)
+* [public/index.html](examples/ajax-promises/public/index.html)
+* [public/js/main.js](examples/ajax-promises/public/js/main.js)","{{ site.book_js_5 }} 
+
+* Eloquent JavaScript 3rd Edition by Marijn Haverbeke, Chapter 11 Asynchronous Programming (Async Functions)
+
+MDN Articles
+
+* [MDN - Using Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+* [MDN - Async Await](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await)","
+__Due Monday 11/23 at 11pm:__
+ 
+ * [Homework #7](homework/07.html)
+
+__Due Monday 11/30 at 11pm:__
+
+ * [Final Project Milestone #04](final-project.html#milestone04)
+
+<!--
+
+__Due Tuesday 04/28 at 11pm:__
+
+ * [Final Project Milestone #04](final-project.html#milestone04)
+
+
+
+
+__Due Monday 4/24 at 11pm:__ 
+HW 8 AJAX
+ 
+ * [Homework #9](homework/09.html)
+
+-->",m2 due
+,,22,Nov-18,Wed,* Realtime Web Applications,"* Revisit Polling
+* [Websockets and socket.io](slides/23/socketio.html)
+* In-Class Workshop Tomorrow
+* [Rooms](slides/25/socketio-rooms.html)
+* Websockets and socket.io Examples
+* [app.js](examples/websockets-demo/app.js) (server)
+* [public/main.js](examples/websockets-demo/public/main.js) (client)
+* [public/index.html](examples/websockets-demo/public/index.html) (client)","* Node: Up and Running by Mike Wilson, Tom Hughes-Croucher, Part 2 Chapter 7 Important External Modules (Socket.IO)
+* [Socket.IO Overview](https://socket.io/docs/)
+
+","
+<!-- Reminder, __Final Project Due 11/25__ at 11pm -->
+ 
+
+",
+,,23,Nov-23,Mon,* Realtime Web Applications Continued,* See lab instructions,See previous class,"Due __today__ while you're in class:
+ 
+ * [Socket.IO Lab](homework/socket-io-lab.html)
+ * [Form to submit](https://forms.gle/ejC5HyQiz9FJvxy68)",m3 due
+,,24,Nov-25,Wed,"
+
+* Frontend Framework","* [React Basics](slides/26/react.html)
+* Final Exam Reminder
+* [React Revisited](slides/26/react-state-parent.html)
+* Example Code: [index.js / Sum of Counters, Text Input](examples/react/demo/src/index.js) (Parent and Child Components, Text Input)
+* Example with React and fetch
+* [index.js](examples/react-parents/demo/src/index.js) (React)
+* [app.js](examples/react-parents/api/app.js) (Express API)
+* [db.js](examples/react-parents/api/db.js) (Mongoose Schema)
+ 
+<!--React review, multiple child clickers and forms
+* [React and Express / Using Webpack](slides/26/react-webpack-continued.html)
+ * React lab demo
+-->","* [React Hello World](https://facebook.github.io/react/docs/hello-world.html) and [React Official Tutorial](https://facebook.github.io/react/tutorial/tutorial.html)
+* [Build With React](http://buildwithreact.com/)
+* [React Events](https://facebook.github.io/react/docs/events.html#supported-events)
+* [React Using create-react-app](https://github.com/facebookincubator/create-react-app/blob/master/README.md#getting-started)",,
+,,25,Nov-30,Mon,* Frontend Framework Continued,* See slides from previous class,"
+
+Practice Questions
+ 
+ * [Practice Questions](resources/handouts/final/final_exam_practice.pdf)
+ * [Practice Questions Solutions](resources/handouts/final/final_exam_practice_solutions.pdf)
+ * [Practice Questions Set 2](resources/handouts/final/final_exam_practice_2.pdf)
+ * [Practice Questions Set 2 Solutions](resources/handouts/final/final_exam_practice_2_solutions.pdf)","<!--
+__Due Sunday 5/3 at 11pm:__ 
+ 
+ * [Homework #8](homework/08.html)
+-->",
+,,26,Dec-2,Wed,"* Frontend Framework Continued
+
+<!--
+* Build tools 
+* Integration of all technologies
+-->","* See lab instructions
+
+<!--
+* (Optional) [React and Express / Using Webpack](slides/26/react-webpack-continued.html)
+-->",,"Due __today__ (12/2) while you're in class:
+
+ * [React Lab](homework/react-lab.html)",
+y,,27,Dec-7,Mon,* Review,,,,
+y,exam,28,Dec-9,Wed,EXAM #2,,,,

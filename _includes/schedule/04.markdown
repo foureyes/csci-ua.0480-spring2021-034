@@ -1,0 +1,30 @@
+	<td markdown="block">
+
+* [Higher Order Functions](slides/js/higher-order-functions.html) 
+* [Higher Order Functions Continued](slides/js/higher-order-functions-continued.html) 
+* [Objects Revisited, Arrow Functions with "this"](slides/js/objects-prototypes.html)
+* [A Detour: Globals, Methods, and This](slides/js/globals-methods-this.html)
+
+
+
+
+</td>
+	<td markdown="block">
+[{{ site.book_js }}]({{ site.book_js_link }})
+
+* [Chapter 15 - Functions (up to "More Control over Function Calls")](http://speakingjs.com/es5/ch15.html)
+
+[{{ site.book_js_2 }}]({{ site.book_js_2_link }})
+
+* 4.9 From arguments to rest parameters in [Core ES6 Features](http://exploringjs.com/es6/ch_core-features.html)
+* 13.1 Overview and 13.2.4 ECMAScript 6 solution: arrow functions in [Arrow Functions](http://exploringjs.com/es6/ch_arrow-functions.html#ch_arrow-functions)
+
+[{{ site.book_js_5 }}]({{ site.book_js_5_link }})
+
+* Chapter 5 - Higher Order Functions
+
+</td>
+	<td markdown="block">
+
+
+</td>

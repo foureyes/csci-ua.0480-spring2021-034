@@ -1,0 +1,172 @@
+@black: #000;
+@white: #fff;
+@yellow: #ffff80;
+@pink: #ff0066;
+@aqua: #13daec;
+@green: #77dd88;
+@med-gray: #222;
+@dark-gray: #1a1a1a;
+
+@default-font: "Helvetica Neue",Helvetica,Arial,sans-serif;
+@background-color: @black;
+@header-color: @yellow;
+@header-small-color: @green;
+@header-tiny-color: @white;
+@strong-color: @pink;
+@slide-link-color: @aqua;
+@slide-link-hover-color: @med-gray;
+@code-background-color: @dark-gray;
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+body {
+  background-color: @background-color;
+}
+
+strong {
+  color: @strong-color;
+}
+
+.q {
+  color: @strong-color;
+}
+
+.intro-slide {
+  text-align: center;
+}
+
+
+.reveal {
+  font-family: @default-font;
+  /* font-size: 36px; */
+  font-size: 28px;
+  font-weight: normal;
+  color: #eeeeee; 
+  h1, h2, h3, h4 {
+    text-align: center;
+    color: @header-color;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  h3 {
+    color: @header-small-color;
+  }
+  h4 {
+    color: @header-tiny-color;
+  }
+
+  .slides {
+    text-align: left;
+  }
+
+  .slides>section {
+    top: -60%;
+  }
+
+  ul, ol {
+    margin-left: 2em;
+
+	li {
+      margin-top: 0.5em;
+	}
+  }
+  .img {
+    text-align: center;
+    margin: 1em 0em 1em 0em;
+  }
+
+  pre {
+    font-size: 0.85em;
+	width: 100%;
+  }
+  code {
+    background-color: @code-background-color;
+	tab-size: 2;
+  }
+}
+
+::selection {
+  color: white;
+  background: #ff5e99;
+  text-shadow: none; 
+}
+
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a:not(.image) {
+  color: @slide-link-color;
+  text-decoration: underline;
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  -ms-transition: color .15s ease;
+  -o-transition: color .15s ease;
+  transition: color .15s ease; 
+}
+
+.reveal a:not(.image):hover {
+  background-color: @slide-link-hover-color;
+}
+
+.reveal .roll span:after {
+  color: #fff;
+  background: #0d99a5; 
+}
+
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls div.navigate-left,
+.reveal .controls div.navigate-left.enabled {
+  border-right-color: #13daec; }
+
+.reveal .controls div.navigate-right,
+.reveal .controls div.navigate-right.enabled {
+  border-left-color: #13daec; }
+
+.reveal .controls div.navigate-up,
+.reveal .controls div.navigate-up.enabled {
+  border-bottom-color: #13daec; }
+
+.reveal .controls div.navigate-down,
+.reveal .controls div.navigate-down.enabled {
+  border-top-color: #13daec; }
+
+.reveal .controls div.navigate-left.enabled:hover {
+  border-right-color: #71e9f4; }
+
+.reveal .controls div.navigate-right.enabled:hover {
+  border-left-color: #71e9f4; }
+
+.reveal .controls div.navigate-up.enabled:hover {
+  border-bottom-color: #71e9f4; }
+
+.reveal .controls div.navigate-down.enabled:hover {
+  border-top-color: #71e9f4; }
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2); }
+
+.reveal .progress span {
+  background: #13daec;
+  -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -o-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+/*********************************************
+ * SLIDE NUMBER
+ *********************************************/
+.reveal .slide-number {
+  color: #13daec; }
+
+.xml {
+	opacity: 1 !important;
+}

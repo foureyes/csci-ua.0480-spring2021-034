@@ -1,1 +1,2 @@
-# csci-ua.0480-spring2021-034
+
+Course site for 0480 - AIT (Test)

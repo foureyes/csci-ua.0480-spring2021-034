@@ -1,0 +1,49 @@
+	<td markdown="block">
+
+* [Objects and Prototypes, Classes](slides/05/prototypes.html)
+* [Objects in JavaScript Summary](slides/05/objects-review.html)
+* [Where Not to Use Arrow Functions](slides/05/not-arrow.html)
+
+
+{% comment %}
+sp 2017 - moved out
+* Maybe start [Intro to Web Development](slides/05/web.html)?
+{% endcomment %}
+
+
+
+
+
+
+{% comment %}
+* [A Web Server](slides/05/server.html)
+{% endcomment %}
+
+</td>
+	<td markdown="block">
+
+[{{ site.book_js }}]({{ site.book_js_link }})
+
+* [Chapter 17 -  Layer 2: The Prototype Relationship Between Objects](http://speakingjs.com/es5/ch17.html#prototype_relationship)
+
+[{{ site.book_js_2 }}]({{ site.book_js_2_link }}])
+
+* [Chapter 10 - Destructuring](http://exploringjs.com/es6/ch_destructuring.html)
+* [Chapter 15 - Classes](http://exploringjs.com/es6/ch_classes.html)
+
+[{{ site.book_js_6 }}]({{ site.book_js_6_link }})
+
+* [Chapter 2. Doing Interesting Things](http://chimera.labs.oreilly.com/books/1234000001808/ch02.html) - Only Section on "Building a Chat Server"
+* [Chapter 4. Core APIs](http://chimera.labs.oreilly.com/books/1234000001808/ch04.html#chap6_id35817215) - Only Section on I/O
+
+[{{ site.book_js_5 }}]({{ site.book_js_5_link }}) (Optional, similar content to Speaking JS chapter above)
+
+* Chapter 6 - The Secret Life of Objects
+* Chapter 8 - Bugs and Error Handling 
+
+</td>
+	<td markdown="block">
+Due Thursday, 9/28 at 11pm:
+
+* [Homework #2](homework/02.html) 
+</td>

@@ -1,0 +1,11 @@
+{
+  "name": "database-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "hbs": "^4.0.3",
+    "mongoose": "^5.4.20"
+  }
+}

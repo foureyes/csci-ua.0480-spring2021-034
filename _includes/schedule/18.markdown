@@ -1,0 +1,36 @@
+	<td markdown="block">
+<!-- 
+* [](slides//.html)
+* [](slides//.html)
+-->
+
+* [Some Sample Markup](code/class18.html)
+* [Layout and Style](slides/19/layout-style.html)
+* [JavaScript Timers](slides/19/timers.html)
+* [CSS](slides/19/css.html)
+* [Selectors, JS and CSS](slides/19/js-css.html)
+* [Events](slides/19/events.html)
+* Remember to submit form for milestone 2
+
+
+
+
+</td>
+	<td markdown="block">
+(readings same as previous class)
+
+{% comment %}
+* {{site.book_js}} - Chapter 12 - JavaScript and the Browser
+* {{site.book_js}} - Chapter 13 - The Document Object Model
+* [HTML and CSS from shayhowe.com](http://learn.shayhowe.com/html-css/getting-to-know-html/)
+{% endcomment %}
+</td>
+	<td markdown="block">
+
+
+Due Friday, November 17th
+
+* [Homework #7](homework/07.html)
+* [Milestone #3](final-project.html#milestone3) 
+
+</td>

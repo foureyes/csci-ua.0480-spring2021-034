@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title></title>
+		<style>
+* {
+	font-family: sans-serif;
+}
+#container {
+	padding: 10px;
+	border: 3px solid #00a;
+}
+.item {
+	width: 100px;
+	height: 100px;
+	padding: 20px;
+	font-size: 2em;
+	color: #0a0;
+	border: 3px solid #0a0;
+}
+		</style>
+	</head>
+	<body>
+		<div id='container'>
+		</div>
+		<input type='submit' id='add-button' value='Add'>
+		
+<script>
+(function() {
+
+
+	var count = 1;
+	document.addEventListener('DOMContentLoaded', init);
+
+	function init() {
+		console.log(this);
+		var button = document.getElementById('add-button');
+		button.addEventListener('click', handleClick);
+	}
+
+	function handleClick(evt) {
+		var container = document.getElementById('container');
+		var div = document.createElement('div');
+		div.appendChild(document.createTextNode(count + ''));
+		div.classList.add('item');
+		container.appendChild(div);
+		count += 1;
+		evt.preventDefault();
+	}
+})();
+</script>
+	</body>
+</html>

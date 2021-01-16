@@ -1,0 +1,22 @@
+	<td markdown="block">
+
+* [Ajax Part 1](slides/20/ajax.html) (from previous class)
+* [Ajax Part 2](slides/21/ajax-express.html)
+* [Promises](slides/21/promises.html)
+
+
+<!-- 
+* [](slides//.html)
+* [](slides//.html)
+-->
+</td>
+	<td markdown="block">
+* {{site.book_js_5}} - Chapter 17 - HTML (Focus on the section on XMLHttpRequest)
+</td>
+	<td markdown="block">
+
+Due __Tuesday__, Nov 28th at 11PM 
+
+* [Homework #08](homework/08.html)
+
+</td>

@@ -1,0 +1,42 @@
+	<td markdown="block">
+
+* [React Basics](slides/26/react.html) (from previous class)
+* [React Revisited](slides/26/react-state-parent.html) (from previous class)
+* [React and Express / Using Webpack](slides/26/react-webpack-continued.html)
+* React review, multiple child clickers and forms
+* React lab demo
+
+Practice Questions
+
+* [Practice Questions](resources/handouts/final/final_exam_practice.pdf)
+* [Practice Questions Solutions](resources/handouts/final/final_exam_practice_solutions.pdf)
+* [Practice Questions Set 2](resources/handouts/final/final_exam_practice_2.pdf)
+* [Practice Questions Set 2 Solutions](resources/handouts/final/final_exam_practice_2_solutions.pdf)
+
+{% comment %}
+* [es6/es2015/esnext](slides/25/es6.html) 
+* [Rooms](slides/25/socketio-rooms.html) 
+* [Socket IO Lab](homework/socket-io-lab.html)
+    * [Form to submit](https://docs.google.com/a/nyu.edu/forms/d/e/1FAIpQLSdmF51oafE7ehLw56EPxg5nV5YxizkJef-W6Loh59qncR2xWg/viewform)
+* Example Code
+    * [Solution to Socket.io Lab](https://github.com/nyu-csci-ua-0480-001-fall-2016/examples/blob/master/class25/socketio-racer-and-grid/racer-app.js)
+    * [More Example Code for Socket.io](https://github.com/nyu-csci-ua-0480-001-fall-2016/examples/blob/master/class25/socketio-racer-and-grid/grid-app.js)
+{% endcomment %}
+
+</td>
+	<td markdown="block">
+
+{% comment %}
+* [Core ES6 Features](http://exploringjs.com/es6/ch_core-features.html)
+* [Socket IO How-To](http://socket.io/docs/)
+* [Socket IO Rooms](http://socket.io/docs/rooms-and-namespaces/)
+{% endcomment %}
+
+</td>
+	<td markdown="block">
+
+Due __today__ while you're in class:
+
+* [React Lab](homework/react-lab.html)
+    * [Form to submit](https://docs.google.com/forms/d/e/1FAIpQLSdaxXbyGHRuGorUI2WXl-5SVcYAR8K-NuEys35NtCrRMDJvdA/viewform)
+</td>

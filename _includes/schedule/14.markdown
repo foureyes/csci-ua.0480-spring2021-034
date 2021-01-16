@@ -1,0 +1,45 @@
+	<td markdown="block">
+
+
+* [Mongoose](slides/14/mongoose.html)
+* [Routers, Project/Directory Layout, nodemon](slides/14/layout.html)
+* [Validation](slides/15/validation.html)
+* Coding Demos and Class Notes: 
+    * [Mongoose](examples/mongodb/mongoose.js)
+    * [Mongoose and Express](examples/mongodb/mongooseexpress.zip) (functioning web app)
+    * [Embedded Documents](examples/mongodb/embedded.zip) (pseudo-code)
+
+
+</td>
+	<td markdown="block">
+MongoDB
+
+* [Databases and Collections](https://docs.mongodb.com/manual/core/databases-and-collections/)
+* [Types](https://docs.mongodb.com/manual/core/documen://docs.mongodb.com/manual/reference/bson-types/)
+* [Query Documents](https://docs.mongodb.com/manual/tutorial/query-documents/)
+* [Create, Read, Update, Delete](https://docs.mongodb.com/manual/crud/)
+* [Insert](https://docs.mongodb.com/manual/tutorial/insert-documents/)
+* [Data Modeling Intro](https://docs.mongodb.com/manual/core/data-modeling-introduction/)
+* [Data Model Design](https://docs.mongodb.com/v3.2/core/data-model-design/)
+* [Embedded](https://docs.mongodb.com/manual/tutorial/model-embedded-one-to-many-relationships-between-documents/#data-modeling-example-one-to-many)
+* [Document References](https://docs.mongodb.com/manual/tutorial/model-referenced-one-to-many-relationships-between-documents/#data-modeling-publisher-and-books)
+* [Modeling Relationships / Examples](https://docs.mongodb.com/v3.2/applications/data-models-relationships/)
+
+Mongoose
+
+* [Embedded Documents - Sub Docs](http://mongoosejs.com/docs/subdocs.html) 
+* [Document References - Mongoose Population](http://mongoosejs.com/docs/populate.html) 
+
+</td>
+	<td markdown="block">
+
+Due <strike>11/01</strike> 11/02
+
+* [Homework #05](homework/05.html)
+* [First milestone for Final Project](final-project.html#proposal)
+
+Due <strike>11/29</strike> 12/4
+
+* [Final Project](final-project.html)
+
+</td>

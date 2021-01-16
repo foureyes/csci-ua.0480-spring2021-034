@@ -1,0 +1,41 @@
+	<td markdown="block">
+* Labs This Week and Next!
+    * Will Count as Quiz Grades
+* Previous class on Promises
+* Realtime Apps with Socket.io
+    * [Socket.io](slides/23/socketio.html)
+
+
+{% comment %}
+    * [Example Code for Socket.io Chat](https://github.com/nyu-csci-ua-0480-001-fall-2016/examples/tree/master/class25/socketio-chat)
+
+    * [AJAX Polling Chat](https://github.com/nyu-csci-ua-0480-001-fall-2016/examples/blob/master/class24/ajax-chat/public/javascripts/chat.js)
+    * [AJAX Polling Chat Using Date and Time](https://github.com/nyu-csci-ua-0480-001-fall-2016/examples/blob/master/class24/ajax-chat/public/javascripts/chatTime.js)
+
+* [Example Promise Code for XMLHttpRequest](https://github.com/nyu-csci-ua-0480-001-fall-2016/examples/blob/master/class23/ajax/public/javascripts/demo.js#L87)
+{% endcomment %}
+
+{% comment %}
+* [About Class #22](slides/22/meta.html)
+
+* [Ajax Part 1](slides/20/ajax.html)
+{% endcomment %}
+
+{% comment %}
+* (from forever ago) [CSS](slides/19/css.html)
+{% endcomment %}
+</td>
+	<td markdown="block">
+<!--
+* Chapter 
+* Chapter 
+-->
+
+* [Socket IO How-To](http://socket.io/docs/)
+
+</td>
+	<td markdown="block">
+<!--
+* [](assignments/.html)
+-->
+</td>

@@ -1,0 +1,16 @@
+.jekyll-cache
+.jekyll-cache/*
+.jekyll-cache/*/*
+*.swp
+_site
+node_modules
+bower_components
+.DS_Store
+.jekyll-metadata
+.ipynb_checkpoints*
+notebooks/homework*-demo
+_data/.~lock.*
+*lock.schedule.csv
+_data/*lock.schedule.csv
+_data/.~lock.schedule.csv#
+

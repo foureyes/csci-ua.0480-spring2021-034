@@ -1,0 +1,56 @@
+	<td markdown="block">
+
+* [Objects](slides/js/js-objects.html)
+* [Functions Some More!](slides/js/js-functions-addendum.html)
+* [Strings, Arrays, Mutability and Variable Parameters](slides/js/js-strings-arrays.html)
+* [Node, NPM, and git](slides/js/js-node-npm-debug-git.html)
+
+{% comment %}
+* [Review](slides/02/review.html) (and [a more in depth review on basics if you want it](slides/02/review-basics.html))
+{% endcomment %}
+
+{% comment %}
+* [Objects and Mutability, Arguments Object](slides/02/objects-addendum.html)
+{% endcomment %}
+
+
+
+</td>
+	<td markdown="block">
+[{{ site.book_js }}]({{ site.book_js_link }})
+
+* [Chapter 15 - Functions (up to "More Control over Function Calls")](http://speakingjs.com/es5/ch15.html)
+* [Chapter 16 -  Variables: Scopes, Environments, and Closures (up to "Global Variables")](http://speakingjs.com/es5/ch16.html)
+
+[{{ site.book_js_2 }}]({{ site.book_js_2_link }})
+
+* [Chapter 9 - Variables and scoping](http://exploringjs.com/es6/ch_variables.html)
+
+For a more gentle introduction to functions in JavaScript, check out [{{ site.book_js_5 }}]({{ site.book_js_5_link }}) 
+
+* Chapter 3 - Functions
+{% comment %}
+* [{{ site.book_js }}]({{ site.book_js_link }}) <br> Chapter 4 - Data Structures: Data Structures: Objects and Arrays
+* [{{ site.book_js_2 }}](http://speakingjs.com/es5/ch12.html) - Chapter 12 - Strings
+* [{{ site.book_js_2 }}](http://speakingjs.com/es5/ch15.html) - Chapter 15 - Functions (starting from "Handling Missing or Extra Parameters")
+* [{{ site.book_js_2 }}](http://speakingjs.com/es5/ch16.html) - Chapter 16 -  Variables: Scopes, Environments, and Closures (starting from "Closures: Functions Stay Connected to Their Birth Scopes")
+* [{{ site.book_js_2 }}](http://speakingjs.com/es5/ch17.html) - Chapter 17 - Objects (up to "Converting Any Value to an Object")
+* [{{ site.book_js_2 }}](http://speakingjs.com/es5/ch18.html) - Chapter 18 - Arrays
+
+{% endcomment %}
+
+</td>
+	<td markdown="block">
+
+
+Quizzes #2 and #3 due __9/19__ before class
+
+{% comment %}
+Due Thursday, 9/15, by 11pm
+
+* [Homework #1](homework/01.html)
+* Repository should be posted by Thursday, September 8th, at 11PM
+{% endcomment %}
+
+
+</td>

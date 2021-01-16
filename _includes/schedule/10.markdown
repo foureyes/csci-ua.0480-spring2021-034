@@ -1,0 +1,48 @@
+	<td markdown="block">
+
+{% comment %}
+* Review Middleware
+{% endcomment %}
+
+* [Middleware](slides/09/middleware.html)
+* Review [Response and Request Objects / Along with Templating](slides/09/request-response.html)
+* [More About Get](slides/10/review-get.html)
+* [Forms](slides/10/forms.html)
+* [Sessions and Cookies](slides/10/sessions.html)
+
+__Class Notes / Project__
+
+* [Express Get, Post and Middleware (HW 04, Part 2 Hint)](resources/handouts/get-post-middleware.zip)
+
+__Midterm Practice__
+
+* [midterm practice](resources/handouts/midterm/midterm_1_practice.pdf)
+* [midterm practice solutions](resources/handouts/midterm/midterm_1_practice_solutions.pdf)
+
+<!-- 
+* [Maybe Static Sites, Remote Server](slides/08/static.html)
+* [Maybe Debugging](slides/09/debugging.html)
+
+* [](slides//.html)
+* [](slides//.html)
+-->
+</td>
+	<td markdown="block">
+
+{% comment %}
+https://expressjs.com/en/guide/writing-middleware.html
+* [MDN on Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
+* nczonline articles on [Cookies](https://www.nczonline.net/blog/2009/05/05/http-cookies-explained/) and [Cokies and Security](https://www.nczonline.net/blog/2009/05/12/cookies-and-security/)
+{% endcomment %}
+</td>
+	<td markdown="block">
+
+{% comment %}
+Due <strike>Thursday 3/9</strike> Friday 3/10, 11PM 
+(__but you should probably try to get most of it down BEFORE the midterm on 3/8__)
+{% endcomment %}
+
+
+
+
+</td>

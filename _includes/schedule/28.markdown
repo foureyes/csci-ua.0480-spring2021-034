@@ -1,0 +1,21 @@
+	<td markdown="block">
+
+* [About the Final Exam](slides/28/exams.html)
+* [Practice Questions](resources/handouts/final/final_exam_practice.pdf)
+* [Practice Questions Solutions](resources/handouts/final/final_exam_practice_solutions.pdf)
+* [Practice Questions Set 2](resources/handouts/final/final_exam_practice_2.pdf)
+* [Practice Questions Set 2 Solutions](resources/handouts/final/final_exam_practice_2_solutions.pdf)
+</td>
+	<td markdown="block">
+<!--
+* Chapter 
+* Chapter 
+-->
+</td>
+	<td markdown="block">
+
+__Due Monday, 12/12 at 11pm__
+
+* [final project requirements](final-project.html#final_submit)
+* [final project submission form](https://docs.google.com/a/nyu.edu/forms/d/e/1FAIpQLScLCi2BBlzIbrlIh31cQ02gBs8BWeWpmQxlRNAmD8eLWHc9Ww/viewform)
+</td>

@@ -1,0 +1,57 @@
+	<td markdown="block">
+
+{% comment %}
+* [es6/es2015/esnext](slides/25/es6.html) 
+* [Solution to Socket.io Lab](https://github.com/nyu-csci-ua-0480-001-fall-2016/examples/blob/master/class25/socketio-racer-and-grid/racer-app.js)
+* [More Example Code for Socket.io](https://github.com/nyu-csci-ua-0480-001-fall-2016/examples/blob/master/class25/socketio-racer-and-grid/grid-app.js)
+{% endcomment %}
+
+* socket.io in 20 minutes! (see previous class slides)
+* socket.io lab demo
+* (optional) [Rooms](slides/25/socketio-rooms.html) 
+
+
+{% comment %}
+* (from forever ago) [CSS](slides/19/css.html)
+
+* Homework Questions
+* Milestone #2 Questions (read the comments, please)
+* [Ajax Part 2](slides/21/ajax-express.html)
+    * [review](slides/21/ajax-express.html#/8) and rebuild XMLHttpRequest / hello
+    * deal with errors
+    * [try another](slides/20/ajax.html#/25) [url](http://data.nba.com/data/15m/json/cms/noseason/game/20160205/0021500754/boxscore.json)...  and go back to CORs and SOP
+    * [repository viewer](http://localhost:4000/slides/21/ajax-express.html#/10)
+* [Promises](slides/22/promises.html)
+* [See AJAX Examples in repository](https://github.com/jversoza/ait-spring-16-examples)
+{% endcomment %}
+
+{% comment %}
+* [Deployment](slides/23/deployment.html)
+{% endcomment %}
+
+<!-- 
+* [](slides//.html)
+* [](slides//.html)
+-->
+</td>
+	<td markdown="block">
+<!--
+* Chapter 
+* Chapter 
+-->
+
+* (optional) [Socket IO Rooms](http://socket.io/docs/rooms-and-namespaces/)
+
+</td>
+	<td markdown="block">
+Due 12/4 at 11pm
+
+* [final project instructions](final-project.html#final_submit)
+* [submit final project using this form](https://docs.google.com/forms/d/e/1FAIpQLScDWlGGmILdY2SnW1RWdcsvMrBo4yr9ngayesr7FQ3gn6DvdQ/viewform)
+
+Due __today__ while you're in class:
+
+* [Socket IO Lab](homework/socket-io-lab.html)
+    * [Form to submit](https://docs.google.com/forms/d/e/1FAIpQLSeaycESjcV2a4-OPIex4a3GNlowyobjUwApKxi5RIIFLmqUEw/viewform)
+
+</td>

@@ -1,0 +1,83 @@
+	<td markdown="block">
+
+* Potentially Review [Mongoose](slides/14/mongoose.html) 
+* [Validation](slides/15/validation.html) from previous class
+* [Routers](slides/14/layout.html) from previous classes
+* [Authentication](slides/16/auth.html)
+* [High-Level Description of SSL/TLS](slides/16/ssl.html)
+
+{% comment %}
+NOTES
+* Go over the slides on [Mongoose](slides/15/mongoose.html) from the previous class
+* Go over the slides on [Validation](slides/15/validation.html) from the previous class
+{% endcomment %}
+
+{% comment %}
+* package.json, hw started?
+* review scaffolding, focusing on routes
+* go over the slides on [url parameters](slides/15/params.html) from the previous class
+* find, findOne, update, $push, drop
+* create a [unique](https://docs.mongodb.org/manual/tutorial/create-a-unique-index/) [index](https://docs.mongodb.org/manual/core/indexes-introduction/)?
+* check out mongoose ([see previous slides](slides/15/mongoose.html))
+* [Authentication](slides/16/auth.html)
+{% endcomment %}
+
+{% comment %}
+NOTES
+* [Mongoose](slides/15/mongoose.html)
+	* start with previous version w/ create
+		* review creating...
+		* more about schemas
+			* require something
+			* 
+	* single pizza page
+	* add a slug...
+		* how do we update?... what about update just one?
+	* delete single pizza
+* Design and Other Mongoose Ops
+	* add a topping
+		* modify form to add a topping
+		* push
+* Other form elements
+	* how do we delete with checkboxes? delete from list of pizzas
+	* number
+	* etc.
+* [Validation](slides/15/validation.html)
+	* required in schema
+* Authentication
+
+* hw changes
+	* add validation on number field
+	* require item
+	* if item already exists, update number
+{% endcomment %}
+
+<!-- 
+* [](slides//.html)
+* [](slides//.html)
+-->
+</td>
+	<td markdown="block">
+
+
+Passport Examples
+
+* [PassportJS Documentation](http://passportjs.org/docs)
+* [From passport-local-mongoose](https://github.com/saintedlama/passport-local-mongoose/tree/master/examples/login)
+* [From mherman.org](http://mherman.org/blog/2015/01/31/local-authentication-with-passport-and-express-4/#.VjGSOq6rSRs)
+* [From scotch.io](http://scotch.io/tutorials/javascript/easy-node-authentication-setup-and-local)
+
+Password Hashing
+
+* [NIST - Recommendation for Password-Based Key Derivation](http://csrc.nist.gov/publications/nistpubs/800-132/nist-sp800-132.pdf)
+* [How to securely hash passwords](http://security.stackexchange.com/questions/211/how-to-securely-hash-passwords)              
+* [Salted Password Hashing - Doing it Right](https://crackstation.net/hashing-security.htm)
+</td>
+	<td markdown="block">
+{% comment %}
+Due Thursday, November 3rd at 11PM
+
+* [Homework #06](homework/06.html)
+{% endcomment %}
+
+</td>

@@ -1,0 +1,1583 @@
+---
+layout: homework
+title: CSCI-UA.0480 - Homework #1
+---
+
+<style>
+pre.board {
+	font-family: monospace !important;
+	font-size: 1.01em !important;
+}
+</style>
+<!--
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+	const tx = document.getElementsByTagName('textarea');
+	for (let i = 0; i < tx.length; i++) {
+  		tx[i].setAttribute('style', 'height:' + (tx[i].scrollHeight) + 'px;overflow-y:hidden;');
+		tx[i].addEventListener("input", OnInput, false);
+	}
+
+	function OnInput() {
+  		this.style.height = 'auto';
+		this.style.height = (this.scrollHeight) + 'px';
+	}
+});
+</script>
+-->
+<div class="panel panel-default">
+	<div class="panel-heading">Homework #1</div>
+	<div class="panel-body" markdown="block">
+
+
+# Connectmoji
+
+## Due __Sep 16th, by 11PM__
+
+<div markdown="block" class="img">
+![full play](../resources/img/connectmoji/full-play.gif)
+</div>
+
+## Overview
+
+### Description
+
+__There are multiple parts to this homework:__
+
+__Parts 1 and 2__ - Connectmoji
+
+Create an interactive 2-player (computer vs human player) "connection" game. 
+
+* the game is played on a vertical grid of cells (imagine a board stood on its side)
+* players take alternate turns dropping a piece in a column
+* the piece dropped will occupy the lowest unoccupied cell of the grid
+* when a player drops a piece that results in an uninterrupted vertical, horizontal or diagonal line of adjacent identical pieces of an agreed upon length, that player wins
+* for example, the board below shows that 😎 has won the game by creating a vertical line of four consecutive pieces in column C 
+	<pre class="board"><code data-trim contenteditable>|    |    |    |    |    |    |    |
+|    |    | 😎 |    |    |    |    |
+| 💻 |    | 😎 |    |    |    |    |
+| 💻 | 😎 | 😎 |    | 💻 |    | 💻 |
+| 😎 | 😎 | 😎 | 💻 | 💻 | 😎 | 💻 |
+|----+----+----+----+----+----+----|
+| A  | B  | C  | D  | E  | F  | G  |
+</code></pre>
+* (note that this game can be played to any length of consecutive pieces or any number of rows / columns)
+
+
+
+You'll create this game in 2 parts. The first part will guide you through creating several helper functions for your game. The second part deals with implementing the game using the helper functions you made for part 1. It'll be a bit over-engineered, but don't worry - you don't have to use all of the functions you create (and you definitely won't use every feature in each function). Of course, you're encouraged to create your own helper functions as well!
+
+See the example animated gif at the top of these instructions to see how a single game may be played.
+
+
+### Objectives
+
+1. Write some ES6!
+    * control structures
+    * functions
+    * Array and string manipulation
+2. Learn how to run node programs
+3. Learn about node built-ins:
+    * `process`
+    * `exports`
+    * `require`
+4. Install and use modules, create your own
+5. Run unit tests to check your work
+6. Use a static analysis tool (eslint) to help prevent bugs / errors
+
+### Submission Process
+
+The final version of your assignment should be in GitHub.
+
+* __push__ your changes to the homework repository on GitHub
+* all repositories will be cloned on the due date 
+* after the due date, no further commits will be seen by the graders (even if you continue to commit your work)
+
+
+## Preparation
+
+
+Ensure that node and npm are installed (this should have been done for _homework #0_). You should be able to open up your terminal or DOS Shell and run `node -v` and `npm -v`. Both commands should output a version number (probably something like `10.10.0` for `node` and `5.7.1` for `npm`).
+
+1. use git / clone the repository
+2. install development modules
+    * mocha and chai for running the supplied unit tests
+    * eslint for cleaning up your JavaScript / spotting common sources of bugs and errors in your code
+3. install modules required by your game
+
+###  Use Git / Clone the repository
+
+Make sure you have git / a git client!
+
+* [commandline git](https://git-scm.com/book/en/v1/Getting-Started-Installing-Git)
+* [SourceTree](https://www.sourcetreeapp.com/)
+* [GitKraken](https://www.gitkraken.com/) 
+
+Assuming that you've already:
+
+* submitted your github username via the form/survey
+* accepted the invitation that adds you to the github organization for this course
+
+You can then go through the following steps to clone your repository and commit your first changes:
+
+1. ...go to the [class github page]({{site.vars.github_org}})
+2. find the repository that starts with your github username and ends with homework01 (for example, mygithubusername-homework01) 
+3. on the repository's page, use the green "Clone or download" button on the right side of the screen to copy the HTTPS clone URL to __clone__ the homework. To use the commandline client (with GITHUB_REPOSITORY_URL being the url you copied from the green button):
+    <pre><code data-trim contenteditable> git clone GITHUB_REPOSITORY_URL
+</code></pre>
+4. create a file called <code>.gitignore</code> in the same directory
+5. add the following line to the file so that git ignores any locally installed node modules: <code> node_modules </code>
+6. in the same project directory, create a file called README.md, and edit it so that it includes:
+	* your github username
+	* the title of your project: Homework #01 - Connectmoji
+7. again, in the same project directory, run <code>git add README.md</code> to let git know that we're ready to "save"
+8. save your work locally by running <code>git commit -m "add homework meta information"</code>... everything within the quotes after <code>-m</code> is any commit message you'd like
+	* please make your commit messages descriptive
+	* (what features have been added, what bug has been fixed, etc.)
+0. finally, send your work to github by running <code>git push</code> (or <code>git push origin master</code>)
+
+
+###  Install Development Modules
+
+You'll have to install a couple of node modules to help you run tests and use static analysis tools on your code. These tools won't be required for your program to run, but they will be useful while you're writing your programs. 
+
+You'll be installing the following modules globally:
+
+* `mocha` - for running unit tests
+
+You'll also install the following modules locally in your project directory:
+
+* `chai` - supplies assertions for unit tests
+* `eslint` - for catching potential errors in your code
+* `eslint-plugin-mocha` - to support linting test code
+
+Go into the directory of your cloned repository (`cd username-homework01`), and create `package.json`
+
+<pre><code data-trim contenteditable>
+npm init
+# follow the prompts to create a package.json... you can 
+# just use the default answers to the questions that are asked
+# (for our purposes, the answers don't really matter)
+</code></pre>
+
+You can add dependencies to `package.json` using the following commands:
+
+<pre><code data-trim contenteditable>npm install --save-dev mocha
+npm install --save-dev eslint
+npm install --save-dev chai
+npm install --save-dev eslint-plugin-mocha
+# can also be installed in a single line
+npm install --save-dev eslint mocha chai eslint-plugin-mocha
+</code></pre>
+
+Note that these will all be installed locally to your project directory:
+
+* It will create a `package-lock.json` file that stores exact versions
+* It will make a modification to an existing file, `package.json`, within your project folder
+* It will create a `node_modules` folder where your downloaded modules are stored (this folder is included in your `.gitignore` file because these external libraries are not meant to be in your project's version control
+
+__Troubleshooting errors__
+
+* On some systems (for example, Ubuntu 18.04), you may have to use `sudo` to run `npm` as the super user
+* If any part of your code complains about a missing package, try installing it with `npm` either locally or globally (do your best to keep everything local at first, of course)
+
+
+### Install Required Modules
+
+You'll also need a few modules to help you ask the user for input, clear the screen and determine the space that string takes up on on screen.
+
+* `readline-sync`
+	* in your repository directory, install the node module, <code>readline-sync</code>, by running this command in your project's directory:
+    	<pre><code> npm install --save readline-sync
+</code></pre>
+	* note that the <code>readline-sync</code> module allows you to prompt for user input __synchronously__
+		* this is very different from how node.js apps usually operate
+		* however, for our purposes, using sync prompt is fine (for now), and it mimics the browser's prompt functionality well
+	* check out the example usage on [readline-sync's npm page](https://www.npmjs.com/package/readline-sync)
+    	* essentially: `const readlineSync = require('readline-sync');`
+    	* which imports the function <code>question</code> from the <code>readline-sync</code> module into your program
+	* note that installing `readline-sync` will make a modification to `package.json` as well. This modification to `package.json` should be committed and pushed as well!
+* `clear`
+	* in your repository directory, install the node module, <code>clear</code>, by running this command in your project's directory:
+    	<pre><code> npm install --save clear
+</code></pre>
+	* the <code>clear</code> module allows you to "clear" the screen for a command line program (across different platforms)
+	* check out the example usage on [clear's npm page](https://www.npmjs.com/package/clear)
+    	* essentially: `const clear = require('clear');`
+    	* which imports the function <code>clear</code> which can be used by simply calling it: `clear()`
+	* installing `clear` will make a modification to `package.json`; again, it should be committed and pushed along with your other files
+* `wcwidth`
+	* in your repository directory, install the node module, <code>wcwidth</code>, by running this command in your project's directory:
+    	<pre><code> npm install --save wcwidth
+</code></pre>
+	* the <code>wcwidth</code> module calculates the number of columns a string of characters needs to be represented onscreen (for example, in a monospace font, a single character may take up multiple cells, like a emoji smiley face 😃)
+	* check out the example usage on [wcwidth's npm page](https://www.npmjs.com/package/wcwidth)
+    	* essentially: `const wcwidth = require('wcwidth');`
+    	* which imports the function <code>wcwidth</code> which can be used by simply calling it: `wcwidth('😃')`
+	* installing `wcwidth` will make a modification to `package.json`; again, it should be committed and pushed along with your other files
+
+###  Minimum Number of Commits
+
+As you write your code, make sure that you make at least four commits total (more commits are better; if you can, try to commit per feature added). 
+
+* the commits should be meaningful (that is, do not just add a newline, commit and push to make up the requirements for commits).
+* make sure your commit messages describe the changes in the commit; for example:
+	* `add config file reader and set board based on config file`
+	* `fix bug that prevented vertical lines of tiles from being flipped`
+
+<pre><code data-trim contenteditable>git add --all
+git commit -m 'your commit message'
+</code></pre>
+* push your code frequently
+<pre><code data-trim contenteditable>git push
+</code></pre>
+
+### Running Your Programs, Linting, and Testing
+
+To run your programs, use the commandline (Terminal.app, DOS, etc.):
+
+<pre><code data-trim contenteditable># in your project directory
+# change directory to src folder
+cd src
+node myfile.js
+
+# or, without changing directory
+node src/myfile.js
+</code></pre>
+
+Use a utility called `npx` to run any executable tools that you've installed, like your linting tool (`eslint`) and your testing tool (`mocha`).
+
+`npx` is included with `npm` (around version 5.2.0), which, on some platforms is automatically installed with `node`. It's used to find the binary of the argument passed to it within your project's `node_modules` so that you don't have to execute it from `node_modules/package_name/bin/executable`.
+
+After installing `eslint` and `mocha`:
+
+<pre><code data-trim contenteditable>
+# to test, from the root of the repository:
+npx mocha tests/connectmoji-test.js
+
+# to lint, from the root of the repository:
+npx eslint src/*
+</code></pre>
+
+<!-- \* -->
+
+## Part 1 - Connectmoji
+
+### Background 
+
+For your implementation, you'll break down the game into several functions. These helper functions will be written in a _module_ (a file separate from the file that actually runs your game), which you'll use in a later part: `src/connectmoji.js`
+
+The helper functions you'll be implementing are described below. Unit tests have been included in your repository in the file, `test/connectmoji-test.js`. 
+
+### Creating a Module / Exporting Functions 
+
+You'll be creating a module that contains a bunch of helper functions. The file that you'll be writing your module in is already included in your repository in `src/connectmoji.js`. Both your _actual_ interactive game (in Part 2) and the supplied unit tests will use this module. Note that we are __not using ES6 modules__ (they are only available in the latest version of node, and they are not enabled by default... and the node docs still use `require` rather than ES6 `import`).
+
+To make the functions you write available when your module is brought into another program (that is, required or _imported_), you'll have to _export_ your functions. See [this sitepoint tutorial](https://www.sitepoint.com/understanding-module-exports-exports-node-js/) or this [article](http://openmymind.net/2012/2/3/Node-Require-and-Exports/) to get a primer on modules, `exports` and using `require`. There are a few ways to do export your functions (all of the examples use `module.exports`, but they should work with just `exports` as well):
+
+1. create all of your functions ... then, at the end, assign `module.exports` to an object literal containing all of the functions that you want to export:
+	<pre><code data-trim contenteditable>function foo(x, y) {
+       // implementation
+   } 
+    
+   function bar(z) { 
+       // implementation
+   } 
+
+   // define more functions
+
+   module.exports = {
+       foo: foo,
+       bar: bar,
+       // add more property name to function mappings...
+   }
+</code></pre>
+2. create all of your functions in an object and assign that object to `module.exports`:
+	<pre><code data-trim contenteditable>const c = { 
+       foo: function(x, y) {
+           // implementation
+       },
+    
+       bar: function(z) {
+           // implementation
+       },
+    
+       // add more properties and their associated functions
+   }
+    
+   module.exports = c;
+</code></pre>
+3. Create functions as properties on `module.exports`
+	<pre><code data-trim contenteditable>module.exports.foo = function(x, y) {
+       // implementation
+   }
+    
+   module.exports.bar = function(z) {
+       // implementation
+   },
+    
+   // add more properties on module.exports
+</code></pre>
+
+When you `require` your module, the object you create for `exports` will be given back. In the example below, the module, `some-module.js` is brought in to the current file (the `./` specifies that the file is in the same directory as the current file) and is represented by the variable, `someModule`. The functions can be accessed by using regular dot notation on the `someModule` object:
+
+<pre><code data-trim contenteditable>const someModule = require('./some-module.js');
+someModule.someFunction();
+</code></pre>
+
+__You should make sure your exports are up to date as you implement your functions__ so that you can run your unit tests as you complete your function implementations.
+		
+### Unit Tests
+
+You can use the supplied unit tests (in `tests/connectmoji.js`) to check that your functions are:
+
+* are named correctly
+    * have the required parameters
+* return the appropriate value(s) 
+* meet the minimum requirements according to the specifications 
+
+The given unit tests use Mocha as a testing framework and Chai for assertions. While you don't have to know how to write these tests, you should read through them (the api is very _human readable_) to get a feel for how your functions are being tested. If you're curious about writing unit tests, check out [this article on codementor](https://www.codementor.io/nodejs/tutorial/unit-testing-nodejs-tdd-mocha-sinon). 
+
+You can __run the included unit tests by using this command__ in your project directory:
+
+`npx mocha test/connectmoji.js`
+
+If you run these tests before starting, you'll get a bunch of reference errors. This is because you have no functions implemented yet. Additionally, you'll have to export the functions you create so that the tests have access to them.
+
+__Please try continually running the unit tests as you develop your program.__ 
+
+### Only Running a Subset of Unit Tests
+
+To clear out the noise of dealing with many failing tests due to unimplemented functions, use `.only()`:
+
+Any time that you see the functions `describe()` or `it()` in `tests/connectmoji.js`, you can follow it with `.only()` to limit the tests being run to those contained in the call to `describe` or `it`. For example:
+```
+# describe('generateBoard', function() { });
+describe.only(('generateBoard', function() { });
+# or
+# it('generates a board with specified number of rows and columns', function() { });
+it.only('generates a board with specified number of rows and columns', function() { });
+```
+
+Alternatively, you can simply comment out unused tests until you're ready to implement them.
+
+
+### Assumptions
+
+The functions make some assumptions about how you'll be representing a Connectmoji grid:
+
+0. first, __we won't be using a 2-dimensional array__; instead, use a an object that contains 3 properties: a 1-dimensional `Array` representing the board's data, and the number of rows and columns in the board (more details later)
+1. the width of the grid is based on the number of columns; the number of rows specifies height)
+2. each column can be identified by using an uppercase letter (for example, `A` for the first column)
+3. although some functions allow for an arbitrary number of columns, you can assume that the board will always have at least 1 column, but no more than 26 columns
+2. we can name a cell / square based on its row number and column number 
+    * rows start from the top with row number 0
+    * cols start from the left with column number 0... or alternatively, the letter `A`
+    * the diagram below shows a board with row and column labels
+        <pre><code data-trim contenteditable>
+		     +---+---+---+
+  r  0 | 0 | 1 | 2 |
+  o    +---+---+---+
+  w  1 | 3 | 4 | 5 |
+  s    +---+---+---+
+           2 | 6 | 7 | 8 |
+             +---+---+---+
+               0   1   2
+			   A   B   C
+			    columns
+</code></pre>
+    * in this example, the middle cell (containing 4) is at row 1, column 1
+    * the cell containing 2 (the last column of the first row) is at row 0, column 2
+4. Again, although a 2-dimensional `Array` is a natural fit for representing a board with cells, __your implementation will use an object that contains:
+	* a property called `data`: a one dimensional `Array` used to represent the board
+    * two additional properties, `rows` and `cols` that specify how many rows and columns the board contains
+	* wait a second! how can we represent a grid with a one-dimensional `Array`?
+	* in this representation, imagine all of the rows of the board placed adjacent to each other 
+	* see the diagram below for a board with 3 columns and 3 rows:
+        <pre><code data-trim contenteditable>           +-----+-----+-----+-----+-----+-----+-----+-----+-----+
+row, col   | 0,0 | 0,1 | 0,2 | 1,0 | 1,1 | 1,2 | 2,0 | 2,1 | 2,2 |
+                 +-----+-----+-----+-----+-----+-----+-----+-----+-----+
+index      |  0  |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |
+                 +-----+-----+-----+-----+-----+-----+-----+-----+-----+
+</code></pre>
+	    * the upper left corner would be at index 0 (or row 0, column 0)
+    	* the upper left corner would be at index 2 (or row 0, column 2)
+    	* the center square would be at index 4 (or row 1, column 1)
+5. `null` will be used to mark an empty cell
+6. Using the examples above, a full board object that has 2 rows and 3 columns with all empty cells may look like this 
+	<pre><code data-trim contenteditable>{ 
+  data: [null, null, null, null, null, null],
+  rows: 2,
+  cols: 3
+}
+</code></pre>
+7. you can assume that all of the code examples below use `c` as the name of the imported module of your Connectmoji functions
+
+<br>
+
+### Functions to Implement
+
+
+### `generateBoard(rows, cols, fill)`
+
+// modify parameters to allow for a default value for fill (specified below)` 
+
+__Parameters:__
+
+* `rows` - the number of rows in the board
+* `cols` - the number of columns in the board
+* `fill` (optional) - the initial value contained in each cell
+    * default value should be empty string (`null`)
+
+__Returns:__
+
+An object containing 3 properties:
+
+* `data`: single dimensional `Array` containing the number of elements that would be in a rows x columns board... with each cell containing the initial value, `initialCellValue`
+* `rows`: the number of rows in the board (its height)
+* `cols`: the number of columns in the board (its width)
+
+__Description:__
+
+Creates and returns an object with the three properties specified above. Note that `data` will be a single dimensional `Array` representation of the board. The number of elements in the `Array` is the same as the number of cells in the board based on the supplied number of `rows` and `columns`. The initial value in each cell is the `fill` passed in. If `fill` is not passed in, default to  (`null`).
+
+A `for` loop and generous use of `push` works here, but an alternative would be to use an [`Array` constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Syntax) (not typical, but worth doing in this case) with the [`fill` method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill) for creating the `data` property.
+
+The `rows` and `cols` property can be set directly from the arguments passed in!
+
+
+
+__Example:__
+
+	const board1 = c.generateBoard(2, 3);
+	// board1 is filled with default value, null
+	{ 
+	  data: [null, null, null, null, null, null],
+	  rows: 2,
+	  cols: 3
+	}
+
+	const board2 = c.generateBoard(2, 3, false);
+	// board2 is filled with false
+	{ 
+	  data: [false, false, false, false, false, false],
+	  rows: 2,
+	  cols: 3
+	}
+
+<hr>
+
+### `rowColToIndex(board, row, col)` 
+
+__Parameters:__
+
+* `board` - the board object where the `row` and `col` come from
+* `row` - the row number to be converted to an index in a one dimensional `Array` representation
+* `col` - the column number to be converted to an index in a one dimensional a`Array` representation
+
+__Returns:__
+
+* a `Number`, the index that's mapped to by the given `row` and `col` based on the board's data and internal `rows` and `cols` properties
+
+__Description:__
+
+A cell in the board object's `data` `Array` can be specified by a row number and a column number. Again, `data` is a one dimensional `Array`, so to retrieve a value from data only a single index can be used. This function translates a row and a column into an index in the one dimensional `Array` stored in the `board` object's data property
+
+Hint: Use the `board` object's `rows` and `cols` properties to calculate the appropriate index, `i`, from the `board` object's `data` property
+
+__Example:__
+
+	// translates a row and col to an index
+	const board = c.generateBoard(3, 3);
+
+	const i = c.rowColToIndex(board, 1, 1);
+	// 4
+
+	const j = c.rowColToIndex(board, 0, 2);
+	// 2
+
+<hr>
+
+### `indexToRowCol(board, i)`
+
+__Parameters:__
+
+* `board` - the board where the `rowNumber` and `columnNumber` come from
+* `i` - the index to be converted into a row and column 
+
+__Returns:__
+
+* an object containing two properties, `row` and `col`, representing the row and column numbers that the `index` maps to
+
+__Description:__
+
+Using the `rows`, `cols` and `data` property of the `board` object passed in, translates a single index in the `data` `Array` of the board to the cell's row and column number. 
+
+Hint: If you need integer division or if you need to always round down, you can just call [Math.floor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) after dividing (which will give you the largest integer less than or equal to a given number).
+
+__Example:__
+
+	// translates an index to a row and col (as an object)
+	const board = c.generateBoard(3, 3);
+
+	const rowCol1 = c.indexToRowCol(board, 4);
+	// {"row": 1, "col": 1}
+
+	const rowCol2 = c.indexToRowCol(board, 2);
+	// {"row": 0, "col": 2}
+
+<hr>
+
+### `setCell(board, row, col, value)`
+
+__Parameters:__
+
+* `board` - the board where a cell will be set to `letter`
+* `row` - the row number of the cell to be set
+* `col` - the column number of the cell to be set
+* `value`` - the value to set the cell to
+
+__Returns:__
+
+* a __new__ `board` that contains a __new__ `data` `Array` representing the board where the cell at `row` and `col` is set to the value of `value`
+
+__Description:__
+
+Sets the value of the cell at the specified row and column numbers on the board (`board`) object's `data` `Array` to the value, `letter`.
+
+Instead of modifying the `board` object passed in, create a copy of the `board`, mutate the copy (place the values), and return the copy. 
+
+To create a new object, you can manually recreate keys and assign values. Note that if a value is a reference type, like the `data` `Array`, you'll have to take care to copy the values rather than the reference. One way to do this is to use the [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Copy_an_array) or the [slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) method. Note that both of these methods produce a shallow copy.
+
+__Example:__
+
+	// sets the cell to the value specified by row and col
+	let board = c.generateBoard(2, 3);
+	board = c.setCell(board, 1, 1, 'X');
+	board = c.setCell(board, 0, 2, 'O');
+	
+	// after setting cells, board should now look like this:
+	{
+		data: [null, null, 'O', null, 'X', null],
+		rows: 2,
+		cols: 3
+	}
+        
+	// note that this does not mutate the original board passed in
+    const board = c.generateBoard(2, 3, ' ');
+    const updatedBoard = c.setCell(board, 1, 1, 'X');
+
+	// setCell returns a new board, updatedBoard
+    {
+      data: [' ', ' ', ' ', ' ', 'X', ' '],
+      rows: 2,
+      cols: 3
+    }
+
+	// but the original variable, board, does not change
+    {
+      data: [' ', ' ', ' ', ' ', ' ', ' '],
+      rows: 2,
+      cols: 3
+    }
+    
+<hr> 
+
+### `setCells(board, <any number of move objects>)` 
+
+`// modify the parameters to allow for an arbitrary number of arguments after board`
+
+
+__Parameters:__
+
+* `board` - an object with a `data` `Array`, `rows`, and `cols` as properties
+* an arbitrary number of objects, each containing `row`, `col`, and `val` properties specifiying where to place a value on the board... for example: `{row: 2, col: 3, val: '😎'}, {row: 3, col: 3, val: '💻'}`
+
+__Returns:__
+
+* a new `board` object with the elements in its `data` `Array` set to the values specified by the objects in `moves`
+
+__Description:__
+
+
+Using the row, column and value properties of every object in the `moves` `Array`, sets the value of the cells at the specified row and column numbers on the board (`board`) object's `data` `Array`.
+
+Instead of modifying the `board` object passed in, create a copy of the `board`, mutate the copy (set the values), and return the copy. 
+
+__Example:__
+
+	// places multiple values on board
+    const board = c.generateBoard(3, 3, ' ');
+
+	// setCells is called with 3 objects... but there can be an arbitrary number 
+	// of moves passed in 
+    const updatedBoard = c.setCells(
+      board, 
+      {row:0, col:1, val: 'X'},
+      {row:1, col:2, val: 'X'}, 
+      {row:2, col:2, val: 'O'}, 
+    );
+
+	// updatedBoard should have values set based on moves
+    {
+      data: [' ', 'X', ' ', ' ', ' ', 'X', ' ', ' ', 'O'],
+      rows: 3,
+      cols: 3
+    }
+
+	// original board should remain unchanged
+    {
+      data: [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+      rows: 3,
+      cols: 3
+    }
+
+
+<hr> 
+
+### `boardToString(board)`
+
+__Parameters:__
+
+* `board` - the board to be converted to a `String`
+
+__Returns:__
+
+* a `String` representation of the board 
+
+__Description:__
+
+__Note:__ both `wcwidth` and `.length` give varying values depending on emoji passed in due to some single emoji consisting of multiple emoji plus _joining_ and _variation characters_! Consequently, lengths and wcwidth are inconsistent; There's currently no _easy_ way to deal with this. So, if your code or test fails due to something like the ❤️ emoji, it's ok; the graders will not use that character. Feel free to replace that character in the text.
+
+`boardToString` reates a _text drawing_ representation of the Connectmoji `board` passed in. The board should have:
+
+* borders between cells
+* the contents of each cell 
+* labels on the rows and columns
+
+Printing out an example result would yield:
+
+<pre class="board"><code data-trim contenteditable>|    |    |    |    |    |    |    |
+|    |    |    |    |    |    |    |
+|    |    |    |    |    |    |    |
+|    |    |    |    |    |    |    |
+|    |    |    |    |    |    |    |
+| 😄 | ❤️ |    |    |    |    |    |
+|----+----+----+----+----+----+----|
+| A  | B  | C  | D  | E  | F  | G  |
+</code></pre>
+
+It should work for boards of any size! Here's an example of a board with 4 rows and 5 columns (A through E)
+
+<pre class="board"><code data-trim contenteditable>|    |    |    |    |    |
+|    |    |    |    |    |
+|    |    |    |    |    |
+| 😄 | ❤️ |    |    |    |
+|----+----+----+----+----+
+| A  | B  | C  | D  | E  |
+</code></pre>
+
+A few rules for displaying
+
+* if the value in the `board` object's `data` `Array` is null, treat it as a blank cell; display _some number of spaces_ in the string
+* pad each value of an occupied cell with a space, before and after
+* some emoji take up more than one "character width", even though they're one character... so you'll have to dynamically size the grid by using the `wcwidth` function
+	* for example `wcwidth('😃')` gives back 2, meaning the emoji character, while counted as 1 for string length purposes, actually takes up the width of two characters in the display
+	* this means that the width (not the string length) between the pipes (`|`), must be 4:
+	* 4 spaces for empty cell 
+	* a smiling emoji with a space before and after)
+* if a character padded with single spaces causes a misalignment (is narrower than other cells), __add additional padding on the right__ (that is, add spaces to the end to match width of widest cell)
+	* in the example below, notice how the emoji is centered, where as the X has extra padding
+	<pre class="board"><code data-trim contenteditable>| 😄 |    |    |    |    |    |    |
+| X  |    |    |    |    |    |    |
+</code></pre>
+* the column labels should be shown as letters underneath the grid
+	* they should also be padded with a space
+	* add additional padding at the end to match width of widest cell
+		* in the example below, again, the emoji is centered because it takes up two character widths, whereas the labels have extra padding on the right to account for the added column width
+		<pre class="board"><code data-trim contenteditable>| 😄 |    |    |    |    |    |    |
+|----+----+----+----+----+----+----|
+| A  | B  | C  | D  | E  | F  | G  |
+</code></pre>
+* there are no leading or trailing newlines or spaces before and after the board
+* __not all terminals and editors will show emoji width for monospace fonts correctly!__ 
+	* ... for example, terminal.app on MacOS and MinTTY on Windows displays the alignment properly
+	* ... while iTerm2 on MacOS and cmder on Windows, emoji will not align! (but that's ok) 
+	* if you have the padding correct in the code, you can assume that the implementation is correct even if your application makes it seem like it isn't aligned
+	* a passing test is greater guarantee of correct implementation
+
+This one is actually quite challenging (and tedious) to get exactly right, so if you're not getting the test passing, but it _looks like_ the expected output, there won't be any penalties ... and if there are other issues (for example, not adding labels), there will only be small point penalties.
+
+Again, you can __assume that the numbers of columns will not be greater than 26__.
+
+Hint: One way of dealing with the row label is to use one of the following functions that returns the unicode code point of the character given:
+
+* [String.fromCodePoint](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCodePoint)
+* [String.fromCharCode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode)
+* ...and a little bit about [how they're different](https://stackoverflow.com/questions/34680898/can-you-use-string-fromcodepoint-just-like-string-fromcharcode) (tl;dr... `fromCodePoint` can deal with all legal unicode values, but may not be as widely supported as `fromCharCode`)
+
+__Example:__
+
+    // a string representation of a board with two moves
+    let board = c.generateBoard(6, 7);
+    board = c.setCells(
+      board, 
+      {row: 5, col: 0, val: 'X'},
+      {row: 4, col: 0, val: '😄'}
+    );
+
+	// board is exactly the string below
+	// (backticks show that this is a multiline string)
+
+<pre class="board"><code data-trim contenteditable>`|    |    |    |    |    |    |    |
+|    |    |    |    |    |    |    |
+|    |    |    |    |    |    |    |
+|    |    |    |    |    |    |    |
+| 😄 |    |    |    |    |    |    |
+| X  |    |    |    |    |    |    |
+|----+----+----+----+----+----+----|
+| A  | B  | C  | D  | E  | F  | G  |`
+</code></pre>
+<hr>
+
+
+
+
+### `letterToCol(letter)`
+
+__Parameters:__
+
+* `letter` - the uppercase letter to be translated to a numeric value
+
+__Returns:__
+
+* the column number associated with the `letter`
+* `null` (if `letter` is not a valid column)
+
+__Description:__
+
+Translates a column letter to a column number. The possible letters are uppercase A through Z, and their corresponding numeric column values are 0 - 25. An invalid _letter_ will result in `null`.
+
+__Example:__
+
+	// translates a letter to a column value (A = 0, B = 1)
+
+    c.letterToCol("A");
+	// 0
+	
+    c.letterToCol("Z");
+	// 25
+
+	// all of the following will return null
+    c.letterToCol("1");
+    c.letterToCol("a");
+    c.letterToCol("😄");
+    c.letterToCol("AB");
+
+
+<hr>
+
+### `getEmptyRowCol(board, letter, empty) `
+
+`default empty to null`
+
+__Parameters:__
+
+* `board` - the board to examine for an empty cell
+* `letter` - the name of the column to check for an empty cell
+* `empty` - the value contained in the `data` `Array` of `board` that represents an empty cell in that board; the default is `null` (that is, treat `null` values as empty)
+
+__Returns:__
+
+* an object with two properties: `row` and `col`... specifying the row and column numbers of an empty cell in the column identified by `letter`
+* `null` (if `letter` is not a valid column or if there are no empty cells in the specified column)
+
+__Description:__
+
+Finds the next empty cell in the column identified by `letter` in the board object: 
+
+* this empty cell must be the nearest empty cell to the _bottom_ of the board (the _lowest_ unoccupied cell)
+* in terms of actual row numbers, it's the highest row number that doesn't have a piece in it
+* if there are no occupied cells in the column, is the highest row number / lowest location on the board
+* do not count a cell as empty if it's between two occupied cells vertically (this situation should not be possible anyway!)
+	* for example, in the board below, row 1 would not be counted as empty
+	<pre class="board"><code data-trim contenteditable>
+| 😄 | ...this is row 0
+|    | ...then row 1
+| 😄 | ...and finally row 2
+|----+
+| A  |
+</code></pre>
+* if the entire column is occupied, then no empty cells are in that column; return null
+
+__Example:__
+
+	// gives back an empty cell's row and column with row number less 
+	// than lowest occupied row number in column (think of this as the
+	// highest unoccupied cell)
+	let board = c.generateBoard(3, 2);
+	board = c.setCells(
+  	  board, 
+  	  {row: 2, col: 0, val: '😄'},
+  	  {row: 2, col: 1, val: '😄'},
+  	  {row: 1, col: 1, val: '😄'}
+	);
+	c.getEmptyRowCol(board, "A");
+	// {row: 1, col: 0}
+	c.getEmptyRowCol(board, "B");
+	// {row: 0, col: 1}
+
+
+	// gives back row and column with row being highest row number 
+	// if column is completely empty (essentially, bottom-most cell
+	// in column)
+    let board = c.generateBoard(3, 2);
+    c.getEmptyRowCol(board, "A");
+	// {row: 2, col: 0}
+
+    // gives back null if column is full
+    let board = c.generateBoard(2, 2);
+    board = c.setCells(
+      board, 
+      {row: 1, col: 0, val: '😄'},
+      {row: 1, col: 1, val: '😄'},
+      {row: 0, col: 0, val: '😄'},
+      {row: 0, col: 1, val: '😄'}
+    );
+    c.getEmptyRowCol(board, "A");
+	// null
+    
+    // does not count holes in columns
+    let board = c.generateBoard(4, 3);
+    board = c.setCells(
+      board, 
+      {row: 3, col: 0, val: '😄'},
+      {row: 1, col: 0, val: '😄'},
+    );
+    c.getEmptyRowCol(board, "A");
+	// {row: 0, col: 0}
+    
+
+    // does not fill holes in columns even if min row num is filled
+    let board = c.generateBoard(4, 3);
+    board = c.setCells(
+      board, 
+      {row: 0, col: 0, val: '😄'},
+    );
+    c.getEmptyRowCol(board, "A");
+	// null
+    
+
+    // gives back null if column does not exist
+    let board = c.generateBoard(2, 2);
+    c.getEmptyRowCol(board, "C");
+	// null
+    
+    // gives back null if column is invalid - not a letter or more 
+	// than 1 character
+    let board = c.generateBoard(2, 2);
+    c.getEmptyRowCol(board, "1");
+	// null
+    c.getEmptyRowCol(board, "AA");
+	// null
+
+<hr>
+
+### `getAvailableColumns(board)`
+
+__Parameters:__
+
+* `board` - the board to examine for a winner
+
+__Returns:__
+
+* gives back all columns that have an empty cell as an `Array` of uppercase letters
+
+__Description:__
+
+Examines the `board` passed in to see if any valid empty cells exist (see `getEmptyRowCol` above for rules regarding what counts as a valid empty cell).
+
+It returns an `Array` of letters representing the columns where the empty cells are. 
+
+If there are no valid empty cells, an empty `Array` is returned.
+
+
+__Example:__
+
+Given the following board as `board` in the code below:
+
+<pre class="board"><code data-trim contenteditable>| 😄 |    |    |    |
+| 🤮 | 😄 |    |    |
+| 😄 | 🤮 | 🤮 |    |
+|----+----+----+----+
+| A  | B  | C  | D  |
+</code></pre>
+
+    // gives back all column letters that can be used as a valid move (for dropPiece, for example)
+    c.getAvailableColumns(board)
+	// returns an Array that contains the following letters: 'B', 'C', and 'D'
+
+    
+<pre class="board"><code data-trim contenteditable>| 😄 | 🤮 | 🤮 | 😄 |
+| 🤮 | 😄 | 😄 | 🤮 |
+| 😄 | 🤮 | 🤮 | 😄 |
+|----+----+----+----+
+| A  | B  | C  | D  |
+</code></pre>
+
+    // gives back an empty list of no valid empty columns are in board
+	// (essentially, no legal moves can be played)
+    c.getAvailableColumns(board)
+	// []
+
+<hr>
+
+### `hasConsecutiveValues(board, row, col, n)`
+
+__Parameters:__
+
+* `board` - the board to examine for a winner
+* `row` - the row number of the cell to examine for consecutive values
+* `col` - the column number of the cell to examine for consecutive values
+* `n` - the number of consecutive values for a win
+
+__Returns:__
+
+* `true` if there are `n` consecutive values horizontally, vertically or diagonally; otherwise, returns `false`
+
+__Description:__
+
+Given a `row` and `col` number, determine if the value in that cell is repeated consecutively horizontally, vertically or diagonally for `n` number of times: `true` if the number of consecutive values is greater than or equal to `n`, `false` otherwise. 
+
+Note that when looking for consecutive repeated values, the `row` and `col` can be anywhere in the series of consecutive values. If you're looking for a vertical line, look above and below the specified `row` and `col`.
+
+
+__Example:__
+
+    // determines if value at location is repeated x times vertically
+    const board = c.generateBoard(3, 4);
+    const updatedBoard = c.setCells(
+      board, 
+      {row:2, col:1, val: '😄'},
+      {row:1, col:1, val: '😄'}, 
+      {row:0, col:1, val: '😄'}, 
+    );
+    c.hasConsecutiveValues(updatedBoard, 2, 1, 3);
+	// true
+    c.hasConsecutiveValues(updatedBoard, 1, 1, 3);
+	// true
+    c.hasConsecutiveValues(updatedBoard, 0, 1, 3);
+	// true
+    
+    
+    // determines if value at location is repeated x times horizontally
+    const board = c.generateBoard(3, 4, ' ');
+    const updatedBoard = c.setCells(
+      board, 
+      {row:2, col:2, val: '😄'},
+      {row:2, col:1, val: '😄'}, 
+      {row:2, col:0, val: '😄'}, 
+    );
+    c.hasConsecutiveValues(updatedBoard, 2, 2, 3);
+	// true
+    c.hasConsecutiveValues(updatedBoard, 2, 1, 3);
+	// true
+    c.hasConsecutiveValues(updatedBoard, 2, 0, 3);
+	// true
+    
+
+    // determines if value at location is repeated x times diagonally
+    const board = c.generateBoard(3, 4, ' ');
+    const updatedBoard = c.setCells(
+      board, 
+      {row:2, col:2, val: '😄'},
+      {row:2, col:1, val: '🤮'},
+      {row:1, col:1, val: '😄'}, 
+      {row:2, col:0, val: '🤮'},
+      {row:1, col:0, val: '🤮'}, 
+      {row:0, col:0, val: '😄'}, 
+    );
+    c.hasConsecutiveValues(updatedBoard, 2, 2, 3);
+	// true
+    c.hasConsecutiveValues(updatedBoard, 1, 1, 3);
+	// true
+    c.hasConsecutiveValues(updatedBoard, 0, 0, 3);
+	// true
+    
+
+    // gives back false if value at location is not repeated x times
+    const board = c.generateBoard(3, 4, ' ');
+    const updatedBoard = c.setCells(
+      board, 
+      {row:2, col:2, val: '😄'},
+      {row:2, col:1, val: '🤮'},
+      {row:1, col:1, val: '🤮'}, 
+      {row:2, col:0, val: '🤮'},
+      {row:1, col:0, val: '🤮'}, 
+      {row:0, col:0, val: '😄'},
+    );
+    c.hasConsecutiveValues(updatedBoard, 2, 2, 3);
+	// false
+    c.hasConsecutiveValues(updatedBoard, 2, 1, 3);
+	// false
+    c.hasConsecutiveValues(updatedBoard, 1, 1, 3);
+	// false
+    c.hasConsecutiveValues(updatedBoard, 2, 0, 3);
+	// false
+    c.hasConsecutiveValues(updatedBoard, 1, 0, 3);
+	// false
+    c.hasConsecutiveValues(updatedBoard, 0, 0, 3);
+	// false
+
+<hr>
+
+### `autoplay(board, s, numConsecutive)`
+
+__Parameters:__
+
+* `board` - the board object that will be used for `autoplay`
+* `s` - a string containing the values (pieces) for each player, along with their moves, in the format of `vwABCDE...` where v and w are the single characters representing each player's associated value, and the letters are the columns played by each player, alternating (v plays A first, then w plays B next... and the third move is v to column C)
+* `numConseuctive` - the number of consecutive values necessary for a win
+
+__Returns:__
+
+* a result object that contains board data and metadata about the game played on the board (see description below)
+
+__Description:__
+
+Using the board object, `board`, and a string of moves, `s`, play out a series of moves automatically. The returned `result` object will have the following properties:
+
+* `board` - a board object consisting of the usual properties, `data`, `rows`, and `cols`... this should be `null` if there's a move that produces an error (see `error` property below)
+* `lastPieceMoved` - the value of the last placed piece 
+	* this can remain unset / `undefined` if there were no moves!
+	* for example, if the move string were `vwABC`, then the last piece moved would be v (it moves to A, w moves to B, and the third move is v to C)
+* `error` - if any of the moves results in an error, this field is set to an object described below; otherwise, it should not be set at all (remain `undefined`)
+	* the error object should contain the following properties...
+	* `num` - the number of the move where the error occurred, with the first move starting at 1 (for example, `vwABCD`... and C produces an invalid move / error, then `num` should be 3 as it was the third move)
+* `winner` - the value of the piece that wins the game, if applicable; otherwise, it should not be set at all (remain `undefined`)
+	* for example, if `s` were `vwAABBC` and the last move for v to C produces a win, then `winner` would be set to `v`
+* if a win occurs, but there are more moves specified, then the move immediately after a win should produce an error
+* if there's an error or invalid move, the function can return immediately with the appropriate fields filled (for example, a `null` `board` property, a filled `error` property, etc.)
+
+Again, the second parameter, `s`, will supply the pieces and moves (that is, which columns to drop the piece in). 
+
+* the first two characters in `s` are the pieces, and every character after should be an uppercase letter indicating which column to place the piece in (for example `XOAABB`)
+	* ⚠️⚠️⚠️  ... to deal with emoji convert the string to an `Array` first rather than using `charAt` or `codePointAt`
+	* from there, you can access by `Array` index
+* the piece is then set by _dropping_ it to the lowest unoccupied cell in that column.
+* so, `😎OAABB` would result in a board that looks like this (since the emoji is first dropped into column A, and then the letter O is dropped on top of that):
+	<pre class="board"><code data-trim contenteditable>|    |    |    |    |    |    |    |
+|    |    |    |    |    |    |    |
+|    |    |    |    |    |    |    |
+|    |    |    |    |    |    |    |
+| O  | O  |    |    |    |    |    |
+| 😎 | 😎 |    |    |    |    |    |
+|----+----+----+----+----+----+----|
+| A  | B  | C  | D  | E  | F  | G  |
+</code></pre>
+
+
+
+
+__Example:__
+
+
+    // autoplays a series of moves based on string
+    const s = '😄🤮ABAACD';
+    let board = c.generateBoard(3, 4, null);
+    const result = c.autoplay(board, s, 4);
+	// result is
+    {
+      board: {
+        data: ['🤮', null, null, null, '😄', null, null, null, '😄', '🤮', '😄', '🤮'],
+        rows: 3,
+        cols: 4,
+      },
+      pieces: ['😄', '🤮'],
+      lastPieceMoved: '🤮',
+      // no winner key!
+      // no error key!
+    }
+    
+    // autoplays a series of moves based on string and shows winner if last move wins game
+    const s = '😄🤮AABBCCD';
+    let board = c.generateBoard(3, 4);
+    const result = c.autoplay(board, s, 4);
+	// result is
+    {
+      board: {
+        data: [null, null, null, null, '🤮', '🤮', '🤮', null, '😄', '😄', '😄', '😄'],
+        rows: 3,
+        cols: 4,
+      },
+      pieces: ['😄', '🤮'],
+      lastPieceMoved: '😄',
+      winner: '😄',
+      // no error key!
+    }
+    
+    // gives back null board property if autoplayed moves result in a win, but there are more moves after win
+    const s = '😄🤮AABBCCDD';
+    let board = c.generateBoard(3, 4);
+    const result = c.autoplay(board, s, 4);
+	// result is
+    {
+      board: null,
+      pieces: ['😄', '🤮'],
+      lastPieceMoved: '🤮',
+      error: {num: 8, val: '🤮', col: 'D'},
+    }
+    
+    // gives back null board property if autoplayed moves result in an invalid move
+    const s = '😄🤮D';
+    let board = c.generateBoard(3, 3);
+    const result = c.autoplay(board, s, 4);
+	// result is
+    {
+      board: null,
+      pieces: ['😄', '🤮'],
+      lastPieceMoved: '😄',
+      error: {num: 1, val: '😄', col: 'D'},
+    }
+    
+<hr>
+
+
+### Checking Your Code, Pushing Your Changes
+
+1. JavaScript (ES5) is kind of crazy (read: has some really _bad_, but valid parts), so it's useful to use a static analysis tool, like `eslint` to check your code
+    * ideally, you'd be doing this periodically while you develop
+    * the commandline usage is described here, but there are eslint integrations for some editors (see the plugins section in the [eslint installation guide](https://eslint.org/docs/user-guide/integrations))
+    * from your project directory run: `npx eslint src/*` to check all of the code in the `src` directory
+    * (you _did install_ `eslint`, right?)
+    * check the output; __make sure you fix all warnings / errors__
+	* __some minor number of points will be deducted for eslint warnings0__
+2. Run your tests one last time to make sure that they're all (or... _mostly_) passing.
+    * `npx mocha test/connectmoji-test.js`
+	* note that in the tests, `null` is displayed as `[null]`
+3. Fix unit test errors 
+    * if you have test failure, examine the output of each failure...
+    * it'll describe what was expected vs what was actually given back by your function... 
+    * in the example below, +/green shows expected, while -/red shows the incorrect output
+        <br>
+        ![observed / expected](../resources/img/connectmoji/hw01-tests-01.png)
+    * in the following example, the diff of expected and observed shows a very subtle difference in spacing!
+        <br>
+        ![spaces!](../resources/img/connectmoji/hw01-tests-02.png)
+    * if you get `TypeError ... is not a function`
+        <br>
+        ![reference error](../resources/img/connectmoji/hw01-tests-03.png)
+        <br>
+        ...you may have:
+        * not implemented the function (!)
+        * named the function differently than what was specified in the instructions
+        * did not export the function from your module
+5. finally make sure your changes are saved and pushed 
+    * __use git to add and commit__ to continually save changes
+    * push your changes so that they're available on the remote repository (github)
+
+
+## Part 2 - Connectmoji
+
+
+Whew. That was a lot of work. But, ummmm... there's no Connectmoji game yet. What?
+__Let's use the module / helper functions you created in part 1 to implement an interactive game that supports the following features:__
+
+1. Scripted moves for both players
+2. User controlled game settings
+2. An interactive game
+
+You don't have to use _all_ of the function you created in your `connectmoji.js` module (and you definitely won't need to use all of the features of each function). However, you'll likely end up doing a lot of redundant work. Of course, you are encouraged to create your own additional functions as well!
+
+## You MUST IMPLEMENT #1, Scripted Moves
+
+* in order for this game to be tested properly, scripted moves must be implemented for both the computer and the human player
+* consequently, this feature will be worth a  __significant__ number of points
+* make sure you've implemented it (see the section below, "Scripted Moves")
+
+### Prep
+
+You'll write your Connectmoji game in the file called `src/game.js`. Your first step is to bring in some required modules. Open up `src/game.js` and...
+
+1. bring in the module you created by using `require`
+    <pre><code data-trim contenteditable>// you can name the object whatever you like
+// "tic" is used below...
+const c = require('./connectmoji.js');
+</code></pre>
+2. bring in the module, `readline-sync`, which you installed in the preparation portion of the homework
+    <pre><code data-trim contenteditable>const readlineSync = require('readline-sync');
+</code></pre>
+
+### Scripted Moves 
+
+Testing your game against a computer player that makes random moves can be pretty annoying because you can't reliably repeat tests!
+
+To deal with this, add a feature to your game that allows you to pass in the game's configuration, as well as a series of moves. That is, when you run your game on the commandline, you can add an extra option to configure the game and control the computer and player moves.
+
+To pick up commandline arguments, use the built-in variable `process.argv`. `process.argv` is an array that contains parts of the command used to run your program. For example, if you run your program with `node my-program.js`, `process.argv[0]` will be `node` and `process.argv[1]` will be `my-prgoram.js`.
+
+We can use this feature to supply some options and moves to a new game by adding those options and moves to the line you use to run your game:
+
+* `node filename.js OPTIONS_AND_MOVES`
+* ... where `OPTIONS_AND_MOVES` is in the following format:
+* `PLAYER_VALUE,MOVE_STRING,NUMBER_ROWS,NUMBER_COLUMNS,NUMBER_CONSECUTIVE`
+
+For example, the following string for `OPTIONS_AND_MOVES`:
+
+`😎,😎💻AABBCC,6,7,4`
+
+Represents:
+
+* `😎` - `PLAYER_VALUE`: the value that the player will use for the game
+* `😎💻AABBCC` - `MOVE_STRING`: a string where the first characters represent the values to played on the board, and the remaining characters are alternating column letters that represent moves for those values
+* `6` - `NUMBER_ROWS`: the number of rows in the board
+* `7` - `NUMBER_COLUMNS`: the number of columns in the board
+* `4` - `NUMBER_CONSECUTIVE`: the number of repeated consecutive values needed for a win
+
+To capture the commandline argument, you can use this line:
+<pre><code data-trim contenteditable>const arr = process.argv[2]
+</code></pre>
+
+You can assume that if the `OPTIONS_AND_MOVES` commandline argument is supplied, it will be in the valid format specified above.
+
+__Example__
+
+Finally, an example of running the game with options would be like this (from the root of your repository):
+
+`node src/games.js 😎,😎💻AABBCC,6,7,4`
+
+Now... instead of just randomly choosing the computer's move or prompting the user for above, the moves are drawn from the `MOVE_STRING`. The board is automatically set and displayed at the point where automatic play ends (no intervention is needed from the user). 
+
+__Example: Player Goes Next After Scripted Moves__
+
+Here's an example of scripted play (`AABBCC`), with the next _manual_ move for the player (of course, the scripted moves can also result in the computer going next too)... 
+
+![autoplay, player goes](../resources/img/connectmoji/autoplay-player-turn.gif)
+
+In the example above, the player's next move wins the game, but its manual. The moves were `AABBCC` (with a win condition of 4), the player merely has to move to `D` to win.
+
+__Example: Player Wins Immediately After Scripted Moves__
+
+Note, however, if the automated moves resulted in a win without requiring a move from the player or computer - for example `AABBCCD` - then:
+
+* display the final state of the board
+* print out who won (as you would in a normal game)
+* do not prompt for any further moves
+ 
+Only do this if the last move results in a win (otherwise, if there's a win and further moves, the further moves are invalid, and autplay should not work / print out an error message!).
+ 
+See an example of scripted moves that results in a win below, where the automatic moves end with the player winning against the computer. Again, the scripted moves are `AABBCCD`, so the player does not even need to move to get the win!
+
+![autoplay, player wins](../resources/img/connectmoji/autoplay-player-win.gif)
+
+__To implement this feature...__
+
+* at the beginning of your file, use `process.argv` to access the passed in argument... 
+* create the board based on the rows and columns
+* use the moves string to play out the automated moves
+	* you can assume that the move string does not contain any errors and will always have valid moves
+  * this can be done behind-the-scenes (no need to show each individual move)
+	* (hint: use the `autoplay` function you've created from above!)
+* once the moves have played out (again, automatically; no need to show each move)...
+	* show a message that says: press `ENTER` to continue...
+	* once the user presses `ENTER`...
+  * display the board (it should reflect the state of the board after all of the scripted moves)
+  	* if there's a winner, simply show the board and show the winner
+  	* but if there's no winner yet, show the board and prompt for the next move from the player or randomly generate the computer's next move (depending on who has the next turn) 
+  	* ...again, based on who should play the next move after the moves from the `MOVE_STRIMG` are exhausted
+
+### User Controlled Game Settings
+
+If there are no commandline options (that is, `OPTIONS_AND_MOVES` are not specified), ask the user to configure the game. Use `readline-sync` to ask the user for input synchronously (very different from how node usually works in terms of io, but more in line with how we're accustomed to seeing how programs flow). Check out the [documentation on `readline-sync` on npm](https://www.npmjs.com/package/readline-sync).
+
+Here's some example usage:
+
+<pre><code data-trim contenteditable>
+const readlineSync = require('readline-sync');
+ 
+const answer = readlineSync.question('What is the meaning of life?');
+console.log(answer);
+</code></pre>
+
+1. Ask the player for rows, columns and consecutive pieces
+	<pre><code data-trim contenteditable>Enter the number of rows, columns, and consecutive "pieces" for win
+(all separated by commas... for example: 6,7,4)
+>
+</code></pre>
+	* the player should respond with ROWS,COLUMNS,CONSECUTIVE
+	* assume that the player always puts in a valid format
+	* or alternatively, if the user enters nothing... in which case, default to 6 rows, 7 columns, and 4 for the win
+	* finally, output the values that will be used for rows, columns, and consecutive values:
+		<pre><code data-trim contenteditable>Using row, col and consecutive: 6 7 4</code></pre>
+2. Ask the user for two values - one to represent the player and one to represent the computer
+	<pre><code data-trim contenteditable>Enter two characters that represent the player and computer
+(separated by a comma... for example: P,C)
+>
+</code></pre>
+	* emoji are acceptable
+	* again, assume that the player inputs a value that's a valid format (P,C)
+	* alternatively if the user enters nothing, default to the following emoji: 😎 💻
+	* finally, output the values that will be used for each player:
+	 Using player and computer characters: 😎 💻
+3. Finally, ask the player to choose who will go first
+	<pre><code data-trim contenteditable>Who goes first, (P)layer or (C)omputer?
+>
+</code></pre>
+	* if they choose an invalid value, then default to having the player go first
+	* output who's going first
+		<pre><code data-trim contenteditable>Player goes first
+</code></pre>
+4. To continue, ask the user to press `ENTER`:
+	<pre><code data-trim contenteditable>Press &lt;ENTER&gt; to start game
+</code></pre>
+
+A full run of asking for options, but having the player enter nothing to use default values would go like this:
+
+<pre><code data-trim contenteditable>Enter the number of rows, columns, and consecutive "pieces" for win
+(all separated by commas... for example: 6,7,4)
+>
+Using row, col and consecutive: 6 7 4
+
+Enter two characters that represent the player and computer
+(separated by a comma... for example: P,C)
+>
+Using default player and computer characters: 😎 💻
+
+Who goes first, (P)layer or (C)omputer?
+>
+Player goes first
+Press &lt;ENTER&gt; to start game
+</code></pre>
+
+
+### An Interactive Game
+
+Now... for the actual game. The player and the computer will take turns dropping pieces until the board is full or the player and computer have reached the number set for consecutive values.
+
+1. Regardless of whether or not options were created via the commandline or supplied interactively by the player, the player and computer will alternate turns
+2. If it's the player's turn, ask the player for a letter:
+	  <pre><code data-trim contenteditable>Choose a column letter to drop your piece in
+>
+</code></pre>
+  * (as described in a later step, board is still shown in state prior to move, above this prompt)
+  * if the user enters an invalid move, ask for another column
+  * here's an example where the player puts in a column that doesn't exist (note that an error message is shown, and a prompt is used to ask for a column again)
+  * don't clear the screen in this case
+  * <pre><code data-trim contenteditable>|    |    |    |    |    |    |    |
+|    |    |    |    |    |    |    |
+|    |    |    |    |    |    |    |
+|    |    |    |    |    |    |    |
+| O  | O  |    |    |    |    |    |
+| 😎 | 😎 |    |    |    |    |    |
+|----+----+----+----+----+----+----|
+| A  | B  | C  | D  | E  | F  | G  |
+Choose a column letter to drop your piece in
+&gt; H
+Oops, that is not a valid move, try again!
+Choose a column letter to drop your piece in
+&gt;     
+</code></pre>
+  * And, obligatory animated gif version...
+  <br>
+  ![bad move bro](../resources/img/connectmoji/bad-move-bro.gif)
+3. If it's the computer's turn, 
+    <pre><code data-trim contenteditable>Press &lt;ENTER&gt; to see computer move
+</code></pre>
+  * (as described in the next step, board is still shown in state prior to move, above this prompt)
+  * tell the user to press ENTER to see the computer move to allow them to see what the board look like before the computer goes
+  * you can assume that the computer makes valid moves (if the board were full, the computer shouldn't move)
+  * aaand... another gif 
+  <br>
+  ![press enter for computer](../resources/img/connectmoji/press-enter.gif)
+1. In either case:
+	* __the piece is placed in the lowest unoccupied column on the board__ (think of it as being dropped down the column)
+	* display the column that the piece was just dropped in
+		<pre><code data-trim contenteditable>...dropping in column A
+</code></pre>
+	* display the board as a string
+		<pre class="board"><code data-trim contenteditable>|    |    |    |    |    |    |    |
+|    |    |    |    |    |    |    |
+|    |    |    |    |    |    |    |
+|    |    |    |    |    |    |    |
+|    |    |    |    |    |    |    |
+| 😎 |    |    |    |    |    |    |
+|----+----+----+----+----+----+----|
+| A  | B  | C  | D  | E  | F  | G  |
+</code></pre>
+	* ...so combined, along with a prompt for the next move for the player
+		<pre class="board"><code data-trim contenteditable>...dropping in column A
+|    |    |    |    |    |    |    |
+|    |    |    |    |    |    |    |
+|    |    |    |    |    |    |    |
+|    |    |    |    |    |    |    |
+| 💻 |    |    |    |    |    |    |
+| 😎 |    |    |    |    |    |    |
+|----+----+----+----+----+----+----|
+| A  | B  | C  | D  | E  | F  | G  |
+&nbsp; 
+Choose a column letter to drop your piece in
+&gt;
+</code></pre>
+5. After the player moves or the computer presses ENTER, use the `clear` function (mentioned above in the setup; it must be brought in using `require`) to clear the previous display of the board and show the resulting board state of the move 
+6. Again, if the last move results in a winner a winner, stop play, __display the board__... and display which value was the winner:
+    <pre><code data-trim contenteditable>Winner is 😎
+</code></pre>
+    ![winner display](../resources/img/connectmoji/winner.png)
+7. If the last move results in a full board, __display the board__ ... and display a message saying that it was a tie:
+    <pre><code data-trim contenteditable>No winner. So sad 😭
+</code></pre>
+
+__Example__
+
+The following is an example of a full game manually configured and played to a tie:
+
+<br>
+
+![game tied example](../resources/img/connectmoji/end-example.gif)
+
+
+<!--
+__Here's an example game:__
+
+<div markdown="block" class="img" id="hw01-tic-tac-toe-sample">
+![example game](../resources/img/hw01-example-game.gif)
+</div>
+-->
+
+<!--
+<br>
+__And the text-only version of the game above:__
+
+<pre><code data-trim contenteditable>Shall we play a game? TIC-TAC-TOE!
+
+How wide should the board be? (1 - 26)
+> 3
+Pick your letter: X or O
+> O
+Player is O
+     1   2   3
+   +---+---+---+
+ A |   |   |   |
+   +---+---+---+
+ B |   |   |   |
+   +---+---+---+
+ C |   |   |   |
+   +---+---+---+
+
+Press &lt;ENTER&gt; to show computer's move...
+     1   2   3
+   +---+---+---+
+ A | X |   |   |
+   +---+---+---+
+ B |   |   |   |
+   +---+---+---+
+ C |   |   |   |
+   +---+---+---+
+
+What's your move?
+> B2
+     1   2   3
+   +---+---+---+
+ A | X |   |   |
+   +---+---+---+
+ B |   | O |   |
+   +---+---+---+
+ C |   |   |   |
+   +---+---+---+
+
+Press &lt;ENTER&gt; to show computer's move...
+     1   2   3
+   +---+---+---+
+ A | X | X |   |
+   +---+---+---+
+ B |   | O |   |
+   +---+---+---+
+ C |   |   |   |
+   +---+---+---+
+
+What's your move?
+> C3
+     1   2   3
+   +---+---+---+
+ A | X | X |   |
+   +---+---+---+
+ B |   | O |   |
+   +---+---+---+
+ C |   |   | O |
+   +---+---+---+
+
+Press &lt;ENTER&gt; to show computer's move...
+     1   2   3
+   +---+---+---+
+ A | X | X | X |
+   +---+---+---+
+ B |   | O |   |
+   +---+---+---+
+ C |   |   | O |
+   +---+---+---+
+
+Computer won!!!
+</code></pre>
+
+<br>
+__Remember, the game should work with variable widths... here's the beginning of a game on a 5 x 5 board:__
+
+<pre><code data-trim contenteditable>
+Shall we play a game? TIC-TAC-TOE!
+
+How wide should the board be? (1 - 26)
+> 5
+Pick your letter: X or O
+> X
+Player is X
+     1   2   3   4   5
+   +---+---+---+---+---+
+ A |   |   |   |   |   |
+   +---+---+---+---+---+
+ B |   |   |   |   |   |
+   +---+---+---+---+---+
+ C |   |   |   |   |   |
+   +---+---+---+---+---+
+ D |   |   |   |   |   |
+   +---+---+---+---+---+
+ E |   |   |   |   |   |
+   +---+---+---+---+---+
+
+What's your move?
+> E4
+     1   2   3   4   5
+   +---+---+---+---+---+
+ A |   |   |   |   |   |
+   +---+---+---+---+---+
+ B |   |   |   |   |   |
+   +---+---+---+---+---+
+ C |   |   |   |   |   |
+   +---+---+---+---+---+
+ D |   |   |   |   |   |
+   +---+---+---+---+---+
+ E |   |   |   | X |   |
+   +---+---+---+---+---+
+
+Press &lt;ENTER&gt; to show computer's move...
+     1   2   3   4   5
+   +---+---+---+---+---+
+ A | O |   |   |   |   |
+   +---+---+---+---+---+
+ B |   |   |   |   |   |
+   +---+---+---+---+---+
+ C |   |   |   |   |   |
+   +---+---+---+---+---+
+ D |   |   |   |   |   |
+   +---+---+---+---+---+
+ E |   |   |   | X |   |
+   +---+---+---+---+---+
+
+What's your move?
+>
+</code></pre>
+-->
+
+</div>
+
+</div>
+

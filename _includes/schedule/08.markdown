@@ -1,0 +1,29 @@
+	<td markdown="block">
+{% comment %}
+* [About Class #8](slides/08/meta.html)
+{% endcomment %}
+
+
+* [Node's HTTP Module](slides/07/node-http.html)
+* [Project Setup](slides/08/setup.html)
+* [Express](slides/08/express.html) 
+
+{% comment %}
+* [Static Sites, Remote Server](slides/08/static.html)
+{% endcomment %}
+</td>
+	<td markdown="block">
+</td>
+	<td markdown="block">
+
+
+
+{% comment %}
+Due Thursday, 2/23, by 11PM
+
+* [Homework #03](homework/03.html)
+Due Wednesday, 2/29, by 11AM (Before Class)
+
+* Quiz #04 and #05 - Objects and Prototypes, HTTP and Net Module
+{% endcomment %}
+</td>

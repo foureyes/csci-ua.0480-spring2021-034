@@ -1,0 +1,23 @@
+these are some cat names:
+
+<ol>
+{{#each catNames as |c|}}
+<li>{{c}}</li>
+{{/each}}
+</ol>
+<form method="GET" action="/cats">
+<label for="len">length</label><input type="text" name="len">
+<input type="submit" value="filter">
+</form>
+<!-- 
+GET /cats?len=value-user-entered HTTP/1.1
+-->
+
+
+
+
+
+
+
+
+

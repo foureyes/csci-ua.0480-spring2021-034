@@ -1,0 +1,33 @@
+<h1>Player Stats</h1>
+<div id="game-stats">
+</div>
+<input type="button" id="get-stats" value="get objects">
+<style>
+* {
+	font-family: sans-serif;
+}
+</style>
+<script>
+var button = document.getElementById('get-stats')
+button.addEventListener('click', handleClick);
+
+function handleClick() {
+	console.log('handling click');
+	// var url = "https://api.github.com/users/foureyes/repos";
+	// var url = "http://foureyes.github.io/csci-ua.0480-fall2014-002/homework/02/2014-06-15-heat-spurs.json";
+	var url = "../homework/02/2014-06-15-heat-spurs.json";
+	request = new XMLHttpRequest();
+	request.open('GET', url, true);
+	request.send();
+
+	request.onload = function() {
+		console.log(request.responseText);
+		var res = document.getElementById('game-stats');
+		var objects = JSON.parse(request.responseText);
+		var ul = res.appendChild(document.createElement('ul'));
+		objects.forEach(function(obj) {
+			ul.appendChild(document.createElement('li')).textContent = obj.name + ', ' + obj.team;
+		});
+	};
+}
+</script>

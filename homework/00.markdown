@@ -1,0 +1,23 @@
+---
+layout: homework
+title: CSCI-UA.0480 - Homework #0
+---
+
+<div class="panel panel-default">
+	<div class="panel-heading">Homework #0</div>
+	<div class="panel-body" markdown="block">
+
+# Installation, GitHub Username
+
+Do this so I can assign you _real_ homework next class!
+
+* [Fill out this form to submit your GitHub username]({{ site.survey_intro }}) (which you should have already done in class)
+* Please install Node.js:
+    * [via package manager](https://nodejs.org/en/download/package-manager/)
+    * [or by download](https://nodejs.org/en/download/)
+
+</div>
+
+</div>
+
+

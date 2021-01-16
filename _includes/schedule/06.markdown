@@ -1,0 +1,76 @@
+	<td markdown="block">
+
+* From slides in previous classes...
+* Decorators
+    * spread (...args) / arguments and apply
+    * decorator example (negate, timing)
+* This
+    * method, regular, call/bind/apply, arrow
+    * animal example
+    * animal counter example
+* Objects and Prototypes
+    * Object.getPrototypeOf
+    * Object.prototype, null
+
+* [Intro to Web Development](slides/05/web.html)  
+* [Networking and Sockets](slides/06/sockets.html)
+* [A Webserver](slides/06/webserver.html)
+
+{% comment %}
+* From Previous Class (maybe?) [Patterns, Errors, Use Strict](slides/05/patterns-errors-strict.html)
+{% endcomment %}
+
+{% comment %}
+* Homework
+* We missed covering [JSON from a previous class](slides/03/objects.html#/20)
+* [Objects Revisited](slides/06/objects-prototypes.html)
+* [A Detour: Globals, Methods, and This](slides/06/globals-methods-this.html)
+* [Objects and Prototypes](slides/06/prototypes.html)
+* Maybe talk about require again from previous class?
+* [Patterns, Errors, Use Strict](slides/06/patterns-errors-strict.html)
+{% endcomment %}
+</td>
+	<td markdown="block">
+
+MDN Documentation on HTTP
+
+* [An overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
+* [A typical HTTP session](https://developer.mozilla.org/en-US/docs/Web/HTTP/Session)
+* [HTTP Messages](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages) (HTTP/2 is not covered in the course, so those parts are optional)
+* Reference for HTTP [methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) and [status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+
+[{{ site.book_js_5 }}]({{ site.book_js_5_link }}) (Optional, same content as above)
+
+* Chapter 13 - JavaScript and the Browser
+* Chapter 17 - HTTP (up to browsers and http)
+
+{% comment %}
+Online Articles on HTTP and Cookies
+
+* [Let's build a Web Server (in Python, but useful for our class) Parts 1 through 3](https://ruslanspivak.com/lsbaws-part1/)
+* [Tangled Web - Chapter 3  -  Hypertext Transfer Protocol (available online via NYU Library)](https://getit.library.nyu.edu/go/9409104)
+* [MDN on Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
+* nczonline articles on [Cookies](https://www.nczonline.net/blog/2009/05/05/http-cookies-explained/) and [Cookies and Security](https://www.nczonline.net/blog/2009/05/12/cookies-and-security/)
+
+{% endcomment %}
+
+</td>
+	<td markdown="block">
+
+
+{% comment %}
+Due Thursday, 2/16
+
+* [Homework #2](homework/02.html) 
+In-Class Programming Activity
+
+* [Creating an HTTP Request object, and a Poll](https://docs.google.com/a/nyu.edu/forms/d/e/1FAIpQLSe2mqmcuD_bhT_XFqDpXTbdBUTIvfIOTtqepiQ_dTWhIICyaA/viewform)
+
+
+
+{% endcomment %}
+
+<!--
+* [](assignments/.html)
+-->
+</td>

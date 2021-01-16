@@ -1,0 +1,72 @@
+	<td markdown="block">
+
+Review!
+
+{% comment %}
+__MongoDB Outage, Final Project Extended__
+
+* due today, 11pm
+* grace period up through wed, 12/6, 11pm
+
+Slides
+
+* [React Basics](slides/26/react.html)
+* [React Revisited](slides/26/react-state-parent.html)
+* [React and Express / Using Webpack](slides/26/react-webpack-continued.html)
+{% endcomment %}
+
+{% comment %}
+* [Binary Calculator Example Code](https://github.com/nyu-csci-ua-0480-001-fall-2016/examples/blob/master/class27/binary-calculator/src/index.js)
+
+
+Slides 
+
+* reminder regarding quizzes
+* (optional) input element - react
+* (optional) [Flexbox](slides/22/flexbox.html)
+* begin review
+* evaluations
+{% endcomment %}
+
+{% comment %}
+Practice Questions
+
+* [Practice Questions](resources/handouts/final/final_exam_practice.pdf)
+* [Practice Questions Solutions](resources/handouts/final/final_exam_practice_solutions.pdf)
+* [Practice Questions Set 2](resources/handouts/final/final_exam_practice_2.pdf)
+* [Practice Questions Set 2 Solutions](resources/handouts/final/final_exam_practice_2_solutions.pdf)
+{% endcomment %}
+
+</td>
+	<td markdown="block">
+
+{% comment %}
+* [Using Flexible Box Layout (developer.mozilla.org)](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
+* [CSS Playground (codepen.io)](https://codepen.io/enxaneta/full/adLPwv/)
+* [A Complete Guide to Flexbox (css-tricks.com)](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* [Flexbox Cheat Sheet (jonibologna.com/)](http://jonibologna.com/flexbox-cheatsheet/)
+{% endcomment %}
+
+{% comment %}
+* [Hello World](https://facebook.github.io/react/docs/hello-world.html) and [Official Tutorial](https://facebook.github.io/react/tutorial/tutorial.html)
+* [Build With React](http://buildwithreact.com/)
+{% endcomment %}
+
+</td>
+	<td markdown="block">
+
+{% comment %}
+Due __today__ while you're in class:
+
+* [React Lab](homework/react-lab.html)
+    * [Form to submit](https://docs.google.com/forms/d/e/1FAIpQLScX9gG1czW9wZqdNaQZMQu0zWZXdAHhU5BN4LjzVaWewEhD3Q/viewform)
+{% endcomment %}
+
+{% comment %}
+__Reminder__
+
+* Quizzes 7 and 8 due Friday 5/5
+* (find them online in NYU Classes)
+{% endcomment %}
+
+</td>
