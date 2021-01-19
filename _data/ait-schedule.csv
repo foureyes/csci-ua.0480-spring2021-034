@@ -1,5 +1,5 @@
 draft,type,num,date,day,topics,slides,readings,assignments,
-y,,1,Jan-28,Thu,"* Introductions 
+,,1,Jan-28,Thu,"* Introductions 
 * JavaScript Basics
 * Variables
 * Functions","In Class
@@ -39,18 +39,18 @@ y,,1,Jan-28,Thu,"* Introductions
  
  * Chapter 1 - Values, Types, and Operators
  * Chapter 2 - Program Structure
- * Chapter 3 - Functions","__Due Friday 9/4, by 11am__  
+ * Chapter 3 - Functions","__Due Friday 1/29, by 9:30am__  
 
 Homework #0
  
- * [Fill out this survey / use of GitHub consent form]({{ site.survey_intro }})
+ * [Fill out this survey (timezone, use of GitHub)]({{ site.survey_intro }})
  * (Must be logged in to NYU Google Drive)
  * (Required for future homeworks! ^^^)
- * [Sign up for piazza]({{ site.forum }})
+ * [Sign up for course forum]({{ site.forum }})
 
  
  
-__Due Wednesday morning 9/9, by 11am__ 
+__Due Tuesday morning 2/2, by 9:30am__ 
  
 Quizzes
 
@@ -62,7 +62,7 @@ Installation
  * [Install Node {{ site.node_version }}](https://nodejs.org/en/)
  * (you can also use homebrew on MacOS or apt/yum/etc. on Linux) 
 ",
-y,,2,Feb-02,Tue,"* Objects
+,,2,Feb-02,Tue,"* Objects
 * Node
 * Modules and Require
 * Static Analysis Tools
@@ -92,16 +92,18 @@ y,,2,Feb-02,Tue,"* Objects
  [{{ site.book_js_5 }}]({{ site.book_js_5_link }})
 
 *  [Chapter 11 - Asynchronous Programming](http://eloquentjavascript.net/11_async.html) (Only read up to Promises)","
- __Due Monday morning 9/14, by 11am__ 
+ __Due Thursday morning 2/4, by 9:30am__ 
  
  * Quiz #4 
 
- __Due Monday 9/21, by 11pm__
+ __Due Tuesday 2/9, by 11pm__
 
+* Homework #1 to be posted
 
+<!--
 * [Homework #1](homework/01.html)
-",
-y,,3,Feb-04,Thu,* Higher Order Functions,"* [Higher Order Functions](slides/js/higher-order-functions.html) 
+-->",
+,,3,Feb-04,Thu,* Higher Order Functions,"* [Higher Order Functions](slides/js/higher-order-functions.html) 
 * [Higher Order Functions Continued](slides/js/higher-order-functions-continued.html) 
 * [Objects Revisited, Arrow Functions with ""this""](slides/js/objects-prototypes.html)
 * [A Detour: Globals, Methods, and This](slides/js/globals-methods-this.html)","[{{ site.book_js }}]({{ site.book_js_link }})

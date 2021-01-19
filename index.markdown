@@ -3,11 +3,10 @@ layout: default
 nav-state: index
 ---
 
+
 <!--
 <h1>AIT Test Deploy</h1>
 -->
-
-
 
 <div id="quick-links">
 <h3><a href="syllabus.html">Course Info</a> | <a href="{{ site.vars.forum }}">Forum</a> | <a href="syllabus.html#tutoring">Tutoring</a> | <a href="syllabus.html#hw-policy">Homework Policy</a> | <a href="syllabus.html#quiz-policy">Quiz Policy</a></h3>
