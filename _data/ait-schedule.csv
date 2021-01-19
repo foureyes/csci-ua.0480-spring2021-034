@@ -208,7 +208,7 @@ Example Set 1
 * [Node's HTTP Module](slides/07/node-http.html)
 * [Project Setup](slides/08/setup.html)
 -->",See previous classes on HTTP and network programming,,
-y,,,Feb-18,Thu,Legislative Day,,,,
+y,holiday,,Feb-18,Thu,Legislative Day,,,,
 y,,7,Feb-23,Tue,"* Server-side Web Framework
 * Project Layout","Administrative
 
@@ -354,7 +354,12 @@ __Due Monday 10/19 at 11pm__
  * hw 6 – saving to db (short!)
  * [Homework #05](homework/05.html) 
 -->",
-y,,12,Mar-11,Thu,"* Object Document Mapper Continued
+y,,12,Mar-11,Thu,* Review,"* Exam Review: format, sample assignment",,,
+y,exam,13,Mar-16,Tue,EXAM #1,,,"__Due Wednesday April 1st__
+
+* [Final Project Miletsone #01](final-project.html#milestone1)
+* [Homework #06](homework/06.html) ",
+y,,14,Mar-18,Thu,"* Object Document Mapper Continued
 * URL Parameters
 * Validation","
 * MongoDB, Mongoose from Previous Classes
@@ -362,14 +367,9 @@ y,,12,Mar-11,Thu,"* Object Document Mapper Continued
 * [URL Parameters](slides/14/params.html)
 * [Validation](slides/15/validation.html)
 
+
 ","* [Express Routing - Route Parameters](https://expressjs.com/en/guide/routing.html)
 * [Mongoose - Validation](https://mongoosejs.com/docs/validation.html)",,
-y,,13,Mar-16,Tue,* Review,"* Exam Review: format, sample assignment",,,
-y,exam,14,Mar-18,Thu,EXAM #1,"
-",,"__Due Wednesday April 1st__
-
-* [Final Project Miletsone #01](final-project.html#milestone1)
-* [Homework #06](homework/06.html) ",
 y,,15,Mar-23,Tue,"
 * Authentication
 * Final Project / Deployment
