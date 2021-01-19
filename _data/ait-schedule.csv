@@ -59,9 +59,8 @@ Quizzes
  
 Installation
 
- * [Install Node {{ site.node_version }}](https://nodejs.org/en/)
- * (you can also use homebrew on MacOS or apt/yum/etc. on Linux) 
-",
+ * [Install Node {{ site.node_version }} (manual installation)](https://nodejs.org/en/)
+ * [Recommended: use package manager for your system](https://nodejs.org/en/download/package-manager)",
 ,,2,Feb-02,Tue,"* Objects
 * Node
 * Modules and Require

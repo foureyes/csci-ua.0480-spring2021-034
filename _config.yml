@@ -91,7 +91,7 @@ vars:
   #final_room: WWH 109
   survey_github: https://docs.google.com/forms/d/e/1FAIpQLSfH_31bRaKCjdOcJwaKrVogbwt-HnD2LhHaca85fp90bm_xPQ/viewform
   
-  node_version: 12.x.x
+  node_version: LTS
 
   slides_img_prefix: "../../resources/img"
   github_org: "https://github.com/nyu-csci-ua-0480-034-fall-2020"
