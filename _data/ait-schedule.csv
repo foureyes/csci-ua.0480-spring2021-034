@@ -14,8 +14,8 @@ draft,type,num,date,day,topics,slides,readings,assignments,
  * [Functions Some More!](slides/js/js-functions-addendum.html)
  * [Strings, Arrays, Mutability and Variable Parameters](slides/js/js-strings-arrays.html) (skim)
  * Arriving on Time
- * Survey / Consent to Use GitHub
- * Piazza
+ * Survey – Timezone, GitHub
+ * Forum
  * Node Installation
  
  Home
@@ -54,13 +54,13 @@ __Due Tuesday morning 2/2, by 9:30am__
  
 Quizzes
 
- * Quizzes #2 and #3 
- * (Quizz #1 will be posted later and is optional)
+ * Quizzes #1, #2, and #3 
  
 Installation
 
- * [Install Node {{ site.node_version }} (manual installation)](https://nodejs.org/en/)
- * [Recommended: use package manager for your system](https://nodejs.org/en/download/package-manager)",
+* [Node {{ site.node_version }} install with package manager)](https://nodejs.org/en/download/package-manager)
+* [Node {{ site.node_version }} manual installation](https://nodejs.org/en/)
+ ",
 ,,2,Feb-02,Tue,"* Objects
 * Node
 * Modules and Require
@@ -91,11 +91,11 @@ Installation
  [{{ site.book_js_5 }}]({{ site.book_js_5_link }})
 
 *  [Chapter 11 - Asynchronous Programming](http://eloquentjavascript.net/11_async.html) (Only read up to Promises)","
- __Due Thursday morning 2/4, by 9:30am__ 
+ __Due 2/4, Tuesday morning, by 9:30am__ 
  
- * Quiz #4 
+ * Quiz #4
 
- __Due Tuesday 2/9, by 11pm__
+ __Due 2/4, Tuesday evening, by 11pm__
 
 * Homework #1 to be posted
 
