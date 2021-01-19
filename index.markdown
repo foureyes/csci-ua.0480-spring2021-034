@@ -10,6 +10,7 @@ nav-state: index
 -->
 
 
+
 <div id="quick-links">
 <h3><a href="syllabus.html">Course Info</a> | <a href="{{ site.vars.forum }}">Forum</a> | <a href="syllabus.html#tutoring">Tutoring</a> | <a href="syllabus.html#hw-policy">Homework Policy</a> | <a href="syllabus.html#quiz-policy">Quiz Policy</a></h3>
 </div>
@@ -39,7 +40,7 @@ nav-state: index
 		<td markdown="block">{{ c.topics | remove: '__new__' | markdownify }}</td>
 		<td markdown="block">{{ c.slides |  markdownify }}</td>
 		<td markdown="block">{{ c.readings | markdownify }}</td>
-		<td markdown="block">{{ c.assignments | markdownify }}</td>
+		<td class="assignments" markdown="block">{{ c.assignments | markdownify }}</td>
 		{% endif %}
 	{% endif %}
 </tr>
@@ -112,8 +113,8 @@ td:nth-child(3) {
 	width: 30%;
 }
 
-td:nth-child(4) {
-	width: 35%;
+.assignments, td:nth-child(4) {
+	width: 30%;
 }
 
 #schedule {
