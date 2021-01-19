@@ -59,7 +59,7 @@ Quizzes (on NYU Brightspace)
  
 Installation
 
-* [Node {{ site.node_version }} install with package manager)](https://nodejs.org/en/download/package-manager)
+* [Node {{ site.node_version }} install w/ package manager](https://nodejs.org/en/download/package-manager)
 * [Node {{ site.node_version }} manual installation](https://nodejs.org/en/)
  ",
 ,,2,Feb-02,Tue,"* Objects
