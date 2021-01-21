@@ -92,11 +92,11 @@ Installation
  [{{ site.book_js_5 }}]({{ site.book_js_5_link }})
 
 *  [Chapter 11 - Asynchronous Programming](http://eloquentjavascript.net/11_async.html) (Only read up to Promises)","
- __Due 2/4, Tuesday morning, by 9:30am__ 
+ __Due 2/9, Tuesday morning, by 9:30am__ 
  
  * Quiz #4 (on NYU Brightspace)
 
- __Due 2/4, Tuesday evening, by 11pm__
+ __Due 2/9, Tuesday evening, by 11pm__
 
 * Homework #1 to be posted
 
@@ -132,12 +132,13 @@ y,,4,Feb-09,Tue,* Objects and Prototypes,"* [Objects and Prototypes, Classes](sl
  [{{ site.book_js_5 }}]({{ site.book_js_5_link }}) (Optional, similar content to Speaking JS chapter above)
  
  * [Chapter 6 - The Secret Life of Objects](http://eloquentjavascript.net/06_object.html)
- * [Chapter 8 - Bugs and Error Handling](http://eloquentjavascript.net/08_error.html)","
+ * [Chapter 8 - Bugs and Error Handling](http://eloquentjavascript.net/08_error.html)","__Due 2/11, Thursday morning, by 9:30am__ 
+ 
+ * Quiz #5 (on NYU Brightspace)
 
+ __Due 2/16, Tuesday evening, by 11pm:__
 
- <!-- * [Homework #2](homework/02.html) -->
-
- ",
+*  [Homework #2](homework/02.html)",
 y,,5,Feb-11,Thu,"* Networking Primer
 * Network Programming
 * Streams / Buffers / File IO
@@ -168,13 +169,10 @@ MDN Articles on HTTP
 Net Module Review
  
  * [Create Server](https://nodejs.org/api/net.html#net_net_createserver_options_connectionlistener)
-","__Due Wednesday morning 9/23, by 11am__ 
+","__Due 2/23, Tuesday morning, by 9:30am,__ 
  
- * Quiz #5 
-
- __Due Monday 9/28 at 11pm:__
-
-*  [Homework #2](homework/02.html)",
+ * Quiz #6 (on NYU Brightspace)
+",
 y,,6,Feb-16,Tue,"* A Simple Web Server Continued / Our ""Framework""
 * Routing
 * Node HTTP Module","* [HTTP Summary](slides/07/http-summary.html)
@@ -209,7 +207,12 @@ Example Set 1
   
 * [Node's HTTP Module](slides/07/node-http.html)
 * [Project Setup](slides/08/setup.html)
--->",See previous classes on HTTP and network programming,,
+-->",See previous classes on HTTP and network programming,"
+
+__Due 2/23, Tuesday evening, by 11pm:__
+ 
+ * [Homework #03](homework/03.html)
+",
 y,holiday,,Feb-18,Thu,Legislative Day,,,,
 y,,7,Feb-23,Tue,"* Server-side Web Framework
 * Project Layout","Administrative
@@ -237,11 +240,9 @@ Express Documentation
 * [Express Hello World](https://expressjs.com/en/starter/hello-world.html)
 * [Express Basic Routing](https://expressjs.com/en/starter/basic-routing.html)
 * [Express Routing](https://expressjs.com/en/guide/routing.html) (up to, but not including route paths)
-* [Express Static Files](https://expressjs.com/en/starter/static-files.html)","<strike>Due Monday 10/5 at 11pm:</strike>
-
-__Due Tuesday 10/6 at 11pm:__
+* [Express Static Files](https://expressjs.com/en/starter/static-files.html)","__Due 3/2, Tuesday morning, by 9:30am,__ 
  
- * [Homework #03](homework/03.html)
+ * Quiz #7 (on NYU Brightspace)
 ",
 y,,8,Feb-25,Thu,"* Server-side Web Framework Continued
 * Templating","* (See previous slides on Express)
@@ -258,10 +259,7 @@ Express Documentation
 
 [{{ site.book_js_6 }}]({{ site.book_js_6_link }})
 
-* [Chapter 7. Important External Modules - Express - Middleware](https://www.oreilly.com/library/view/node-up-and/9781449332235/ch07.html#id3221848) ","__Due Monday morning 10/12, by 11am__ 
- 
- * Quiz #6 
-",
+* [Chapter 7. Important External Modules - Express - Middleware](https://www.oreilly.com/library/view/node-up-and/9781449332235/ch07.html#id3221848) ",,
 y,,9,Mar-02,Tue,* Forms,"* Review Middleware
 * [Express Request and Response](slides/09/request-response.html) (start [With Web Server/Web App](slides/09/request-response.html#/7))
 * GET and POST / Request and Response 
