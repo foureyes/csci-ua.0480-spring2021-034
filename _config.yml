@@ -76,6 +76,7 @@ vars:
   course_room: Remote
   # course_room_2: Silver 411
   course_url: https://cs.nyu.edu/courses/spring21/CSCI-UA.0480-008/
+  lms_url: https://brightspace.nyu.edu/d2l/home/27599 
   course_site_alt: http://cs.nyu.edu/~jversoza
 
   # office hours
