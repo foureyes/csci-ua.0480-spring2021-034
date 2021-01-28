@@ -316,7 +316,7 @@ from g
 <section markdown="block">
 ## Without Const, Let, or Var Revisited
 
-__Variables declared without `const`, `let`, or `var` actually mask the variable in nearest enclosing scope (if it's not a `const`)__ (usually global, but a bit tricky for nested functions).
+__Variables declared without `const`, `let`, or `var` actually reference the variable in nearest enclosing scope (if it's not a `const`)__ (usually global, but a bit tricky for nested functions).
 
 <pre><code data-trim contenteditable>
 let x = 1;
