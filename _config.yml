@@ -59,6 +59,7 @@ vars:
   book_js_9_author: Eric Elliott 
 
   survey_intro: https://forms.gle/XmdDDczKyfUst3Di9 
+  forum_name: edstem
   forum: https://edstem.org/us/courses/3751/discussion/ 
   email: jversoza@cs.nyu.edu
   contact_link: https://edstem.org/us/courses/3751/discussion/ 
@@ -80,8 +81,8 @@ vars:
   course_site_alt: http://cs.nyu.edu/~jversoza
 
   # office hours
-  office_hours: "TBD"
-  office_hours_room: Remote
+  office_hours: "8:30 - 9:30am Tue and Thu (before class)"
+  office_hours_room: Remote (see zoom link in course forum for link)
 
   # finals
   # CSCI-UA.0480-002  Special Topics: Applied Internet Technology Joseph Versoza      Tuesday, December 16, 2014  8:00AM - 9:50AM 

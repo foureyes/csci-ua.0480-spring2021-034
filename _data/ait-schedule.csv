@@ -79,7 +79,8 @@ Installation
 * constructor / holes, mutability, slice
 * [Functions Some More!](slides/js/js-functions-addendum.html)
 * [Strings, Arrays, Mutability and Variable Parameters](slides/js/js-strings-arrays.html)
-* File IO","[{{ site.book_js }}]({{ site.book_js_link }})
+* [File IO with fs.readfile (docs)](https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback)
+* [Modules](slides/js/modules-commonjs.html)","[{{ site.book_js }}]({{ site.book_js_link }})
  
  * [Chapter 17 - Objects (up to ""Converting Any Value to an Object"")](http://speakingjs.com/es5/ch17.html)
  * [Chapter 18 - Arrays)](http://speakingjs.com/es5/ch18.html)

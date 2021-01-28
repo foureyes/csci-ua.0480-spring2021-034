@@ -256,13 +256,15 @@ __What are you doing here? GET OUT!__ &#128073;
 There's a __significant amount of work__ involved in this class:
 
 * {:.fragment} 2 x exams (__final is last day of class, not during finals week!__)
-* {:.fragment} 8 or 9 x [homeworks](../../#hw-policy) 
+* {:.fragment} 8 or 10 x [homeworks](../../syllabus#hw-policy) 
     * __Write your own code!__
     * some examples of homework are:
         * write your own library that _does x_
         * use that library to implement some sort of web application
         * use an existing library that already _does x_ to re-write above ^
-* {:.fragment} 8 x [online quizzes](../../#quiz-policy) (taken from home)
+* {:.fragment} 8 to 10 x [quizzes](../../syllabus#quiz-policy) 
+	* mostly taken from home
+	* some may given in-class
 * {:.fragment} 1 x final project
     * essentially, a single web app based on material we've learned
     * details to be posted mid-semester
@@ -285,7 +287,7 @@ This course is not challenging in the way that something like _algorithms_ is, b
 __On the subject of homework and difficulty level, if you need help__ &rarr;
 
 
-* {:.fragment} __please ask on piazza__ - public posts are encouraged as long as you're not posting significant parts of the homework solution
+* {:.fragment} __please ask on [{{site.vars.forum_name}}]({{site.vars.forum}})__ - public posts are encouraged as long as you're not posting significant parts of the homework solution
 * {:.fragment} high level discussions with other students are ok
 * {:.fragment} help debugging an exception/error from other students is ok
 * {:.fragment} see me or the tutor (office / tutoring hours)
@@ -361,11 +363,12 @@ Students coming into the course __have very different backgrounds when it comes 
 
 __If you're concerned about the workload and the material...__ &rarr;
 
-* {:.fragment} I'm __always available to help__, especially on piazza...as well as office hours and by appointment
+* {:.fragment} I'm __always available to help__, especially on {{site.vars.forum_name}}...as well as office hours and by appointment
 * {:.fragment} We'll also have a tutor (I'll post a schedule by next week)
 
 <br>
 __If you think it's going too slowly...__ (you're one of those professionals that are taking this class for some reason 🤓) &rarr;
+{:.fragment}
 
 * {:.fragment} challenge yourself: if the assignment is to make a simple game...
 * {:.fragment}  __make your own library/framework__ (like your own version of immutable.js or rxjs) from scratch, and use it to write the game
@@ -390,13 +393,7 @@ __If you think it's going too slowly...__ (you're one of those professionals tha
 
 ### Node.js (obvs)
 
-1. Suggested install - use the package manager on your OS
-	* __OSX__ 
-		* [install](https://github.com/Homebrew/homebrew/wiki/Installation) [homebrew](http://brew.sh/) 
-		* <pre><code data-trim contenteditable>brew install node</code></pre>
-	* __Linux__ (Specifically Debian/Ubuntu)
-		* <pre><code data-trim contenteditable>sudo apt-get install nodejs
-sudo apt-get install npm</code></pre>
+1. Suggested install - [use a package manager if you already have one that you work with](https://nodejs.org/en/download/package-manager/)
 2. Use the Node.js installer:
 	* __Windows__, __OSX__, and __Linux__: see the [downloads page on the Node.js site](http://nodejs.org/) 
 </section>
@@ -417,7 +414,7 @@ sudo apt-get install npm</code></pre>
 This &#128071;
 
 * You're going to be writing __a lot of JavaScript__ (be prepared for weekly assignments)
-* __I'm available for help__! The best way to get in touch with me is piazza or in-person (ask the question in class - someone else probably has the same question or office hours / appointment)
+* __I'm available for help__! The best way to get in touch with me is {{site.vars.forum_name}} or in-person (ask the question in class - someone else probably has the same question or office hours / appointment)
 * __the 2nd exam is on the last day of class, NOT DURING FINALS WEEK__
 * If you're a __graduating senior__, make sure you do the work; I can't just hand out C's (also, are you _really_ just trying to get a C?)!
 * __Write your own code for assignments!__

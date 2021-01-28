@@ -81,9 +81,8 @@ Expect about __one quiz__ every __week__, which can be in one of the following f
     * Quizzes will be closed at the due date given
     * Quizzes are to be taken on your own
 * In-class quizzes
-    * Dates for in-class quizzes will be posted one week before quiz is given
-    * Will be based on homework
-    * Will be given at the beginning of class
+    * Will be based on previous lectures or homework
+    * Will be given either at the beginning or end of class
 * Make ups will be allowed for the following exceptions:
     1. illness, with documentation
     2. religious observance
