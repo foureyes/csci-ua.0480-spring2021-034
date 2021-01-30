@@ -255,7 +255,7 @@ Variables declared at the "top level" of your program (outside of functions) and
 * variables declared __with__ the keyword, <code>var</code> are __local__ to the function
 * variables declared __with__ the keywords, `const` or `let` are __local__ to the block that they're declared in
 * variables declared __without__ the `let`, `const` or `var` affect the global scope... ⊙﹏⊙
-    * (actually, the nearest enclosing scope - most of the time this is global, but it could be an outer function!)
+    * (actually, the nearest enclosing scope containing the name - most of the time this is global, but it could be an outer function!)
 * global variables (again) are accessible throughout your program, even from within you function's body
 
 </section>
@@ -316,7 +316,7 @@ from g
 <section markdown="block">
 ## Without Const, Let, or Var Revisited
 
-__Variables declared without `const`, `let`, or `var` actually reference the variable in nearest enclosing scope (if it's not a `const`)__ (usually global, but a bit tricky for nested functions).
+__Variables declared without `const`, `let`, or `var` actually reference the variable in nearest enclosing scope (if it's not a `const`) containing the name__ (usually global, but a bit tricky for nested functions).
 
 <pre><code data-trim contenteditable>
 let x = 1;

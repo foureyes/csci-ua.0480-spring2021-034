@@ -21,7 +21,7 @@ draft,type,num,date,day,topics,slides,readings,assignments,
  
  Home
  
- * [About JavaScript](slides/js/js-intro.html)","For an in-depth JavaScript introduction, __skim__ these chapters in [{{ site.book_js }}]({{ site.book_js_2_link }})
+ * [About JavaScript](slides/js/js-intro.html)","For an in-depth JavaScript introduction, __skim__ these chapters in [{{ site.book_js }}]({{ site.book_js_link }})
  
  * [Chapter 7 - JavaScript's Syntax (the section on ""Strict Mode"" can be skipped)](http://speakingjs.com/es5/ch07.html) 
  * [Chapter 8 - Values](http://speakingjs.com/es5/ch08.html)
@@ -66,7 +66,7 @@ Installation
 * Node
 * Modules and Require
 * Static Analysis Tools
- * Introduction to Higher Order Functions (Maybe?)","Discussion
+* Introduction to Higher Order Functions (Maybe?)","Discussion
  
 * Academic Integrity
 * Tutoring and Workshops!
@@ -312,7 +312,7 @@ MongoDB Documentation
 __Due Monday 10/14 at 11pm__
  
 * [Homework #4](homework/04.html)",
-y,,11,Mar-09,Tue,,"* [More Mongoose](slides/12/mongoose.html)
+y,,11,Mar-09,Tue,* NoSQL Database Continued,"* [More Mongoose](slides/12/mongoose.html)
 * NoSQL Injection Example
 
 __Midterm Practice__
