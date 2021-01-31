@@ -376,7 +376,7 @@ outside modified by inside
 * reassignment works fine!
 
 <pre><code data-trim contenteditable>
-const sayHello = function() {
+let sayHello = function() {
 	console.log("Hola!");
 };
 

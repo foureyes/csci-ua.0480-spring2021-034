@@ -53,7 +53,7 @@ __They're pretty unremarkable (whew!)__ &rarr;
     * {:.fragment} with a single `Number` argument, it creates an <code>Array</code> of that length
     * {:.fragment} ...anything else constructs an Array with the arguments as elements
         <pre><code data-trim contenteditable>
-new Array(2) // [ , ,  ] !?!?!?! 
+new Array(2) // an array with two empty elements !?!?!?! 
 new Array('abc') // ['abc'] oookaaaay
 new Array(2, 4, 6) // [2, 4, 6] sure!
 </code></pre>

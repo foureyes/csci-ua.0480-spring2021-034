@@ -358,7 +358,7 @@ f(1, 2, 3);
 The arguments object is array-like, but not an array. (__Let's see.__ &rarr;)
 
 * you can index into it
-* you can get it's length
+* you can get its length
 * you can loop over it (with a _regular_ <code>for</code> loop)
 * no methods, though (no <code>slice</code>, <code>pop</code>, <code>forEach</code>, etc.)
 
@@ -389,7 +389,7 @@ var mySum = function() {
 <section markdown="block">
 ## Arguments vs Rest Parameters
 
-Both __`arguments`__ and __rest parameters__ allow for an arbitrary number of arguments. __Which should be used?__ &arr;
+Both __`arguments`__ and __rest parameters__ allow for an arbitrary number of arguments. __Which should be used?__ &rarr;
 
 1. {:.fragment} prefer using rest parameters
 2. {:.fragment} you get access to a _real_ `Array`
@@ -529,7 +529,7 @@ I'm in here!
 ([Via MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures))...
 
 * normally, the local variables within a function only exist for the duration of that function's execution
-* once the outer function <code>gimmeFunction</code> finishes executing, you'd expect that its local letiable, a, would no longer be accessible
+* once the outer function <code>gimmeFunction</code> finishes executing, you'd expect that its local variable, `a`, would no longer be accessible
 * however... a __closure__ is created when it returns a function!
 * a __closure__ is a special kind of __object that combines two things__: 
 	* a function
