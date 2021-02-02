@@ -119,7 +119,7 @@ Installation
  [{{ site.book_js_5 }}]({{ site.book_js_5_link }})
  
  * [Chapter 5 - Higher Order Functions](http://eloquentjavascript.net/05_higher_order.html)",,
-y,,4,Feb-09,Tue,* Objects and Prototypes,"* [Objects and Prototypes, Classes](slides/05/prototypes.html)
+,,4,Feb-09,Tue,* Objects and Prototypes,"* [Objects and Prototypes, Classes](slides/05/prototypes.html)
 * [Objects in JavaScript Summary](slides/05/objects-review.html)
 * [Where Not to Use Arrow Functions](slides/05/not-arrow.html)","[{{ site.book_js }}]({{ site.book_js_link }})
  
@@ -139,7 +139,10 @@ y,,4,Feb-09,Tue,* Objects and Prototypes,"* [Objects and Prototypes, Classes](sl
 
  __Due 2/16, Tuesday evening, by 11pm:__
 
-*  [Homework #2](homework/02.html)",
+Homework #2 to be posted
+<!--
+*  [Homework #2](homework/02.html)
+-->",
 y,,5,Feb-11,Thu,"* Networking Primer
 * Network Programming
 * Streams / Buffers / File IO
