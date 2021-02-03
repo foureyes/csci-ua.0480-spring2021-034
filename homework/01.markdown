@@ -345,7 +345,7 @@ The given unit tests use Mocha as a testing framework and Chai for assertions. W
 
 You can __run the included unit tests by using this command__ in your project directory:
 
-`npx mocha test/connectmoji.js`
+`npx mocha tests/connectmoji.js`
 
 If you run these tests before starting, you'll get a bunch of reference errors. This is because you have no functions implemented yet. Additionally, you'll have to export the functions you create so that the tests have access to them.
 
@@ -1163,7 +1163,7 @@ __Example:__
     * check the output; __make sure you fix all warnings / errors__
 	* __some minor number of points will be deducted for eslint warnings0__
 2. Run your tests one last time to make sure that they're all (or... _mostly_) passing.
-    * `npx mocha test/connectmoji-test.js`
+    * `npx mocha tests/connectmoji-test.js`
 	* note that in the tests, `null` is displayed as `[null]`
 3. Fix unit test errors 
     * if you have test failure, examine the output of each failure...
