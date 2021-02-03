@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 # Connectmoji
 
-## Due __Sep 21st, by 11PM__
+## Due __Feb 9th, by 11PM__
 
 <div markdown="block" class="img">
 ![full play](../resources/img/connectmoji/full-play.gif)
@@ -210,17 +210,15 @@ You'll also need a few modules to help you ask the user for input, clear the scr
 </code></pre>
 	* the <code>clear</code> module allows you to "clear" the screen for a command line program (across different platforms)
 	* check out the example usage on [clear's npm page](https://www.npmjs.com/package/clear)
-    	* essentially: `const clear = require('clear');`
-    	* which imports the function <code>clear</code> which can be used by simply calling it: `clear()`
+		* essentially: `const clear = require('clear');`
+		* which imports the function <code>clear</code> which can be used by simply calling it: `clear()`
 	* installing `clear` will make a modification to `package.json`; again, it should be committed and pushed along with your other files
 * `wcwidth`
-	* in your repository directory, install the node module, <code>wcwidth</code>, by running this command in your project's directory:
-    	<pre><code> npm install --save wcwidth
-</code></pre>
+	* in your repository directory, install the node module, <code>wcwidth</code>, by running this command in your project's directory: `npm install --save wcwidth`
 	* the <code>wcwidth</code> module calculates the number of columns a string of characters needs to be represented onscreen (for example, in a monospace font, a single character may take up multiple cells, like a emoji smiley face 😃)
 	* check out the example usage on [wcwidth's npm page](https://www.npmjs.com/package/wcwidth)
-    	* essentially: `const wcwidth = require('wcwidth');`
-    	* which imports the function <code>wcwidth</code> which can be used by simply calling it: `wcwidth('😃')`
+		* essentially: `const wcwidth = require('wcwidth');`
+		* which imports the function <code>wcwidth</code> which can be used by simply calling it: `wcwidth('😃')`
 	* installing `wcwidth` will make a modification to `package.json`; again, it should be committed and pushed along with your other files
 
 ###  Minimum Number of Commits
@@ -656,7 +654,7 @@ __Description:__
 
 __Note:__ both `wcwidth` and `.length` give varying values depending on emoji passed in due to some single emoji consisting of multiple emoji plus _joining_ and _variation characters_! Consequently, lengths and wcwidth are inconsistent; There's currently no _easy_ way to deal with this. So, if your code or test fails due to something like the ❤️ emoji, it's ok; the graders will not use that character. Feel free to replace that character in the text.
 
-`boardToString` reates a _text drawing_ representation of the Connectmoji `board` passed in. The board should have:
+`boardToString` creates a _text drawing_ representation of the Connectmoji `board` passed in. The board should have:
 
 * borders between cells
 * the contents of each cell 
@@ -1055,12 +1053,17 @@ __Description:__
 Using the board object, `board`, and a string of moves, `s`, play out a series of moves automatically. The returned `result` object will have the following properties:
 
 * `board` - a board object consisting of the usual properties, `data`, `rows`, and `cols`... this should be `null` if there's a move that produces an error (see `error` property below)
+* `pieces` - an array of the "pieces" that are being player  (for example, ['😄', '🤮'])
 * `lastPieceMoved` - the value of the last placed piece 
 	* this can remain unset / `undefined` if there were no moves!
 	* for example, if the move string were `vwABC`, then the last piece moved would be v (it moves to A, w moves to B, and the third move is v to C)
 * `error` - if any of the moves results in an error, this field is set to an object described below; otherwise, it should not be set at all (remain `undefined`)
 	* the error object should contain the following properties...
 	* `num` - the number of the move where the error occurred, with the first move starting at 1 (for example, `vwABCD`... and C produces an invalid move / error, then `num` should be 3 as it was the third move)
+	
+    * `val`: the "piece" that caused the error as a string
+	* `col`: the column that the piece was dropped in as a single character string 
+    * example of the value stored in error: `{num: 8, val: '🤮', col: 'D'}`
 * `winner` - the value of the piece that wins the game, if applicable; otherwise, it should not be set at all (remain `undefined`)
 	* for example, if `s` were `vwAABBC` and the last move for v to C produces a win, then `winner` would be set to `v`
 * if a win occurs, but there are more moves specified, then the move immediately after a win should produce an error
@@ -1245,7 +1248,7 @@ To capture the commandline argument, you can use this line:
 <pre><code data-trim contenteditable>const arr = process.argv[2]
 </code></pre>
 
-You can assume that if the `OPTIONS_AND_MOVES` commandline argument is supplied, it will be in the valid format specified above.
+⚠️ You can assume that if the `OPTIONS_AND_MOVES` commandline argument is supplied, __it will be in the valid format specified above__.
 
 __Example__
 
@@ -1271,7 +1274,7 @@ Note, however, if the automated moves resulted in a win without requiring a move
 * print out who won (as you would in a normal game)
 * do not prompt for any further moves
  
-Only do this if the last move results in a win (otherwise, if there's a win and further moves, the further moves are invalid, and autplay should not work / print out an error message!).
+Only do this if the last move results in a win (otherwise, if there's a win and further moves, the further moves are invalid, and autoplay should not work / print out an error message!).
  
 See an example of scripted moves that results in a win below, where the automatic moves end with the player winning against the computer. Again, the scripted moves are `AABBCCD`, so the player does not even need to move to get the win!
 
@@ -1282,8 +1285,19 @@ __To implement this feature...__
 * at the beginning of your file, use `process.argv` to access the passed in argument... 
 * create the board based on the rows and columns
 * use the moves string to play out the automated moves
-	* you can assume that the move string does not contain any errors and will always have valid moves
-  * this can be done behind-the-scenes (no need to show each individual move)
+	* you can assume that the __move string does not contain any errors and will always have valid moves__
+	* to break apart the move string, avoid using `split`... but use the spread operator to break a value up into array elements:
+		```
+> const s = '😄🤮ABAACD';
+undefined
+> [...s]
+[
+  '😄', '🤮', 'A',
+  'B',  'A',  'A',
+  'C',  'D'
+]
+```
+	* this can be done behind-the-scenes (no need to show each individual move)
 	* (hint: use the `autoplay` function you've created from above!)
 * once the moves have played out (again, automatically; no need to show each move)...
 	* show a message that says: press `ENTER` to continue...
