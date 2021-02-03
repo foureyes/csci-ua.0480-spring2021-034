@@ -20,7 +20,7 @@ __A modules is a file that contains some JavaScript (functions, variables, etc.)
 1. CommonJS Modules
 2. [ES6 Modules](https://nodejs.org/api/esm.html)
 
-Both allow the inclusion of JavaScript code in _other_ files, but the way that this is accomplished is different in both bethods.
+Both allow the inclusion of JavaScript code in _other_ files, but the way that this is accomplished is different in both methods.
 
 
 </section>
