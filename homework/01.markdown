@@ -691,6 +691,7 @@ A few rules for displaying
 	* this means that the width (not the string length) between the pipes (`|`), must be 4:
 	* 4 spaces for empty cell 
 	* a smiling emoji with a space before and after)
+	* a student suggestion to get the test for passing (again not 💯 a requirement) to account for wcwidth when calculating max number of spaces
 * if a character padded with single spaces causes a misalignment (is narrower than other cells), __add additional padding on the right__ (that is, add spaces to the end to match width of widest cell)
 	* in the example below, notice how the emoji is centered, where as the X has extra padding
 	<pre class="board"><code data-trim contenteditable>| 😄 |    |    |    |    |    |    |
