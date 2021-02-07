@@ -653,7 +653,7 @@ __Note:__ both `wcwidth` and `.length` give varying values depending on emoji pa
 
 * borders between cells
 * the contents of each cell 
-* labels on the rows and columns
+* labels on the columns
 
 Printing out an example result would yield:
 
