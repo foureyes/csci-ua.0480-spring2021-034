@@ -13,4 +13,5 @@ _data/.~lock.*
 *lock.schedule.csv
 _data/*lock.schedule.csv
 _data/.~lock.schedule.csv#
-
+vendor
+vendor/bundle
