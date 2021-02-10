@@ -7,7 +7,7 @@ title: CSCI-UA.0480 - Homework #2
   <div class="panel-heading">Homework #2</div>
   <div class="panel-body" markdown="block">
 
-# Higher Order Functions: Exercises and Processing Data - Due __Sep 28th, by 11PM__
+# Higher Order Functions: Exercises and Processing Data - Due __Feb 16th, by 11PM__
 
 ## Overview
 
@@ -15,7 +15,10 @@ title: CSCI-UA.0480 - Homework #2
 
 __hoffy.js__ - Write a series of functions that demonstrate the use of the rest operator (or call/apply), and higher order functions
 
-__restaurants.js__ and __report.js__ - Print out a report analyzing the NYC restaurants' health inspection ratings data.
+__drawing.js__ - Create classes that represent rectangles, text, and a container to hold a _drawing_
+
+__disney.js__ and __report.js__ - Print out a report analyzing Walt Disney movies dataset.
+
 
 ### Submission Process
 
@@ -77,7 +80,7 @@ __Do not use__:
 * `for` loops
 * `for ... in` loops
 * `for ... of` loops
-* `forEach` method (this is fine for part 2)
+* `forEach` method 
 
 __There will a small (-2) penalty every time one is used__. (Homework is 100 points total)
 
@@ -453,300 +456,428 @@ Once you're finished with your functions, remember to:
 2. make sure that eslint shows no errors
 3. commit and push your code!
 
+## Part 2 - Drawings and Classes
 
-## Part 2 - Processing NYC Restaurant Examination Data
 
-In this part, you'll work with a dataset of hygiene examination records of New York City restaurants.
+For this part of the homework, create classes in the file in your repository called __src/drawing.js__.
 
-The data is free to use as part of NYC's open data initiative.
 
-You'll be using two files for this:
-1. `restaurants.js` to create a function called `processRestaurantData`
-    * the function will take an `Array` of objects with each object representing a listing
-2. `report.js` to read in and parse JSON data and use the `processRestaurantData` function above to create a report
 
-### Importing Data
+### SVG Overview
 
-* Download the csv data by going to the link provided in the pinned piazza post 
-    * place it in a folder outside of your repository
-* Create `src/report.js`...
-* Start by reading in the `csv` file using `fs.readFile` (you can use the absolute path)
-    * make sure that `fs` the module is brought in using `require`, then call the function)
-    * __do not use `readFileSync`__
-* See the docs on `fs.readFile` (hint: make sure you specify `utf8` as the second argument)
-* The file that you read in contains reports of health inspections
-    * there's one restaurant per line
-* Find a way to read in and parse the contents of the file so that:
-    * leading and trailing white space is removed from the initial contents (use the [string method, `trim`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim))
-    * each line into an actual JavaScript object, where the properties correspond with the first row of the file (the headers)
-    * each resulting object is placed into an `Array` for later processing
-    * you can check out some [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) and  [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) documentation
-    * note that the goal of this assignment is to work with higher order functions, so memory efficiency does not need to be taken into consideration
-* All of your parsing can only be done from within the callback function (or the function to be called once data is read from the file) that you supply to `fs.readFile`
-* Examine the resulting `Array` ... (for example, try printing it out!)
-* Later, you will be supplying this `Array` to the `processRestaurantsData` function that you create in `restaurants.js` to generate a report.
-* __You only need to use the following columns from the data__
-  * CAMIS (Unique ID)
-  * DBA (Name of the restaurant)
-  * Zipcode
-  * Cuisine Description
-  * Inspection Date
-  * Score
-  * Grade
-* To verify your file reading and parsing, you can try:
-  printing the "boro", "name", "score", "grade" of the 2nd (remember the array index starts from 0) listing in the file in the format: '${data.name} in ${data.boro} has a health inspection score of ${data.score} with a grade ${data.grade}.'
+You'll be implementing classes that represent drawings / parts of a drawing by using SVG.
+
+[SVG](https://developer.mozilla.org/en-US/docs/Web/SVG) is a markup language for creating vector graphics.
+
+You can think of it as HTML for drawing! (Pssst... it's actually XML). So, some terms used to describe HTML and XML will describe SVG as well:
+
+* __element__ - is a part of an SVG image; it's composed to tags, attributes and possibly text / content 
+* __tag__ - is the name of an element surrounded by &lt; and &gt; `<rect>`; there can be opening and closing tags in an element: `<rect></rect>`
+* __attribute__ - name and value pairs within an opening tag `<rect width="100">`
+	* note that for the example above, the name is unquoted
+	* and the value is quoted with double quotes
+* __content__ - the text surrounded by tags: <text>this is content</text>
+
+Elements can be nested within elements. For example: `<svg xmlns="http://www.w3.org/2000/svg"><rect width="50" height="50"></rect> </svg>`
+
+SVG markup can be placed in a `.svg` file. An `.svg` file can be opened with browsers, such as Chrome or Firefox. Some file explorers even render SVG directly. SVG can even be embedded directly in an html document (view source on this page, and search for `svg` tags.
+
+### `svg` Element
+
+The container (root element) for an SVG drawing is (big surprise) `svg`:
 
 ```
-Sushi Yu in Brooklyn has a health inspection score of 10 with a grade A.
+<svg xmlns="http://www.w3.org/2000/svg"> 
+</svg>
 ```
+
+* within this container, the x values increase from left to right.
+* the y values increase from top to bottom
+
+### `rect` Element
+
+To draw a rectangle, use the `rect` element. Some attributes that you can define on a `rect` element are:
+
+* `x` - the x location of the upper left corner of the rectangle
+* `y` - the y location of the upper left corner of the rectangle
+* `width` - the width in pixels of the rectangle
+* `height` - the height in pixels of the rectangle
+* `fill` - the fill color of the rectangle; this can be text, such as `"red"`, `"orange"`, etc. 
+
+Note that the `rect` element can be self-closing, but for simplicity in our implementation, we'll create `rect` elements with both an opening and closing tag.
+
+Here's an example of drawing two rectangles:
+
+```
+<rect x="25" y="50" width="50" height="100" fill="blue"></rect>
+<rect x="35" y="20" width="50" height="100" fill="orange"></rect>
+```
+
+The code above results in this drawing:
+
+<svg xmlns="http://www.w3.org/2000/svg">
+<rect x="25" y="50" width="50" height="100" fill="blue"></rect>
+<rect x="35" y="20" width="50" height="100" fill="orange"></rect>
+</svg>
+
+<br /> 
+
+### `text` Element
+
+The `text` element allows you to place text in your drawing. Some attributes include:
+
+* `x` - the x location of the upper left corner of the text
+* `y` - the y location of the upper left corner of the text
+* `fill` - the fill color of the text; this can be a color name, such as `"red"`, `"orange"`, etc. 
+* `font-size` - the size of the text
+
+Note that the content of a text element (the value between the `text` tags) is what will be displayed. Here's an example:
+
+```
+<text x="50" y="70" fill="blue" font-size="70">SVG FTW!</text>
+```
+
+The code above results in the following drawing:
+
+<svg xmlns="http://www.w3.org/2000/svg">
+<text x="50" y="70" fill="blue" font-size="40">SVG FTW!</text>
+</svg>
+
+### Implementation 
+
+You'll be creating classes that represent generic svg elements, `svg`, `rect`, and `text`. Your implementation:
+
+* __does not require type checking of incoming arguments__ 
+* __should not use__
+
+* `while` loops
+* `for` loops
+* `for ... in` loops
+* `for ... of` loops
+* `forEach` method 
+
+__There will a small (-2) penalty every time one is used__. (Homework is 100 points total)
+
+
+Create these four classes in `src/drawing.js` __and export them__:
+
+1. `GenericElement(name)` - represents a generic SVG element
+	* `name` - the name of the element (this name is freeform, so, for example: `svg`, `rect`, or even an element that we haven't covered... `circle`)
+2. `RootElement` - represents an `svg` element
+	* should have the attribute: `xmlns="http://www.w3.org/2000/svg"` ...so that it is treated as a valid SVG (XML)
+3. `RectangleElement` - represents a `rect` element
+4. `TextElement` - represents a `text` element
+
+Somewhere in these classes, you should define the following methods:
+
+* `addAttr(name, value)` - adds an attribute named, `name` to the element called on, with value, `value`
+	* `name` - the name of the attribute to be added
+	* `value` - the value of the attribute to be added
+* `addAttrs(obj)` - adds attributes (keeps existing attributes if already present, but if attribute names are the same, your discretion) to the element called on by using the property names and values of the object passed in: `{x: 100, y: 5}` would translate to `x="100" y="5"`
+	* `obj` -  the object containing properties and value that will be used to create attributes and values on the element
+* `addChild(child)` -  adds an element as a child to the element that this is called on (that is, `child`, is nested in this element
+	* `child` - the element to be nested in the parent element
+* `toString()` - returns the string representation of this element, including tags, attributes, text content, and nested elements... 
+	* for example `'<svg xmlns="http://www.w3.org/2000/svg"><text x="50" y="70" fill="blue" font-size="40">SVG FTW!</text> </svg>'`
+	* you can use any whitespace at your discretion (for example, you can add newlines if you want)
+* `write(fileName, cb)` - write the string representation of your element and all its children to a file called `fileName`
+	* `fileName` - the path of the file to write to
+	* `cb` - function to call when writing is done
+		* the callback function can have no parameters 
+	* use [`fs.writeFile`](https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback) as part of your implementation
+
+Your implementation must follow the requirements listed below:
+
+* you must use `extends` for one or more of your classes
+* you can add any properties necessary to make your code work
+* an element's attributes can be in any order when the markup is generated (no specific ordering is required from your implementation)
+* an element's children can be in any order when the markup is generated (no specific ordering is required from your implementation)
+* you can place methods in whatever class you think is appropriate, and you can even repeat code (though you can use inheritance to prevent this) as long as your classes work with the following code:
+
+```
+const root = new RootElement();
+
+const c = new GenericElement('circle');
+c.addAttr('r', 75);
+c.addAttr('fill', 'yellow');
+c.addAttrs({'cx': 200, 'cy': 80});
+
+root.addChild(c);
+
+const r = new RectangleElement(0, 0, 200, 100, 'blue');
+r.addAttrs({width: 800, height: 170});
+root.addChild(r);
+
+const t = new TextElement(50, 70, 70, 'red', 'wat is a prototype? 😬');
+root.addChild(t);
+console.log(root.toString());
+root.write('test.svg', () => console.log('done writing!'));
+```
+
+The code above produces the markup below, either via printing to console by converting to a string with `toString` or by writing to a file: 
+
+```
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="170">
+<circle r="75" fill="yellow" cx="200" cy="80">
+</circle>
+<rect x="0" y="0" width="200" height="100" fill="blue">
+</rect>
+<text x="50" y="70" fill="red" font-size="70">wat is a prototype? 😬
+</text>
+</svg>
+```
+
+Remember that in the resulting markup:
+
+* spacing is at your discretion: you can add / remove newlines, for example
+* an element's attributes can be in any order (your discretion)
+* an element's children can be in any order (your discretion)
+
+When opened with Chrome or Firefox, you should see:
+
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="170">
+<circle r="75" fill="yellow" cx="200" cy="80">
+</circle>
+<rect x="0" y="0" width="200" height="100" fill="blue">
+</rect>
+<text x="50" y="70" fill="red" font-size="70">wat is a prototype? 😬
+</text>
+</svg>
+
+## Part 3 - Walt Disney Movies Data
+
+### Overview
+
+The original data was sourced from [https://www.kaggle.com/sooaaib/walt-disney-movies?select=disney_movies.json](https://www.kaggle.com/sooaaib/walt-disney-movies?select=disney_movies.json) which uses a Creative Commons license (## CC0 1.0 Universal  (CC0 1.0)  Public Domain Dedication). 
+
+There are two steps to this part:
+
+1. Implement helper functions in `disney.js`.
+2. In `report.js`, use the functions implemented in `disney.js` to print a report.
 
 ### Examining the Data
-* Assuming that your parsed data is in a variable called `data` ...
-* `data` will be an `Array` of JSON objects (each line should have been parsed from JSON before pushing into the `data` array)
-* Each object in `data` contains location data, score, grade, and categories.
 
-Below is a sample listing from the dataset with a description of properties you'd need for your assignment
+* Assuming that your parsed JSON data is in a variable called `data` ...
+* `data` will be an `Array` of _movie_ objects; each line should have been parsed from JSON before pushing into the `data` array ... ⚠️ there's no need to create a class representation of these objects
+* Each movie object in `data` contains properties such as `title`, `Directed by`, etc.
+
+For example, a single movie object in the  `data` array will have the following attributes:
 
 ```
 {
-  // nyc's integer id for this restaurant
-  "CAMIS": 41615149,
-
-  // name of the restaurant
-  "DBA": "GOLDEN STARS PIZZA",
-
-  // borough
-  "boro": "Brooklyn",
-
-  // integer zipcode
-  "zipcode": 11204,
-
-  // cuisine description
-  "cuisine": "Italian",
-
-  // inspection date
-  "date": "10/28/2019",
-
-  // Integer Score
-  "score": 13,
-
-  // Grade
-  "grade": "A"
-}
+    "title": "Cinderella",
+    "Directed by": [
+      "Clyde Geronimi",
+      "Hamilton Luske",
+      "Wilfred Jackson"
+    ],
+    "Produced by": "Walt Disney",
+    "Story by": [
+      "Ken Anderson",
+      "Perce Pearce",
+      "Homer Brightman",
+      "Winston Hibler",
+      "Bill Peet",
+      "Erdman Penner",
+      "Harry Reeves",
+      "Joe Rinaldi",
+      "Ted Sears",
+      "Maurice Rapf (uncredited)"
+    ],
+    "Based on": [
+      "Cinderella",
+      "by",
+      "Charles Perrault"
+    ],
+    "Starring": [
+      "Ilene Woods",
+      "Eleanor Audley",
+      "Verna Felton",
+      "Rhoda Williams",
+      "James MacDonald",
+      "Luis van Rooten",
+      "Don Barclay",
+      "Mike Douglas",
+      "William Phipps",
+      "Lucille Bliss"
+    ],
+    "Narrated by": "Betty Lou Gerson",
+    "Music by": [
+      "Oliver Wallace",
+      "Paul J. Smith"
+    ],
+    "Edited by": "Donald Halliday",
+    "Production company": "Walt Disney Productions",
+    "Distributed by": "RKO Radio Pictures",
+    "Release date": [
+      "February 15, 1950 (Boston)",
+      "March 4, 1950 (United States)"
+    ],
+    "Running time": "74 minutes",
+    "Country": "United States",
+    "Language": "English",
+    "Budget": "$2.9 million",
+    "Box office": "$263.6 million",
+    "Running time (int)": 74,
+    "Budget (float)": 2900000,
+    "Box office (float)": 263600000.00000003,
+    "Release date (datetime)": "February 15, 1950",
+    "imdb_rating": "6.9",
+    "imdb_votes": "156,720",
+    "imdb_id": "tt1661199",
+    "metascore": 69,
+    "rotten_tomatoes": "84%"
+  }
 ```
 
+All of the functions in `disney.js` will work on a list of movie objects, with each object similar to the example above. This `Array` of movies will be used an argument (bound to the parameter, `data`) for most of the functions that you create.
 
-### Analytics
+Once you've implemented helper functions in `disney.js`, you can use these functions in your other file, `report.js`, to display some information. If it's helpful, you're free to to reuse functions from `hoffy.js` or `drawing.js` in this part (there's __no requirement to, however__, but `for`, `while`, `for in`, and `for of`, and `.forEach` are all still off limits.
 
-#### The `processRestaurantData` Function
+`report.js` can be used as a command line utility. Given an absolute path to a json data file, It should examine the JSON file's contents and print out a report. The JSON file contains a list of movie objects.
 
-You'll create a function to generate a report (as a string) based on the health inspection data. You'll write this function in `restaurant.js`.
-
-### `processRestaurantData(restaurants)`
-
-__Parameters:__
-
-* `restaurants` - an `Array` of objects, with each object representing a report of an inspection
-
-__Returns:__
-
-* a string containing a report based on the data passed in
-
-__Description:__
-
-This function will generate a report based on the `Array` of objects passed in. The report will contain answers to some questions based on the data.
-
-__Important note about parsing numerical values:__
-
-One of the most common peculiarities you'll come across while working with datasets is that the values read in from a file is that they might not be in the format you expect them to be (they may not be the _right_ type).
-
- eg. you might see
-
- ```
- "score": "5"
- ```
-
-It's actually a string whereas we'd like to use it as a float value.
-
-In situations like these, you'll need to parse the numerical value from the string. Here, we'll [use the `parseInt(strval)` function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
-
-
-### Implementation Requirements
-
-1. When creating your report in `processRestaurantsData`, you must use all of the following Array methods at least once each in your program:
-    * `forEach` (note that you cannot use `break` in `forEach`
-    * `filter` - use the return value
-    * `map` - use the return value
-    * `reduce` - use the return value
-    * There will be a small penalty for each one not used (-2).
-    * HINT: A typical pattern is to always use map 99% of the time, so you never accidentally get rid of or mess up the data, except when you're doing your first pass through the data to clean it up. 
-	
-### Report Overview
-
-Your report will use the data passed in to determine:
-
-1. Who has better food, Staten Island or the Bronx?
-2. How good are the restaurants in Brooklyn?
-3. Which boroughs have the most number of A grades?
-4. What percentage of restaurants in Queens are Chinese restaurants?
-5. What are three restaurants where you might want to eat at when you're in Manhattan?
-
-See the following details...
-
-### Comparing food from Staten Island and the Bronx
-
-* We want to compare the average score of all restaurants in Staten Island vs. the Bronx.
-* Note that a lower score is better.
-* Include the average score of all the restaurants in the file but only belonging to first Staten Island, and then the Bronx; format to have at least two decimal places. Example output below:
+Example usage:
 
 ```
-Average score of restaurants in Staten Island: 17.21
-Average score of restaurants in the Bronx: 15.21
-Hence, the Bronx has better food than Staten Island.
+# on the commandline
+node src/report.js /absolute/path/to/your/repo/data/0021800952.json
 ```
 
-* Be careful of weird things popping up in the score column! You can disregard empty values and values <= 0. Don't worry if your number is slightly different.
-* You can check if a value is a number by using the `isNaN` function. 
-* For average, you can count all restaurant values and not just ones with a valid score number.
-  
-
-
-### Most frequent grade in Brooklyn
-
-* Go through each restaurant in Brooklyn and note which grade occurs the most number of times.
-* Ignore the blank grade ("_")
-
 ```
-The most frequently occuring grade in Brooklyn is A!
-```
+The resulting output might look like this:
 
-### Boroughs ranked by A grades
+* The best movie by IMDB rating is: 'Pirates of the Caribbean: Dead Men Tell No Tales'.
 
-* Rank each borough by the number of A grades.
+* Movies starring Johnny Depp: ['Pirates of the Caribbean: Dead Men Tell No Tales', 'Pirates of the Caribbean: At World's End']
 
-```
-1. Brooklyn has 94 A grades
-2. Manhattan has 68 A grades
-3. Queens has 59 A grades
-4. Bronx has 42 A grades
-5. Staten Island has 21 A grades
+* Top 5 Critically acclaimed movies: [{"title":"Pirates of the Caribbean: Dead Men Tell No Tales'","metascore":92}, {"title":"Pirates of the Caribbean: At World's End'","metascore":95}]`
+
+* Movies with rating greater than 9: `[{"title":"Pirates of the Caribbean: Dead Men Tell No Tales'","imdb_rating":92}, {"title":"Pirates of the Caribbean: At World's End'","imdb_rating":95}]`
+
+* Percentage of movies with IMDB more than 9: 10%
+
+* Most popular movies: ['Pirates of the Caribbean: Dead Men Tell No Tales', 'Pirates of the Caribbean: At World's End']
+
+* Average IMDB Rating of all movies: 7
+
+* Movie with longest running time: 'Pirates of the Caribbean: Dead Men Tell No Tales'.
 ```
 
-### Percentage of Chinese restaurants in Queens
+The original `JSON` file will have to be parsed and manipulated so that it's in a data structure that you functions can work with.
 
-* Find what % of all restaurants in Queens are Chinese restaurants. Check that the Cuisine is "Chinese"; format to have at least two decimal places.
-* Example output below:
+### `disney.js` Functions
 
-```
-Of all the restaurants in Queens, 17.33% are Chinese restaurants.
-```
+Again, each function will have a parameter, `data`, that's in the format of an `Array` of objects, with each object representing a movie.
 
-### Best restaurants in Manhattan
+1. `bestMovie(data)`
+* **Parameters:**
+*data* - an `Array` of objects, with each object representing a movie.
+* **Returns:** a movie object representing the best movie
+* **Description:** This function returns an _entire_ movie object that has the highest value for the `imdb_rating` property. If there's a tie, return an Array of movie objects 
 
-* Go through each restaurant in Manhattan and find the ones with the lowest rating and show the best 3. Example output:
-* Skip restaurants with a blank score and scores < 0
-```
-The best restaurants in Manhattan are:
-1. Bubba Gump Shrimp Co.
-2. Halal Guys.
-3. Olive Garden.
-```
-(actual results might be different, these are examples)
+2. `getMoviesByActor(data,actor_name)` *
+* **Parameters:**
+*data* - an `Array` of objects, with each object representing a movie.
+*actor_name* - a `String` with the name of an actor.
+* **Returns:** an `Array` of movie titles.
+* **Description:** This function returns an `Array` containing the titles of the movies in a single `Array`. This can be retrieved from the `Starring` property (match actor_name with `Starring` property)
+* For example, if actor_name is Johnny Depp, then the  `Array` returned could be:
+	```["Pirates of the Caribbean: Dead Men Tell No Tales", "Pirates of the Caribbean: At World's End"]```
 
-### Return Value
-
-All of the analytics should be coalesced into a single large string representing the analytic report.
-
-This string should be returned by your `processRestaurantsData` function in your module, `restaurants.js`
-
-### Calling processRestaurantsData
-
-Now that you've finished your function, you can try calling it on your data from `report.js`
-
-1. In report.js: require the module that you created (`restaurants.js`).
-2. Use your function on the data that you parsed from reading in the `csv` file that you opened earlier.
-3. Print out the resulting string.
-4. You can compare your output with the example output below
-
-```
-Average score of restaurants in Staten Island: 17.21
-Average score of restaurants in the Bronx: 15.21
-Hence, the Bronx has better food than Staten Island.
-
-The most frequently occuring grade in Brooklyn is A!
-
-Boroughs ranked by A grades:
-1. Brooklyn has 94 A grades
-2. Manhattan has 68 A grades
-3. Queens has 59 A grades
-4. Bronx has 42 A grades
-5. Staten Island has 21 A grades
-
-Of all the restaurants in Queens, 17.33% are Chinese restaurants.
-
-The best restaurants in Manhattan are:
-1. Bubba Gump Shrimp Co.
-2. Halal Guys.
-3. Olive Garden.
-```
-
-## Part 3 - Retrieve JSON from URL
-
-### Setup for Retrieving JSON
-
-In this part, you'll be setting up your project to work with JSON/CSV data from a url:
-
-1. Install the requests library in your project's root folder: `npm install --save request` (similar to installing `readline-sync` in the previous assignment)
-2. Add the module to the beginning of `report.js` using `require`
-3. __Comment out or delete reading from a local file. You can modify the code for the previous part directly to do this.__ 
+3. `listCriticallyAcclaimedMovies(data)`
+* **Parameters:**
+*data* - an `Array` of objects, with each object representing a movie.
+* **Returns:** an `Array` containing the movie `title` and the `metascore`.
+* **Description:** This function returns an `Array` of objects containing the movie `title` and the `metascore`.  Note: return movies with `rating` greater than 90.
+* For example,
+	```[
+{"title":"Pirates of the Caribbean: Dead Men Tell No Tales'","metascore":92}, {"title":"Pirates of the Caribbean: At World's End'","metascore":95}
+]```
+4. `getAverageLength(data)`
+* **Parameters:**
+*data* - an `Array` of objects, with each object representing a movie.
+* **Returns:** a `Number` representing the average length (runtime) of movies in the entire dataset; ignore movies without a length or non-numeric length; use the appropriate column that gives you a normalized value for length (the one that requires least clean-up)
+* **Description:** This function  returns the average (runtime) of the entire dataset.
 
 
-### Retrieve and Process JSON 
+Export these functions using `module.exports`.
 
-Instead of reading a local file, __modify your program__ so that it pieces together all of the data by retrieving partial data sets in json files. The output should be similar, but you'll have to write the part that requests the json files, parses the data out of each file data, and only runs the report when all of the files have been downloaded and parsed.
+### `report.js`
 
-1. [Read the documentation](https://github.com/request/request) to see how to use the requests module (or see the [slides](../slides/js/js-node-npm-debug-git.html#/6))
-	* Notice that the data is only available within the callback that you pass in to calling `request` (much like using readFile)
-	* Again, a __callback__ is a function passed as an argument to another function... the callback will be invoked / executed at a later time, when some event is triggered
-	* In the case of `request`, it's the function that you pass in as the 2nd argument
-2. Remove the part of your program that reads a local file
-3. Instead, use request to download the first json file in the pinned piazza post
-4. Notice that the json file has two fields `data` and `next`
-	* `data` is a list of objects, with each object representing an inspection row
-	* `next` is the name of the next file to retrieve
-5. First try downloading just one file and running your report (the numbers should differ from what you previously had)
-6. Once you have that working...
-	1. Instead of running your report immediately...
-	2. Store the parsed restaurant data (in memory, in a global Array or as an argument that gets continually passed)
-	3. Retrieve the next url to get more data (that is, use the `next` field to get the name of the next json file to retrieve)
-	4. Again, parse the file... and add the data to the data you've already saved
-	5. Continue doing this until there is no more `next` field
-	6. Once you've retrieved all of the data, run your report... it should the same as it did before!
-	7. Check the length of your Array and make sure it has the same number of entries as part 2.
+In `report.js`:
 
+1. bring in the functions from `disney.js`
+	* feel free to add more helper functions / utilities
+2. if useful, bring functions from `hoffy.js` 
+3. use `process.argv[2]` to retrieve the path specified when `report.js` is run on the command line:
+	* `node src/report.js /path/to/file`
+	* `process.argv[2]` will contain `/path/to/file`
+4. find a way to read the contents of this file, parse it, and transform the data into data that can be used for your `disney.js` functions
+	* `JSON.parse` can be used to turn a string into a JavaScript object
+
+5. print out a report that includes:
+
+* The best movie by IMDB rating, title only
+* Top 5 Critically acclaimed movies, as an `Array` of objects with movie title and meta
+* Movies starring Johnny Depp, as an `Array` of titles only
+* Average runtime of all movies 
+
+Again, running the command (from the root of your project):
 
 ```
-Average score of restaurants in Staten Island: 17.21
-Average score of restaurants in the Bronx: 15.21
-Hence, the Bronx has better food than Staten Island.
-
-The most frequently occuring grade in Brooklyn is A!
-
-Boroughs ranked by A grades:
-1. Brooklyn has 94 A grades
-2. Manhattan has 68 A grades
-3. Queens has 59 A grades
-4. Bronx has 42 A grades
-5. Staten Island has 21 A grades
-
-Of all the restaurants in Queens, 17.33% are Chinese restaurants.
-
-The best restaurants in Manhattan are:
-1. Bubba Gump Shrimp Co.
-2. Halal Guys.
-3. Olive Garden.
+`node src/report.js /path/to/file`
 ```
-Lint, commit and push your code!
+
+Output should look _something_ like this:
+
+```
+* The best movie by IMDB rating is: 'Movie Title'.
+
+* Top 5 Critically acclaimed movies: [{"title":"Movie 1'","metascore":92}, {"title":"Movie 2'","metascore":95}]`
+
+* Movies starring Johnny Depp: ['Movie Title 1', 'Movie Title 2', 'etc.']
+
+* Average running time: Number
+
+```
+
+Finally, in report.js, write out an svg barchart to a file called `chart.svg` that visualizes any aspect of the data set you'd like to explore. For example: the metascore for every movie in the "Cars" franchise or the top 3 movies with the highest budgets. __There are no restrictions for what loops in this part__. It'd be useful to use the `drawing.js` module you created, but you can also just hand construct the svg if you like.
+
+Here's an example chart using hardcoded demo data:
+
+
+<svg xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="25" width="200" height="25" fill="green">
+</rect>
+<text x="210" y="45" fill="black" font-size="20">YES
+</text>
+<rect x="0" y="55" width="65" height="25" fill="green">
+</rect>
+<text x="70" y="75" fill="black" font-size="20">NO
+</text>
+<rect x="0" y="85" width="240" height="25" fill="green">
+</rect>
+<text x="250" y="105" fill="black" font-size="20">🤷‍♀️
+</text>
+</svg>
+
+```
+<svg xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="25" width="200" height="25" fill="green">
+</rect>
+<text x="210" y="45" fill="black" font-size="20">YES
+</text>
+<rect x="0" y="55" width="65" height="25" fill="green">
+</rect>
+<text x="70" y="75" fill="black" font-size="20">NO
+</text>
+<rect x="0" y="85" width="240" height="25" fill="green">
+</rect>
+<text x="250" y="105" fill="black" font-size="20">🤷‍♀️
+</text>
+</svg>
+```
+Don't forget to lint, commit, and push your code!
 </div>
 
 </div>
