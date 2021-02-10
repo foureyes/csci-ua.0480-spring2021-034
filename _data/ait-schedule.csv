@@ -139,7 +139,7 @@ Installation
 *  [Homework #2](homework/02.html)
 
 ",
-y,,5,Feb-11,Thu,"* Networking Primer
+,,5,Feb-11,Thu,"* Networking Primer
 * Network Programming
 * Streams / Buffers / File IO
 * HTTP
@@ -169,9 +169,11 @@ MDN Articles on HTTP
 Net Module Review
  
  * [Create Server](https://nodejs.org/api/net.html#net_net_createserver_options_connectionlistener)
-","__Due 2/23, Tuesday morning, by 9:30am,__ 
+","<!--__Due 2/23, Tuesday morning, by 9:30am,__ 
  
  * Quiz #6 (on NYU Brightspace)
+
+ -->
 ",
 y,,6,Feb-16,Tue,"* A Simple Web Server Continued / Our ""Framework""
 * Routing
