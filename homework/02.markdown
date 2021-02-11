@@ -836,7 +836,14 @@ Output should look _something_ like this:
 
 ```
 
-Finally, in report.js, write out an svg barchart to a file called `chart.svg` that visualizes any aspect of the data set you'd like to explore. For example: the metascore for every movie in the "Cars" franchise or the top 3 movies with the highest budgets. __There are no restrictions for what loops in this part__. It'd be useful to use the `drawing.js` module you created, but you can also just hand construct the svg if you like.
+Finally, after loggin out the information above, add the following code directly in `report.js`: 
+
+1. Write out an svg barchart to a file called `chart.svg` that visualizes any aspect of the data set you'd like to explore. 
+	* For example: the metascore for every movie in the "Cars" franchise 
+	* ...or the top 3 movies with the highest budgets. 
+2. The file written should be in the root of your project repository using a relative path (so using `chart.svg` should b esufficient)
+3. __There are no restrictions for what loops in this part__. 
+4. It's probably useful to use the `drawing.js` module you created, but you can also just hand construct the svg if you like.
 
 Here's an example chart using hardcoded demo data:
 
