@@ -648,7 +648,9 @@ When opened with Chrome or Firefox, you should see:
 
 ### Overview
 
-The original data was sourced from [https://www.kaggle.com/sooaaib/walt-disney-movies?select=disney_movies.json](https://www.kaggle.com/sooaaib/walt-disney-movies?select=disney_movies.json) which uses a Creative Commons license (## CC0 1.0 Universal  (CC0 1.0)  Public Domain Dedication). 
+The original data was sourced from [https://www.kaggle.com/sooaaib/walt-disney-movies?select=disney_movies.json](https://www.kaggle.com/sooaaib/walt-disney-movies?select=disney_movies.json) which uses a Creative Commons license (## CC0 1.0 Universal  (CC0 1.0)  Public Domain Dedication). You can download a [zipped version directly from here](disney_movies.json.zip) (you can extract the json file before using in your assignment).
+
+
 
 There are two steps to this part:
 
@@ -740,8 +742,9 @@ Example usage:
 
 ```
 # on the commandline
-node src/report.js /absolute/path/to/your/repo/data/0021800952.json
+node src/report.js path/to/disney_movies.json
 ```
+
 
 The resulting output might look like this:
 
@@ -800,13 +803,13 @@ In `report.js`:
 
 1. bring in the functions from `disney.js`
 	* feel free to add more helper functions / utilities
-2. if useful, bring functions from `hoffy.js` 
-3. use `process.argv[2]` to retrieve the path specified when `report.js` is run on the command line:
+	* if classes or function from previous parts (`drawing.js` and `hoffy.js`) are helpful, you can feel free to use those as well, but it is definitely not required
+2. use `process.argv[2]` to retrieve the path specified when `report.js` is run on the command line:
 	* `node src/report.js /path/to/file`
 	* `process.argv[2]` will contain `/path/to/file`
+3. [download the zipped dataset](disney_movies.json.zip), uncompress, and place in a folder outside of your project
 4. find a way to read the contents of this file, parse it, and transform the data into data that can be used for your `disney.js` functions
 	* `JSON.parse` can be used to turn a string into a JavaScript object
-
 5. print out a report that includes:
 
 * The best movie by IMDB rating, title only
