@@ -80,6 +80,8 @@ vars:
   lms_url: https://brightspace.nyu.edu/d2l/home/27599 
   course_site_alt: http://cs.nyu.edu/~jversoza
 
+  homework_support_url: "https://forms.gle/fPTZcnvxYGrzSr9W9"
+
   # office hours
   office_hours: "8:30 - 9:30am Tue and Thu (before class)"
   office_hours_room: https://nyu.zoom.us/j/93325443896?pwd=MjBiblRwcWhJRG1WaGRkWHVYNEM4Zz09
