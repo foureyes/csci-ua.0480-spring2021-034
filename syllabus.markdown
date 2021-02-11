@@ -50,6 +50,10 @@ __\*__ Basic knowledge of __HTML__ and __CSS__ and familiarity with using __comm
 
 </div><!-- end row -->
 
+{% comment %}
+\**
+{% endcomment %}
+
 <div class="row">
 
   <div class="col-md-6">
@@ -102,7 +106,7 @@ Expect about __one quiz__ every __week__, which can be in one of the following f
 <div class="panel-body" markdown="block">
 Expect about __one homework__ every __week__, with one final project assigned mid-semester:
 
-For [homework support (late submissions based on policies below, grading challenges, etc.), __submit this form__]({page.vars.homework_support_url})
+For homework support (late submissions based on policies below, grading challenges, etc.): [__submit this form__]({{ page.vars.homework_support_url }})
 
 * Homework must be turned in __electronically via git__ 
 * Late homework will not be accepted (repositories are closed when homework is due)
