@@ -743,24 +743,16 @@ Example usage:
 node src/report.js /absolute/path/to/your/repo/data/0021800952.json
 ```
 
-```
 The resulting output might look like this:
 
-* The best movie by IMDB rating is: 'Pirates of the Caribbean: Dead Men Tell No Tales'.
+```
+* The best movie by IMDB rating is: 'Movie Title'.
 
-* Movies starring Johnny Depp: ['Pirates of the Caribbean: Dead Men Tell No Tales', 'Pirates of the Caribbean: At World's End']
+* Top 5 Critically acclaimed movies: [{"title":"Movie 1'","metascore":92}, {"title":"Movie 2'","metascore":95}]`
 
-* Top 5 Critically acclaimed movies: [{"title":"Pirates of the Caribbean: Dead Men Tell No Tales'","metascore":92}, {"title":"Pirates of the Caribbean: At World's End'","metascore":95}]`
+* Movies starring Johnny Depp: ['Movie Title 1', 'Movie Title 2', 'etc.']
 
-* Movies with rating greater than 9: `[{"title":"Pirates of the Caribbean: Dead Men Tell No Tales'","imdb_rating":92}, {"title":"Pirates of the Caribbean: At World's End'","imdb_rating":95}]`
-
-* Percentage of movies with IMDB more than 9: 10%
-
-* Most popular movies: ['Pirates of the Caribbean: Dead Men Tell No Tales', 'Pirates of the Caribbean: At World's End']
-
-* Average IMDB Rating of all movies: 7
-
-* Movie with longest running time: 'Pirates of the Caribbean: Dead Men Tell No Tales'.
+* Average running time: Number
 ```
 
 The original `JSON` file will have to be parsed and manipulated so that it's in a data structure that you functions can work with.
