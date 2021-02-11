@@ -563,12 +563,22 @@ Create these four classes in `src/drawing.js` __and export them__:
 
 1. `GenericElement(name)` - represents a generic SVG element
 	* `name` - the name of the element (this name is freeform, so, for example: `svg`, `rect`, or even an element that we haven't covered... `circle`)
-2. `RootElement` - represents an `svg` element
+2. `RootElement()` - represents an `svg` element
 	* should have the attribute: `xmlns="http://www.w3.org/2000/svg"` ...so that it is treated as a valid SVG (XML)
-3. `RectangleElement` - represents a `rect` element
-4. `TextElement` - represents a `text` element
+3. `RectangleElement(x, y, width, height, fill)` - represents a `rect` element
+	* `x` - the value for the `x` attribute of this `rect` element
+	* `y` - the value for the `y` attribute of this `rect` element
+	* `width` - the value for the `width` attribute of this `rect` element
+	* `height` - the value for the `height` attribute of this `rect` element
+	* `fill` - the value for the `fill` attribute of this `rect` element as a color string, such as `"red"`, `"green"`, etc.
+4. `TextElement(x, y, fontSize, fill, content)` - represents a `text` element
+	* `x` - the value for the `x` attribute of this `text` element 
+	* `y` - the value for the `y` attribute of this `text` element
+	* `fontSize` - the value for the `font-size` attribute of this `text` element
+	* `fill` - the value for the `fill` attribute of this `text` element as a color string, such as `"red"`, `"green"`, etc.
+	* `content` - content between the `text` tags; the _actual_ text
 
-Somewhere in these classes, you should define the following methods:
+Somewhere in these classes, you should define the following methods (you're free to implement these methods in whatever classes make sense, as long as the example code below works):
 
 * `addAttr(name, value)` - adds an attribute named, `name` to the element called on, with value, `value`
 	* `name` - the name of the attribute to be added
