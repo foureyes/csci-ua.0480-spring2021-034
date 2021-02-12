@@ -737,7 +737,7 @@ For example, a single movie object in the  `data` array will have the following 
     "imdb_rating": "6.9",
     "imdb_votes": "156,720",
     "imdb_id": "tt1661199",
-    "metascore": 69,
+    "metascore": 6.9,
     "rotten_tomatoes": "84%"
   }
 ```
@@ -761,7 +761,7 @@ The resulting output might look like this:
 ```
 * The best movie by IMDB rating is: 'Movie Title'.
 
-* Top 5 Critically acclaimed movies: [{"title":"Movie 1'","metascore":92}, {"title":"Movie 2'","metascore":95}]`
+* Top 5 Critically acclaimed movies: [{"title":"Movie 1'","metascore":8.1}, {"title":"Movie 2'","metascore":8.2}]`
 
 * Movies starring Johnny Depp: ['Movie Title 1', 'Movie Title 2', 'etc.']
 
@@ -793,7 +793,7 @@ Again, each function will have a parameter, `data`, that's in the format of an `
 * **Parameters:**
 *data* - an `Array` of objects, with each object representing a movie.
 * **Returns:** an `Array` containing the movie `title` and the `metascore`.
-* **Description:** This function returns an `Array` of objects containing the movie `title` and the `metascore`.  Note: return movies with `rating` greater than 90.
+* **Description:** This function returns an `Array` of objects containing the movie `title` and the `metascore`.  Note: return movies with `rating` greater than 8.
 * For example,
 	```[
 {"title":"Pirates of the Caribbean: Dead Men Tell No Tales'","metascore":92}, {"title":"Pirates of the Caribbean: At World's End'","metascore":95}
