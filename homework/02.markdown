@@ -838,7 +838,7 @@ Output should look _something_ like this:
 ```
 * The best movie by IMDB rating is: 'Movie Title'.
 
-* Top 5 Critically acclaimed movies: [{"title":"Movie 1'","metascore":92}, {"title":"Movie 2'","metascore":95}]`
+* Top 5 Critically acclaimed movies: [{"title":"Movie 1'","metascore":8.2}, {"title":"Movie 2'","metascore":8.0}]`
 
 * Movies starring Johnny Depp: ['Movie Title 1', 'Movie Title 2', 'etc.']
 
