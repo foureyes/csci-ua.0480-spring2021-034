@@ -169,13 +169,12 @@ MDN Articles on HTTP
 Net Module Review
  
  * [Create Server](https://nodejs.org/api/net.html#net_net_createserver_options_connectionlistener)
-","<!--__Due 2/23, Tuesday morning, by 9:30am,__ 
+", "__Due 2/23, Tuesday morning, by 9:30am,__ 
  
  * Quiz #6 (on NYU Brightspace)
 
- -->
 ",
-y,,6,Feb-16,Tue,"* A Simple Web Server Continued / Our ""Framework""
+,,6,Feb-16,Tue,"* A Simple Web Server Continued / Our ""Framework""
 * Routing
 * Node HTTP Module","* [HTTP Summary](slides/07/http-summary.html)
 * [Sockets Review](slides/07/sockets-review.html)
@@ -211,12 +210,15 @@ Example Set 1
 * [Project Setup](slides/08/setup.html)
 -->",See previous classes on HTTP and network programming,"
 
+<!--
 __Due 2/23, Tuesday evening, by 11pm:__
  
  * [Homework #03](homework/03.html)
+-->
+
 ",
-y,holiday,,Feb-18,Thu,Legislative Day,,,,
-y,,7,Feb-23,Tue,"* Server-side Web Framework
+,holiday,,Feb-18,Thu,Legislative Day,,,,
+,,7,Feb-23,Tue,"* Server-side Web Framework
 * Project Layout","Administrative
 
 * [NYU Votes](https://www.nyu.edu/students/student-information-and-resources/nyu-votes.html)
@@ -242,9 +244,14 @@ Express Documentation
 * [Express Hello World](https://expressjs.com/en/starter/hello-world.html)
 * [Express Basic Routing](https://expressjs.com/en/starter/basic-routing.html)
 * [Express Routing](https://expressjs.com/en/guide/routing.html) (up to, but not including route paths)
-* [Express Static Files](https://expressjs.com/en/starter/static-files.html)","__Due 3/2, Tuesday morning, by 9:30am,__ 
+* [Express Static Files](https://expressjs.com/en/starter/static-files.html)","
+
+<!--
+__Due 3/2, Tuesday morning, by 9:30am,__ 
  
  * Quiz #7 (on NYU Brightspace)
+-->
+
 ",
 y,,8,Feb-25,Thu,"* Server-side Web Framework Continued
 * Templating","* (See previous slides on Express)
