@@ -169,7 +169,7 @@ MDN Articles on HTTP
 Net Module Review
  
  * [Create Server](https://nodejs.org/api/net.html#net_net_createserver_options_connectionlistener)
-", "__Due 2/23, Tuesday morning, by 9:30am,__ 
+","__Due 2/23, Tuesday morning, by 9:30am,__ 
  
  * Quiz #6 (on NYU Brightspace)
 
@@ -190,7 +190,7 @@ Coding Demo
 * public/[harry.html](examples/class07b/public/harry.html)
 * public/[mouse.html](examples/class07b/public/mouse.html)
  
- <!--
+<!--
 Coding Demo fa19
  * routing
 * sending a text file
