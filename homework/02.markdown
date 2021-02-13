@@ -801,10 +801,10 @@ Again, each function will have a parameter, `data`, that's in the format of an `
 * **Parameters:**
 *data* - an `Array` of objects, with each object representing a movie.
 * **Returns:** an `Array` containing the movie `title` and the `metascore`.
-* **Description:** This function returns an `Array` of objects containing the movie `title` and the `metascore`.  Note: return movies with `rating` greater than 8.
+* **Description:** This function returns an `Array` of objects containing the movie `title` and the `metascore`.  Note: return movies with `metascore` greater than 8.
 * For example,
 	```[
-{"title":"Pirates of the Caribbean: Dead Men Tell No Tales'","metascore":92}, {"title":"Pirates of the Caribbean: At World's End'","metascore":95}
+{"title":"Title 1","metascore":8.2}, {"title":"Title 2","metascore":8.1}
 ]```
 4. `getAverageLength(data)`
 * **Parameters:**
