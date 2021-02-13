@@ -606,6 +606,7 @@ Your implementation must follow the requirements listed below:
 
 ```
 const root = new RootElement();
+root.addAttrs({width: 800, height: 170});
 
 const c = new GenericElement('circle');
 c.addAttr('r', 75);
@@ -615,7 +616,6 @@ c.addAttrs({'cx': 200, 'cy': 80});
 root.addChild(c);
 
 const r = new RectangleElement(0, 0, 200, 100, 'blue');
-r.addAttrs({width: 800, height: 170});
 root.addChild(r);
 
 const t = new TextElement(50, 70, 70, 'red', 'wat is a prototype? 😬');
