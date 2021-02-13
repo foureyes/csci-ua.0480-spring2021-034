@@ -103,8 +103,9 @@ npm install --save-dev eslint-plugin-mocha
 		* `npm install --save-dev sinon`
 		* `npm install --save-dev mocha-sinon`
 2. implement functions below in __hoffy.js__
+	* ⚠️  due to the structure of the tests for `compose`, `compose` must be present (even if just a function with an empty body) in the `hoffy.js` export
 3. make sure you export your functions as you implement them so that...
-4. you can run tests as you develop these functions (again, the tests are included in the repository):
+4. you can run tests as you develop these functions (again, the tests are included in the repository, and `compose` must be xported as mention in an above step):
     `mocha tests/hoffy-test.js`
 5. also remember to run eslint (there's a `.eslintrc` file included in the repository):
     `node_modules/.bin/eslint src/*`
@@ -149,7 +150,7 @@ __Parameters:__
 * `arr` - an `Array`
 * `num` - a value that we are looking for in the array 
 * `compareFunc` - a function used to determine if an element in `arr` is the one that we're looking for
-	* has two parameters, `value1` and `value2`
+	* has two parameters, `value1` and `value2` representing ele from `arr` and `num` 
 	* returns a boolean: `true` if both values should be treated as equal or `false` otherwise
 
 __Returns:__
