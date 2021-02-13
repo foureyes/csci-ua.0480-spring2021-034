@@ -788,7 +788,7 @@ Again, each function will have a parameter, `data`, that's in the format of an `
 * **Returns:** a movie object representing the best movie
 * **Description:** This function returns an _entire_ movie object that has the highest value for the `imdb_rating` property. If there's a tie, return an Array of movie objects 
 
-2. `getMoviesByActor(data,actor_name)` *
+2. `getMoviesByActor(data,actor_name)`
 * **Parameters:**
 *data* - an `Array` of objects, with each object representing a movie.
 *actor_name* - a `String` with the name of an actor.
