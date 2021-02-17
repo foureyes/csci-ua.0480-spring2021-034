@@ -136,7 +136,7 @@ Before starting, __make sure to review the course materials on the net module an
 
 1. 👀__you can use the code from class samples to start your project__ 👀:
     * see the [{{ page.sampleCodeSource }}]({{ page.sampleCodeURL }})
-    * additionally, check out this example of reading a file and serving the content of the file: [webServer.js](../examples/class07b/webServer.js))
+    * additionally, check out this example of reading a file and serving the content of the file: [webServer.js](../examples/class07b/webServer.js)
 2. check out the [slides on the `net` module](../slides/06/sockets.html#/2), paying close attention to the [the last slide](../slides/06/sockets.html#/10).
 3. lastly, make sure that you can write back a valid http response by reviewing::
     * [the slides on http](../slides/05/web.html#/16)
