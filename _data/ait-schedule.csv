@@ -239,6 +239,16 @@ Express Documentation
 * [Express Basic Routing](https://expressjs.com/en/starter/basic-routing.html)
 * [Express Routing](https://expressjs.com/en/guide/routing.html) (up to, but not including route paths)
 * [Express Static Files](https://expressjs.com/en/starter/static-files.html)","
+__In Class Quiz 01 Today__
+
+* on brightspace
+* all fill in blank or multiple choice
+* 5 “easy”, 2 or 3 “difficult”
+* 15 minutes long
+* 1 attempt
+* all material through http but no net module
+* ""open book"" (slides, your homework, online docs, etc. are ok)
+* if you did the first two homeworks and started the third, you will not need to prep
 
 <!--
 __Due 3/2, Tuesday morning, by 9:30am,__ 
@@ -262,16 +272,7 @@ Express Documentation
 
 [{{ site.book_js_6 }}]({{ site.book_js_6_link }})
 
-* [Chapter 7. Important External Modules - Express - Middleware](https://www.oreilly.com/library/view/node-up-and/9781449332235/ch07.html#id3221848) ","__In Class Quiz 01 Today__
-
-* on brightspace
-* all fill in blank or multiple choice
-* 5 “easy”, 2 or 3 “difficult”
-* 15 minutes long
-* 1 attempt
-* all material through http but no net module
-* ""open book"" (slides, your homework, online docs, etc. are ok)
-* if you did the first two homeworks and started the third, you will not need to prep",
+* [Chapter 7. Important External Modules - Express - Middleware](https://www.oreilly.com/library/view/node-up-and/9781449332235/ch07.html#id3221848) ",,
 y,,9,Mar-02,Tue,* Forms,"* Review Middleware
 * [Express Request and Response](slides/09/request-response.html) (start [With Web Server/Web App](slides/09/request-response.html#/7))
 * GET and POST / Request and Response 
