@@ -13,7 +13,7 @@ h1.warning {
 	<div class="panel-heading">Homework #4</div>
 	<div class="panel-body" markdown="block">
 
-# bears.ai Due 10/17 at 11pm
+# bears.ai Due 10/14 at 11pm
 
 
 ## Overview
@@ -329,7 +329,7 @@ What's missing is the ability to add our own custom bears and have it show up in
 * create a new handlebars template and add a call to <code>render</code> inside of the new route handler that renders the new template
     * add a form to the template with 3 <code>inputs</code> and a submit button - this is how we'll add a bear
     * All three are text fields which accepts the Image URL, Label and the Weight
-    * __Extra credit__: two of these are text fields and one is a file type which will be used to upload images!
+    * __Extra credit__ (note if you implement extra credit, you should state what you implemented in a `README.md` file: two of these are text fields and one is a file type which will be used to upload images!
 * __the form's method should be a <code>POST</code>__
 * the action of the form should be <code>""</code> or <code>/add</code> since we make the request to the same page (/add)
 * now that we have a new form making a <code>POST</code> request to a new URL, add a new route handler in __app.js__ to accept <code>POST</code> requests on the URL of <code>/add</code>
@@ -370,17 +370,29 @@ Path: /
 ```
 
 If you check out the network tab in the browser, you should see a `POST` (as a result of the submit button push) and another `GET` (as a result of a redirect)...
-</div>
 
 ### Deliverables
 
 Complete the implementations in `app.js` and `bear.js` which has the display, search and add functionalities.
 
-For extra credit:
-* modify the add functionality such that instead of an Image URL, you accept a file upload using multer (details mentioned above). [+5 points]
-* make the file upload more robust by dealing with some potential issues such as using hash lib to deal with file name collision for image names, use file-type module to verify file type, etc [+3 points]
-* save the uploaded data in a JSON file to the `labeled_bears` directory on upload.  [+1 point]
+For __extra credit__:
 
-You need to mention all the things you did for extra credit in a README.md file which should be pushed along with the rest of the repository. If we can't see what you've done for extra credit, we can't give you the points.
+1. modify the add functionality such that instead of an Image URL, you accept a file upload using multer (details mentioned above). [+5 points]
+2. make the file upload more robust by dealing with some potential issues such as using hash lib to deal with file name collision for image names, use file-type module to verify file type, etc [+3 points]
+3. save the uploaded data in a JSON file to the `labeled_bears` directory on upload.  [+1 point]
+
+⚠️ __You must document all of the features you implemented extra credit in a `README.md`__ file which should be pushed along with the rest of the repository. If we can't see what you've done for extra credit, we can't give you the points.
+
+
+In `README`, you can use this as an example template:
+```
+# Extra Credit
+
+I implemented:
+
+* (describe extra credit feature implemented)
+* (describe extra credit feature implemented)
+```
+</div>
 
 </div>

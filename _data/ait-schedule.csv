@@ -272,8 +272,17 @@ Express Documentation
 
 [{{ site.book_js_6 }}]({{ site.book_js_6_link }})
 
-* [Chapter 7. Important External Modules - Express - Middleware](https://www.oreilly.com/library/view/node-up-and/9781449332235/ch07.html#id3221848) ",,
-y,,9,Mar-02,Tue,* Forms,"* Review Middleware
+* [Chapter 7. Important External Modules - Express - Middleware](https://www.oreilly.com/library/view/node-up-and/9781449332235/ch07.html#id3221848) ","
+Due Tuesday __3/2, by 9:30AM before class__ 
+ 
+ * Quiz #7
+
+
+__Due Thursday 3/4 at 11pm__
+ 
+* [Homework #4](homework/04.html)
+",
+,,9,Mar-02,Tue,* Forms,"* Review Middleware
 * [Express Request and Response](slides/09/request-response.html) (start [With Web Server/Web App](slides/09/request-response.html#/7))
 * GET and POST / Request and Response 
 * [Form Handling](slides/10/forms.html)
@@ -294,7 +303,7 @@ __Due Monday 10/12 at 11pm__
  
 * [Homework #4](homework/04.html)
 -->",
-y,,10,Mar-04,Thu,"* Cookies
+,,10,Mar-04,Thu,"* Cookies
 * Sessions 
 * NoSQL Database
 ","* Review form handling, middleware
@@ -321,9 +330,10 @@ MongoDB Documentation
 * [MongoDB Query Documents](https://docs.mongodb.com/manual/tutorial/query-documents/)
 * [MongoDB Create, Read, Update, Delete](https://docs.mongodb.com/manual/crud/)
 * [MongoDB Insert](https://docs.mongodb.com/manual/tutorial/insert-documents/)","
-__Due Monday 10/14 at 11pm__
+<!--__Due Monday 10/14 at 11pm__
  
-* [Homework #4](homework/04.html)",
+* [Homework #4](homework/04.html)
+-->",
 y,,11,Mar-09,Tue,* NoSQL Database Continued,"* [More Mongoose](slides/12/mongoose.html)
 * NoSQL Injection Example
 
