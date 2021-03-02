@@ -12,8 +12,7 @@ h1.warning {
 	<div class="panel-heading">Homework #4</div>
 	<div class="panel-body" markdown="block">
 
-# URL Shortener
-
+# URL Shortener Due 3/4 at 11pm
 
 ## Overview
 
@@ -185,7 +184,7 @@ The home page consists of 3 sections. The first section displays the Top 5 Trend
 
 Here's an example of what the page could look like (you don't have to use the same exact styles, but add enough styles so that you can see that the style sheet is correctly served and applied to the html):
 
-![styled homepage](trending.png)
+<img src="trending.png" alt="styled page" width="100%">
 
 If you add stuff to your css file but no styles change, check the console for errors and the html in <code> layout.hbs </code> to make sure the path to the css file is correct.
 
@@ -223,6 +222,7 @@ In this homework, you'll work with HTML and templating to build your front-end. 
 In <code>layout.hbs</code>
 
 * Create a title tag with text <code>URL Shortener</code> or display a logo image from the `/img` folder.
+	* UPDATE 3/2: although a `title` tag and an `img` are different elements and displayed differently (`title` in the tab, and image or header in the page), either will be fine... basically, just make sure there are shared elements through `layout.hbs`
 * Create appropriate tags inside <code>head</code>
 * Create <code>body</code> tag
 * Link your <code>style.css</code> stylesheet
@@ -264,6 +264,9 @@ The format of the `urldata.json`  file in the `data` folder is as follows:
 The general requirements for this part are:
 
 * read the data from the `urldata.json`  file
+	* UPDATE 3/2:
+		* ⚠️ `urldata.json` contains an _invisible_ [BOM](https://en.wikipedia.org/wiki/Byte_order_mark) character at the beginning of the file that prevents JSON parsing; please copy over to new file and overwrite existing (or use vim's `:set nobomb` and save... or open and resave with your editor of choice)
+		* prefer `readFile` to do this despite using sync making more sense (we want to practice callback based management of async io)
 * save the array of `urlShortener` objects in a global variable. We will refer to this global variable as `urlData` in the rest of this assignment.
 * once everything is read, print out the global variable `urlData`. 
 
@@ -288,7 +291,7 @@ Your output should look like the following:
 
 ## Part 5 - URL Shortener Class
 
-In `urlShortener.js`, create a class that represents a URL Shortener. The main logic to shorten the URL should be included in this class. Your class should behave as follows:
+In `urlShortener.js`, create a class that represents a URL Shortener. The main logic to shorten the URL should be included in this class. Your class should behave as follows: (UPDATE 3/2: ⚠️ you can create your own class design, so you can treat this as recommended behavior)
 
 ```
 // the constructor accepts the original long URL
@@ -308,10 +311,12 @@ console.log(urlShortenerObject.clickCount);  // 450
 ⚠️ Export the `URLShortener` class you make and bring it into `app.js` so that your web app can create `URLShortener` instances!
 
 Following class is an example to implement the `URLShortener`. You are not required to follow this class definition.
+(UPDATE 3/2: ⚠️  again, you can create your own class design, so you can treat this as recommended behavior... additionally, minor changes to signatures)
+
 
 ```javascript=
 class URLShortener {
-    constructor () {
+    constructor (originalURL) {
         this.originalURL = originalURL;
         this.clickCount = 0;
     }
