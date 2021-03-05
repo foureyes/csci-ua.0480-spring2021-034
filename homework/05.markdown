@@ -101,7 +101,7 @@ See the animation below for the site works (note that the 2nd browser is in inco
 
 <br>
 
-![demo](/csci-ua.0480-fall2017-007/resources/img/hw05-cookied-00-demo.gif)
+![demo](../resources/img/hw05-cookied-00-demo.gif)
 
 
 
@@ -162,7 +162,7 @@ See the animation below for the site works (note that the 2nd browser is in inco
         * export the function from the module so that it's availabe when `require`'d
 6. when you're done writing your middleware functions, you can test that they all work by running the application (change into the `src/cookied` directory and run `app.js`)
 7. when you first go to `localhost:3000`, clear your cookies <br>
-    ![clear cookies](/csci-ua.0480-fall2017-007/resources/img/hw05-cookied-01-clear.gif)
+    ![clear cookies](../resources/img/hw05-cookied-01-clear.gif)
 8. refresh your page....
 9. check that your application is generating session ids
     * when you refresh, you should see your server logging out `session generated`
@@ -170,21 +170,21 @@ See the animation below for the site works (note that the 2nd browser is in inco
     * you should also see a `sessionId` in your browser's cookies for `localhost:3000`
     * `/` should show your current session id as well (again for debugging purposes; the session id shouldn't be so readily viewable!)
     * see below for an example: <br>
-        ![home generated](/csci-ua.0480-fall2017-007/resources/img/hw05-cookied-02-home-generate.gif)
+        ![home generated](../resources/img/hw05-cookied-02-home-generate.gif)
 10. note, however, that once a session is generated... 
     * if you go to the other page ...
     * or refresh again ...
     * your application should log out `session already exists`
     * see below for an example: <br>
-        ![found a session](/csci-ua.0480-fall2017-007/resources/img/hw05-cookied-04-found.gif)
+        ![found a session](../resources/img/hw05-cookied-04-found.gif)
 11. finally, if you set a color through the `/preferences` page ...
     * that color should be persistent for both pages for that session 
     * which means that opening another browser will have a different color
     * `/` will now show that color is part of the session store
     * see example below: <br>
-        ![color](/csci-ua.0480-fall2017-007/resources/img/hw05-cookied-05-color.gif)
+        ![color](../resources/img/hw05-cookied-05-color.gif)
 12. note that incognito mode will also give you a different session: <br>
-    ![incognito](/csci-ua.0480-fall2017-007/resources/img/hw05-cookied-06-incognito.gif)
+    ![incognito](../resources/img/hw05-cookied-06-incognito.gif)
 
 
 ## Part 2 - Setup for Movies App (Storing Data in a Database)
@@ -217,7 +217,7 @@ See the animation below for the site works (note that the 2nd browser is in inco
 			* create the directory: <code>sudo mkdir -p /data/db</code>
 			* change the owner to your user (replace yourusername with your _actual_ username for you system): <code>sudo chown -R yourusername:staff /data/</code>
 		* ensure that it is up and running by connecting to it using a commandline client... so in a different terminal tab/window, type in <code>mongo</code>:
-{% endomment %}
+{% endcomment %}
 
 <pre><code data-trim contenteditable>Stroszek (1977) by Werner Herzog
 Fitzcarraldo (1982) by Werner Herzog
@@ -388,14 +388,14 @@ You already know how to do most of this, but here's a rough sketch of some of th
 By the end of parts 2-4:
 
 <div markdown="block" class="img">
-![let's watch movies](/csci-ua.0480-fall2017-007/resources/img/movies.gif)
+![let's watch movies](../resources/img/movies.gif)
 </div>
 
 <a name="examples5"></a>
 Part 5:
 
 <div markdown="block" class="img">
-![let's watch movies](/csci-ua.0480-fall2017-007/resources/img/movies-add.gif)
+![let's watch movies](../resources/img/movies-add.gif)
 </div>
 
 </div>
