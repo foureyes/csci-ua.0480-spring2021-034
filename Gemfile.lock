@@ -59,9 +59,10 @@ GEM
 
 PLATFORMS
   universal-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   jekyll (~> 4.2)
 
 BUNDLED WITH
-   2.2.8
+   2.2.13
