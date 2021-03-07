@@ -254,7 +254,7 @@ Create a file called <code>db.js</code> within `src/movies`. <code>db.js</code> 
 
 In <code>db.js</code>, add the require for the <code>mongoose</code> module:
 
-<pre><code data-trim contenteditable>var mongoose = require('mongoose') </code></pre>
+<pre><code data-trim contenteditable>const mongoose = require('mongoose') </code></pre>
 
 Leave a placeholder for your schema...
 
@@ -308,8 +308,8 @@ There's a bunch of setup that we need in order to integrate our databases access
 * at the top of <code>app.js</code>, after you've created your application object: <code>require('./db');</code>
 * after that, retrieve the model that you registered with mongoose:
 
-<pre><code data-trim contenteditable>var mongoose = require('mongoose');
-var Movie = mongoose.model('Movie');
+<pre><code data-trim contenteditable>const mongoose = require('mongoose');
+const Movie = mongoose.model('Movie');
 </code></pre>
 
 You can now use <code>Movie.find</code> to retrieve all of the movies in your database!
