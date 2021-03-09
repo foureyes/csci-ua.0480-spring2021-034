@@ -334,7 +334,7 @@ __Due Thursday 3/11 at 11pm__
  
 * [Homework #5](homework/05.html)
 ",
-y,,11,Mar-09,Tue,* NoSQL Database Continued,"* [More Mongoose](slides/12/mongoose.html)
+,,11,Mar-09,Tue,* NoSQL Database Continued,"* [More Mongoose](slides/12/mongoose.html)
 * NoSQL Injection Example
 
 __Midterm Practice__
@@ -377,7 +377,7 @@ __Due Monday 10/19 at 11pm__
  * hw 6 – saving to db (short!)
  * [Homework #05](homework/05.html) 
 -->",
-y,,12,Mar-11,Thu,"* Object Document Mapper Continued
+,,12,Mar-11,Thu,"* Object Document Mapper Continued
 * URL Parameters
 * Validation","
 * MongoDB, Mongoose from Previous Classes
