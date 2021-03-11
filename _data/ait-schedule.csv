@@ -334,7 +334,7 @@ __Due Thursday 3/11 at 11pm__
  
 * [Homework #5](homework/05.html)
 ",
-,,11,Mar-09,Tue,* NoSQL Database Continued,"* [More Mongoose](slides/12/mongoose.html)
+,,11,Mar-09,Tue,* NoSQL Database Continued,"* [More Mongoose](slides/14/mongoose.html)
 * NoSQL Injection Example
 
 __Midterm Practice__
@@ -355,7 +355,8 @@ __Midterm Practice__
 
 OWASP
 
-* [OWASP NoSQL Injection](https://www.owasp.org/index.php/Testing_for_NoSQL_injection)
+* [OWASP NoSQL Injection pdf](https://owasp.org/www-pdf-archive/GOD16-NOSQL.pdf)
+* [OWASP Testing for NoSQL Injection](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05.6-Testing_for_NoSQL_Injection)
 
 MongoDB Documentation 
 
