@@ -32,7 +32,7 @@ pre {
 	<div class="panel-heading">Final Project</div>
 	<div class="panel-body" markdown="block">
 
-# Final Project, __Final Milestone Due__ 11/30 at 11pm
+# Final Project, __Final Milestone Due__ 4/29 at 11pm
 
 Earlier milestones due every one or two weeks leading up to final milestone due date.
 
@@ -137,20 +137,31 @@ Choose at least __8 points__ worth of these following topics (research and imple
     * Must link to source code relevant to implementation and evidence of working implementation on site
 * (1 - 6 points) Use a __client-side__ JavaScript library or module that we did not cover in class (not including any from other requirements)
     * assign a point value to the library or module that you're using based on amount of effort and/or code required for integration
-    * for example, angular 2 or d3 might be 6 points, while google maps might be 1 point
+    * for example, angular or d3 might be 6 points, while google maps might be 1 point
     * Must link to source code relevant to implementation and evidence of working implementation on site
 * (1 - 6 points) Per external API used 
     * assign a point value to the library or module that you're using based on amount of effort and/or code required for integration
-    * for example, angular 2 might be 6 points, while google maps might be 1 point
+    * for example, angular might be 6 points, while google maps might be 1 point
     * Must link to source code relevant to implementation and API documentation
 
 <a name="milestone1"></a>
 
 ## Milestones
 
+Notes:
+
+* Deploy can be done on platform of your choice (which is recommended if you would like your project to continue running beyond the end of this semester) or on courant's servers
+	1. if deploying on courant's servers, and if you're dividing your app into an API and frontend, you can increment port 
+	2. if deploying on courant's servers and https (such as working with an external API that required https) is needed:
+		* (it should _always_ be required, but for proof of "deployment" for this project, it can be served on non https)
+		* please send "direct" message on course forum requesting https port
+		* app should listen on one port, but be connected to (via https) on port - 10000 (for example, listen on port 30001, but connect on port 20001)
+* Overall project _idea_ cannot be changed after Milestone 2
+* However,"requirements and features may change (for example, removed) up until final deployment (as long as project still fits technical requirements)
+
 <a name="proposal"></a>
 
-###  __Due 11/2 at 11PM__ - Milestone 1 - Requirements / Specifications, Draft Data Model, Skeleton Application (20 points)
+###  __Due 4/1 at 11PM__ - Milestone 1 - Requirements / Specifications, Draft Data Model, Skeleton Application (20 points)
 
 [Check out sample documentation](https://github.com/nyu-csci-ua-0480-008-spring-2017/final-project-example)
 
@@ -197,8 +208,9 @@ Choose at least __8 points__ worth of these following topics (research and imple
 <br>
 <br>
 
-### Due Date __11/9 at 11pm__ - Milestone 2 - Completed Schema, Initial Deployment, "Proof of Concept" First Form and Refinement or Start of Research Topics (20 points)
+### Due Date __4/13 at 11pm__ - Milestone 2 - Completed Schema, Initial Deployment, "Proof of Concept" First Form and Refinement or Start of Research Topics (20 points)
 
+{% comment %}
 1. your server and port name can be accessed through a link in a piazza post for milestone #2
 2. attempt to deploy your code to Courant's servers by following [instructions](homework/deploy.html)
 3. <span class="warning">use [this form to submit your deployed site](https://forms.gle/SBBBQGFs13SGNiwT8)</span>
@@ -211,9 +223,7 @@ Choose at least __8 points__ worth of these following topics (research and imple
     * show _some_ progress, regardless of how small it is, on at least 1 of your research topics,  __it doesn't have to be fully working... stub code from documentation or pseudocode is adequate__
         * consequently, a link to the github repository / line no that shows any proof of work is sufficient
         * or, if it's something that's already visible, a link to the a page on your site that's deployed to the server
-      
 
-{% comment %}
 <a name="milestone03">
 
 <br>
@@ -223,10 +233,11 @@ Choose at least __8 points__ worth of these following topics (research and imple
 {% endcomment %}
 
 
-### Due Date  __11/16 at 11pm__ - Milestone 3 - Two Working Forms, and Significant Progress on Research Topics (20 points)
+### Due Date  __4/22 at 11pm__ - Milestone 3 - Two Working Forms, and Significant Progress on Research Topics (20 points)
 
 
 {% comment %}
+OLD
 1. deploy your application
 	* if deploying on courant, your server and port name can be accessed through a link in a piazza post `"Final Project Deployment Ports"`
 	* follow [these instructions](homework/deploy.html) to get your project running
@@ -244,6 +255,9 @@ Choose at least __8 points__ worth of these following topics (research and imple
 
 
 
+      
+
+{% comment %}
 1. make at least 3 additional commits to add:
     * your 2nd form / ajax interaction
     * make more progress on your research topics
@@ -261,10 +275,6 @@ Choose at least __8 points__ worth of these following topics (research and imple
         * and append the following to the url: `compare/master@%7B2020-11-09%7D...master`
         * for example: `https://github.com/nyu-csci-ua-0480-034-fall-2019/NETID-final-project/compare/master@%7B2020-11-09%7D...master`
 
-
-
-
-{% comment %}
 <a id="final_submit" name="final_submit">
 
 <br>
@@ -273,9 +283,10 @@ Choose at least __8 points__ worth of these following topics (research and imple
 <br>
 {% endcomment %}
 
-### Due Date  __11/30 at 11PM__ - Final Project Complete and Code is fully  _Deployed_ (40 points)
+### Due Date  __4/29 at 11PM__ - Final Project Complete and Code is fully  _Deployed_ (40 points)
 
 
+{% comment %}
 * __all commits must be in by Nov 30th__ 
 * __project must be deployed__ on cims servers (or other platform, such as Heroku, gomix, zeit, etc.)     
 	* if your application needs to be restarted while being graded; I will contact you     
@@ -290,6 +301,7 @@ Choose at least __8 points__ worth of these following topics (research and imple
 <br>
 <br>
 <br>
+{% endcomment %}
 
 
 

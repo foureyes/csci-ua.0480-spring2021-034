@@ -421,15 +421,19 @@ Using Passport JS
 * [From mherman.org](http://mherman.org/blog/2015/01/31/local-authentication-with-passport-and-express-4/#.VjGSOq6rSRs)
 * [From scotch.io](http://scotch.io/tutorials/javascript/easy-node-authentication-setup-and-local)","
 
-<!--
+
 
 
 __Due Tuesday 3/30 at 11pm__
+
+* Quiz 8 on authentication and Quiz 9 on HTML and CSS (to be posted on brightspace)
+
+__Due Thursday 4/1 at 11pm__
  
-* [Homework #5](homework/05.html)
+* [Homework #6](homework/06.html)
 * [Final Project Milestone #01](final-project.html#milestone1)
 
-
+<!--
 
 __Due Monday 10/28 at 11pm:__
  
@@ -437,7 +441,7 @@ __Due Monday 10/28 at 11pm:__
 
 * Quiz 4 and 5: Auth and Sessions/Cookies, HTML and CSS (to be posted)
 -->",
-y,,16,Mar-25,Thu,"* HTML Primer
+,,16,Mar-25,Thu,"* HTML Primer
 * Accessibility on the Web
 * JavaScript and the Browser
 * The Document Object Model
@@ -461,14 +465,14 @@ HTML Tutorials
 * [MDN - Accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
 * [HTML and CSS from shayhowe.com](http://learn.shayhowe.com/html-css/getting-to-know-html/)
 ",,
-y,,17,Mar-30,Tue,* CSS,"* [JavaScript Timers](slides/19/timers.html)
+,,17,Mar-30,Tue,* CSS,"* [JavaScript Timers](slides/19/timers.html)
 * [CSS](slides/19/css.html)
 * (Optional / Briefly) Flexbox
 * (Optional / Briefly) Grids
 ","
 
 * [HTML and CSS from shayhowe.com](http://learn.shayhowe.com/html-css/getting-to-know-html/)
-* [MDN - Introduction to CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS#Guides)","Due Monday MORNING __11/9, by 11am before class__ 
+* [MDN - Introduction to CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS#Guides)","<!-- Due Monday MORNING __11/9, by 11am before class__ 
  
  * Quiz #7 and #8
  * will remain open until Dec 7th if you need to focus on deployment
@@ -477,7 +481,7 @@ y,,17,Mar-30,Tue,* CSS,"* [JavaScript Timers](slides/19/timers.html)
  Due Monday EVENING __11/9 at 11pm:__
 
  * [Final Project Milestone #02](final-project.html#milestone2)
-
+-->
 ",
 y,,18,Apr-01,Thu,"* CSS Continued
 * Events / Timers","* [Selectors, JS and CSS](slides/19/js-css.html)
