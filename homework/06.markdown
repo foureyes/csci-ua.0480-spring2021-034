@@ -203,11 +203,18 @@ Create the following functions in a module, `src/auth.js`:
 2. `login`
 3. `startAuthenticatedSession`
 
+Your `auth.js` __requires the following implementation__:
+
+* use `mongoose.model` to bring in your constructors
+* __do not require your `db.js` file__; instead, bring in only `mongoose` 
+
 You'll use these functions in your express application to implement a login and registration page.
 
 <span class="warning">Warning: the following functions will contain many levels of nested callbacks!</span>
 
 * we haven't covered promises yet, but if you want to remove nesting, using promises is one solution (though you'll have to research this on your own): both `mongoose` and `bcrypt` provide promises (instead of callbacks) as part of their api
+	* ⚠️ __if you do this, you cannot use the supplied unit tests__ 
+	* instead, please add a note to a `README.md` file requesting the graders do a manual code review of your auth functions
 * another way of dealing with this is wrapping some functionality in a function, but if you do this, you'll need to write a function that takes a callback!
 
 ### register
