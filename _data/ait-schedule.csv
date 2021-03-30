@@ -424,7 +424,7 @@ Using Passport JS
 
 
 
-__Due Tuesday 3/30 by 9:30am__
+__Due Tuesday 3/30 at 11pm__
 
 * Quiz 8 on authentication and Quiz 9 on HTML and CSS (to be posted on brightspace)
 
@@ -467,8 +467,6 @@ HTML Tutorials
 ",,
 ,,17,Mar-30,Tue,* CSS,"* [JavaScript Timers](slides/19/timers.html)
 * [CSS](slides/19/css.html)
-* (Optional / Briefly) Flexbox
-* (Optional / Briefly) Grids
 ","
 
 * [HTML and CSS from shayhowe.com](http://learn.shayhowe.com/html-css/getting-to-know-html/)
@@ -483,10 +481,11 @@ HTML Tutorials
  * [Final Project Milestone #02](final-project.html#milestone2)
 -->
 ",
-y,,18,Apr-01,Thu,"* CSS Continued
+,,18,Apr-01,Thu,"* CSS Continued
 * Events / Timers","* [Selectors, JS and CSS](slides/19/js-css.html)
 * [Events](slides/19/events.html)
-
+* (Optional / Briefly) Flexbox
+* (Optional / Briefly) Grids
 ","{{ site.book_js_5 }} 
 
 * [Chapter 15 Events](http://eloquentjavascript.net/15_event.html)
@@ -496,7 +495,16 @@ y,,18,Apr-01,Thu,"* CSS Continued
 * hw 8 – frontend
 * Final Project Milestone #03](final-project.html#milestone03)
 
---->",
+-->
+
+ Due Thursday __4/13 at 11pm:__
+
+* Homework #07 and Milestone #02 to be posted
+
+<!--
+* [Homework #07](homework/07.html) 
+* [Final Project Milestone #02](final-project.html#milestone2)
+-->",
 y,,19,Apr-06,Tue,"* AJAX
 * Same Origin Policy
 * Cross Site Scripting

@@ -13,7 +13,7 @@ title: CSCI-UA.0480 - Homework #7
   <div class="panel-heading">Homework #8</div>
   <div class="panel-body" markdown="block">
 
-# AJAX - __Due Sunday, Nov 23rd by 11pm__
+# AJAX - __Due Thursday, April 13th by 11pm__
 
 
 ## Overview

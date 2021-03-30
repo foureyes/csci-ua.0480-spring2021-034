@@ -210,8 +210,7 @@ Notes:
 
 ### Due Date __4/13 at 11pm__ - Milestone 2 - Completed Schema, Initial Deployment, "Proof of Concept" First Form and Refinement or Start of Research Topics (20 points)
 
-{% comment %}
-1. your server and port name can be accessed through a link in a piazza post for milestone #2
+1. your server and port name can be accessed through a link in a forum post for milestone #2
 2. attempt to deploy your code to Courant's servers by following [instructions](homework/deploy.html)
 3. <span class="warning">use [this form to submit your deployed site](https://forms.gle/SBBBQGFs13SGNiwT8)</span>
 4. your submission won't be graded unless the form above is sent with urls to your deployed site
@@ -230,7 +229,6 @@ Notes:
 <br>
 <br>
 
-{% endcomment %}
 
 
 ### Due Date  __4/22 at 11pm__ - Milestone 3 - Two Working Forms, and Significant Progress on Research Topics (20 points)
