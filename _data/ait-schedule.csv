@@ -484,9 +484,9 @@ HTML Tutorials
 ,,18,Apr-01,Thu,"* CSS Continued
 * Events / Timers","* [Selectors, JS and CSS](slides/19/js-css.html)
 * [Events](slides/19/events.html)
-* (Optional / Briefly) Flexbox
-* (Optional / Briefly) Grids
-","{{ site.book_js_5 }} 
+* ⚠️ final project deploy demo
+* (Optional / Briefly) [Grids](slides/frontend/grids.html)
+* (Optional / Briefly) [Flexbox](slides/frontend/flexbox.html)","{{ site.book_js_5 }} 
 
 * [Chapter 15 Events](http://eloquentjavascript.net/15_event.html)
 ","<!--
@@ -499,12 +499,10 @@ HTML Tutorials
 
  Due Thursday __4/13 at 11pm:__
 
-* Homework #07 and Milestone #02 to be posted
 
-<!--
 * [Homework #07](homework/07.html) 
 * [Final Project Milestone #02](final-project.html#milestone2)
--->",
+",
 y,,19,Apr-06,Tue,"* AJAX
 * Same Origin Policy
 * Cross Site Scripting

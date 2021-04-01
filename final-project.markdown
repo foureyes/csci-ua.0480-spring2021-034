@@ -212,7 +212,7 @@ Notes:
 
 1. your server and port name can be accessed through a link in a forum post for milestone #2
 2. attempt to deploy your code to Courant's servers by following [instructions](homework/deploy.html)
-3. <span class="warning">use [this form to submit your deployed site](https://forms.gle/SBBBQGFs13SGNiwT8)</span>
+3. <span class="warning">use [this form to submit your deployed site](https://forms.gle/tN4C8tfhEVHcfMXc6)</span>
 4. your submission won't be graded unless the form above is sent with urls to your deployed site
 5. your deployed site should contain the following progress:
     * __one working form (that is not login or registration)__ 
