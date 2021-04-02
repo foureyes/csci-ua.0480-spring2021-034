@@ -210,11 +210,13 @@ Notes:
 
 ### Due Date __4/13 at 11pm__ - Milestone 2 - Completed Schema, Initial Deployment, "Proof of Concept" First Form and Refinement or Start of Research Topics (20 points)
 
-1. your server and port name can be accessed through a link in a forum post for milestone #2
-2. attempt to deploy your code to Courant's servers by following [instructions](homework/deploy.html)
-3. <span class="warning">use [this form to submit your deployed site](https://forms.gle/tN4C8tfhEVHcfMXc6)</span>
-4. your submission won't be graded unless the form above is sent with urls to your deployed site
-5. your deployed site should contain the following progress:
+You can deploy your application on any platform you choose, but we have space and resources on Courant's servers, so I have detailed instructions for that deploy process below. In the past, students have also chosen Heroku with MongoDB Atlas. I have links to relevant docs at the end of of these milestone instructions.
+
+#### Regardless of where you deploy:
+
+1. <span class="warning">use [this form to submit your deployed site](https://forms.gle/tN4C8tfhEVHcfMXc6)</span>
+2. your submission won't be graded unless the form above is sent with urls to your deployed site
+3. your deployed site should contain the following progress:
     * __one working form (that is not login or registration)__ 
         * ...that should allow data to be modified or deleted
         * the results of submitting this form should be apparent/viewable
@@ -222,6 +224,25 @@ Notes:
     * show _some_ progress, regardless of how small it is, on at least 1 of your research topics,  __it doesn't have to be fully working... stub code from documentation or pseudocode is adequate__
         * consequently, a link to the github repository / line no that shows any proof of work is sufficient
         * or, if it's something that's already visible, a link to the a page on your site that's deployed to the server
+
+#### If you're deploying on courant's servers: 
+
+1. your server and port name can be accessed through a link in a forum post for milestone #2
+2. attempt to deploy your code to Courant's servers by following [instructions](homework/deploy.html)
+3. if you're dividing your app into an API and frontend, you can increment the port number that you were assigned
+4. if you require https (such as working with an external API that requires https):
+	* (it should _always_ be required, but for proof of "deployment" for this project, it can be served on non https)
+	* please send "direct" message on course forum requesting https port
+	* app should listen on one port, but be connected to (via https) on port - 10000 (for example, listen on port 30001, but connect on port 20001)
+
+#### If you're interested in deploying on a different platform
+
+Some alternative platforms to deploy on include Heroku with MongoDB Atlas, AWS EC2 or Lightsail, or a VPS like Linode or DigitalOcean.
+
+In particular, a popular option in the past has been using Heroku, a platform as a service for _containerized_ application deploy, in conjunction with MongoDB Atlas, MongoDB's cloud database offering. For relevant documentation:
+
+* see [the node.js Heroku tutorial](https://devcenter.heroku.com/articles/deploying-nodejs#provision-a-database) 
+* and [MongoDB's documentation on integrating MongoDb Atlas with Heroku](https://developer.mongodb.com/how-to/use-atlas-on-heroku/)
 
 <a name="milestone03">
 
