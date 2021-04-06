@@ -503,7 +503,7 @@ HTML Tutorials
 * [Homework #07](homework/07.html) 
 * [Final Project Milestone #02](final-project.html#milestone2)
 ",
-y,,19,Apr-06,Tue,"* AJAX
+,,19,Apr-06,Tue,"* AJAX
 * Same Origin Policy
 * Cross Site Scripting
 * Working with APIs","* Events / Timers Review
@@ -520,12 +520,15 @@ MDN Articles on AJAX
 OWASP
 
 * [OWASP - Cross Site Scripting](https://www.owasp.org/index.php/Cross-site_Scripting_(XSS))","
+
+<!--
+
   __Due Monday 11/16 at 11pm:__
 
 * [Homework #06](homework/06.html) 
 * [Final Project Milestone #03](final-project.html#milestone03)
 
-<!--
+
 __Due 4/13 at 11am__
 
 * Quizzes 7 and 8 on NYU Classes
@@ -541,7 +544,7 @@ __Due Wednesday 11/13 at 11pm:__
 -->
 
 ",m1 due
-y,,20,Apr-08,Thu,"* AJAX Continued
+,,20,Apr-08,Thu,"* AJAX Continued
 * Polling
 * Promises","* [Ajax Part 2](slides/21/ajax-express.html)
 * [Promises](slides/21/promises.html)
