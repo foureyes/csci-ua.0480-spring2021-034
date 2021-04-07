@@ -24,6 +24,164 @@ __If you have a task, and you don't know it will finish, how do you ensure that 
 </section>
 
 <section markdown="block">
+## A Long Running Function
+
+__Let's start off by creating a function that will take some amount of time to produce an output__ &rarr;
+
+* name the function `delayedShout`
+* it should accept one argument, `s`, the `String` that it will print out
+* `delayedShout` will print out `s` as uppercase with exclamation points after ~1 to ~3 seconds
+* example: `delayedShout('foo')` will print out `FOO!!!` around 1 to 3 seconds after the initial call
+
+```
+function delayedShout(s) {
+  // ~1.5 to ~3.5 seconds
+  const delay = 1000 + Math.random() * 2000;
+  setTimeout(
+    () => {
+      const shout = `${s.toUpperCase()}!!!`
+      console.log(shout);
+    }, 
+    delay
+  );
+}
+
+```
+{:.fragment}
+
+
+</section>
+
+<section markdown="block">
+## When Does `delayedShout` Print?
+
+__Based on our implementation of `delayedShout`, what will the following code output?__ &rarr;
+
+```
+console.log('before');
+delayedShout('foo');
+console.log('after');
+```
+{:.fragment}
+
+```
+before
+after
+FOO!!!
+```
+{:.fragment}
+
+</section>
+
+
+<section markdown="block">
+## Modify `delayedShout` 
+
+__How can we change our implementation of `delayedShout` so that we are able to do _something_ (like print 'after') when `delayedShout` finishes processing and outputting the string?__ &rarr;
+
+* {:.fragment} add a callback as a parameter
+* {:.fragment} call the callback after processing...
+
+
+```
+function delayedShout(s, cb) {
+  // ~1.5 to ~3.5 seconds
+  const delay = 1000 + Math.random() * 2000;
+  setTimeout(
+    () => {
+      const shout = `${s.toUpperCase()}!!!`
+      console.log(shout);
+      cb();
+    }, 
+    delay
+  );
+}
+```
+{:.fragment}
+
+
+</section>
+
+
+<section markdown="block">
+## Using our new `delayedShout`
+
+__How do we call our new `delayedShout` so that:__
+
+* the string `"after"` is printed ...
+* when `delayedShout` finishes processing and outputting the original string
+* for example:
+	```
+before
+FOO!!!
+after
+```
+
+```
+console.log('before');
+delayedShout('foo', () => console.log('after'));
+```
+{:.fragment}
+
+</section>
+
+<section markdown="block">
+## What About Errors?
+
+This version __waits some time before throwing an error due to length__ &arr;
+
+```
+function delayedShout(s, cb) {
+  // ~1.5 to ~3.5 seconds
+  const delay = 1000 + Math.random() * 2000;
+  setTimeout(
+    () => {
+      if(s.length == 0) {
+        throw 'empty string';
+      }
+      const shout = `${s.toUpperCase()}!!!`
+      console.log(shout);
+      cb();
+    }, 
+    delay
+  );
+}
+```
+
+
+</section>
+
+<section markdown="block">
+## Errors Continued
+
+__Based on our new implementation of `delayedShout`, what will happen if we run the code below?__ &rarr;
+
+
+Will this print out _something_, nothing, or an error? If it prints out _something_, what will it print out?
+
+```
+console.log('before');
+try {
+  delayedShout('', () => console.log('after'));
+} catch(e) {
+  console.log(e); 
+}
+```
+
+We get an error despite the try catch:
+
+* as the callback (which causes the error) gets called later 
+* (after the try catch block has been executed)
+* but the call to `delayedShout` finishes running  without an error.
+{:.fragment}
+</section>
+
+
+
+
+
+
+<section markdown="block">
 ## An Example
 
 Assuming we have a function called __get__ that retrieves a url... __we tend to want to do this__ &rarr;
