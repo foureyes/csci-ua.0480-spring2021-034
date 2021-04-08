@@ -23,6 +23,7 @@ __If you have a task, and you don't know it will finish, how do you ensure that 
 
 </section>
 
+{% comment %}
 <section markdown="block">
 ## A Long Running Function
 
@@ -169,6 +170,7 @@ try {
 ```
 
 We get an error despite the try catch:
+{:.fragment}
 
 * as the callback (which causes the error) gets called later 
 * (after the try catch block has been executed)
@@ -176,6 +178,21 @@ We get an error despite the try catch:
 {:.fragment}
 </section>
 
+
+<section markdown="block">
+## Instead of try/catch...
+
+So, how do we implement exception handling? __Let's modify our function so that we can deal with errors__ &rarr;
+
+* add another callback as a parameter
+* call the callback when there's an error
+{:.fragment}
+
+```
+```
+
+</section>
+{% endcomment %}
 
 
 
@@ -414,9 +431,9 @@ getAndExtract(url);
 <section markdown="block">
 ## Promises
 
-So, an alternate way to deal with this is to __use an API that allows to code as if we were dealing with simple, sequential operations__.
+So, an alternate way to deal with this is to __use an API that allows us to code as if we were dealing with simple, sequential operations__.
 
-One of these APIs, __Promise__, is in ES6 and is actually [already available on a lot of browsers](http://caniuse.com/#feat=promises)
+One of these APIs, [Promise](https://promisesaplus.com/), is in ES6 and is [available on most browsers](https://caniuse.com/promises).
 
 A __Promise__ is an object that __represents an asynchronous action__ - some operation that may or may not have been completed yet.
 
@@ -434,9 +451,15 @@ __Again, a Promise is an object that represents an async task__ &rarr;
 
 Consequently, a Promise can be in one of the following states:
 
-1. pending - the task hasn't been completed yet (still getting a url, reading a file, etc.)
-2. fulfilled - the task has completed successfully
-3. rejected - the task did not complete successfully (error state)
+1. {:.fragment} pending - the task hasn't been completed yet (still getting a url, reading a file, etc.)
+2. {:.fragment} fulfilled - the task has completed successfully
+3. {:.fragment} rejected - the task did not complete successfully (error state)
+
+Another way to think of a promise is:
+{:.fragment}
+
+* {:.fragment} a value that can be returned
+* {:.fragment} that eventually becomes the return the result or a thrown error from an async task
 
 
 </section>

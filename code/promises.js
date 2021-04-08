@@ -36,6 +36,7 @@ console.log('before');
 delayedShout('foo', () => console.log('after'));
 */
 
+/*
 function delayedShout(s, cb) {
   // ~1.5 to ~3.5 seconds
   const delay = 1000 + Math.random() * 2000;
@@ -58,3 +59,20 @@ try {
 } catch(e) {
   console.log(e); 
 }
+*
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
