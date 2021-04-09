@@ -13,7 +13,7 @@ title: CSCI-UA.0480 - Homework #8
   <div class="panel-heading">Homework #8</div>
   <div class="panel-body" markdown="block">
 
-# AJAX - __Due Friday, April 20th by 11pm__
+# AJAX - __Due Sunday, May 3rd by 11pm__
 
 
 ## Overview
@@ -22,7 +22,7 @@ title: CSCI-UA.0480 - Homework #8
 
 You'll be using the following concepts:
 
-* XMLHttpRequest
+* XMLHttpRequest or [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) (or fetch with async await!)
 * sending back json from Express
 
 ### Description
@@ -125,7 +125,7 @@ could return:
     4. To test, add some data into your database manually using the commandline mongo client using the properties supplied above
 	5. enter the url `http://localhost:3000/api/messages` in your browser; you should get JSON back... with the JSON containing the reviews that you entered through the commandline
 2. Add some JavaScript to `src/public/js/main.js` so that once the page loads:
-    1. a background request is made to the the api url above using `XMLHttpRequest`
+    1. a background request is made to the the api url above using `XMLHttpRequest` (or [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch))
 	2. no query string parameters should be present, so all of the reviews should be present in the response
 	3. parse the response to get a collection of reviews
 	3. add the reviews to the `tbody` element of the `table` as rows and table data (`tr` and `td`)
@@ -135,7 +135,7 @@ could return:
     1. the regular form button press event isn't triggered (use `preventDefault`)
     2. instead, the values in the filter form field are retrieved from their elements and are used to construct the url to be requested (use the `.value` property of the form element)
 	3. construct the url by using the base path, `/api/messages` and add a query string by concatenating `semester` and `year` to it
-    4. make a background request to the url you construct using `XMLHttpRequest`
+    4. make a background request to the url you construct using `XMLHttpRequest` (or [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch_)
     5. when the JSON is returned, it should be parsed into a list of objects representing reviews
     6. use those review objects to replace the contents of the table on the page (for example, you could remove all the children in `tbody` using `parentElement.removeChild(childElementToRemove)`
     7. filtering with a blank field removes that field from the filter (so if semester were empty string, all semesters are allowed)
