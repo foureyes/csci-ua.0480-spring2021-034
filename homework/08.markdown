@@ -63,7 +63,7 @@ The animation below shows:
 2. adding a Code Snippet
 3. adding Comments for a particular Code Snippet
 
-<img src="codeshare.gif">
+<img src="../resources/img/codeshare.gif">
 
 ### Make at Least 4 Commits
 

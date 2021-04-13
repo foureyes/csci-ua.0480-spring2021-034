@@ -586,13 +586,12 @@ MDN Articles
 * [MDN - Async Await](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await)","
 __Due Thursday 4/22 at 11pm:__
 
-* Final Project Milestone 3 to be posted
-* Homework #8 to be posted
+* [Homework #8](homework/08.html)
+* [Final Project Milestone #03](final-project.html#milestone03)
+
 
 <!--
- * [Homework #8](homework/08.html)
- * [Final Project Milestone #03](final-project.html#milestone03)
-
+ 
 
  
 
@@ -605,7 +604,7 @@ __Due Tuesday 04/28 at 11pm:__
  * [Final Project Milestone #04](final-project.html#milestone04)
 
 -->",m2 due
-y,,22,Apr-15,Thu,* Realtime Web Applications,"* Revisit Polling
+,,22,Apr-15,Thu,* Realtime Web Applications,"* Revisit Polling
 * [Websockets and socket.io](slides/23/socketio.html)
 * In-Class Workshop Tomorrow
 * [Rooms](slides/25/socketio-rooms.html)
