@@ -606,7 +606,6 @@ __Due Tuesday 04/28 at 11pm:__
 -->",m2 due
 ,,22,Apr-15,Thu,* Realtime Web Applications,"* Revisit Polling
 * [Websockets and socket.io](slides/23/socketio.html)
-* In-Class Workshop Tomorrow
 * [Rooms](slides/25/socketio-rooms.html)
 * Websockets and socket.io Examples
 * [app.js](examples/websockets-demo/app.js) (server)
