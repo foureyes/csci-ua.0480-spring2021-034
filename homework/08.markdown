@@ -1,5 +1,3 @@
-
-  
 ---
 layout: homework
 title: CSCI-UA.0480 - Homework #8
