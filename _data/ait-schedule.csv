@@ -618,12 +618,9 @@ __Due Tuesday 04/28 at 11pm:__
  
 
 ",
-y,,23,Apr-20,Tue,* Realtime Web Applications Continued,* See lab instructions,See previous class,"Due __today__ while you're in class:
- 
- * [Socket.IO Lab](homework/socket-io-lab.html)
- * [Form to submit](https://forms.gle/ejC5HyQiz9FJvxy68)",m3 due
-y,,24,Apr-22,Thu,"
+,,23,Apr-20,Tue,"
 
+* Realtime Web App Addendum
 * Frontend Framework","* [React Basics](slides/26/react.html)
 * Final Exam Reminder
 * [React Revisited](slides/26/react-state-parent.html)
@@ -639,7 +636,15 @@ y,,24,Apr-22,Thu,"
 -->","* [React Hello World](https://facebook.github.io/react/docs/hello-world.html) and [React Official Tutorial](https://facebook.github.io/react/tutorial/tutorial.html)
 * [Build With React](http://buildwithreact.com/)
 * [React Events](https://facebook.github.io/react/docs/events.html#supported-events)
-* [React Using create-react-app](https://github.com/facebookincubator/create-react-app/blob/master/README.md#getting-started)",,
+* [React Using create-react-app](https://github.com/facebookincubator/create-react-app/blob/master/README.md#getting-started)",,m3 due
+,,24,Apr-22,Thu,* Realtime Web Applications Continued,* See lab instructions,See previous classes ,"Due __today__ while you're in class:
+ 
+* Socket.IO Lab to be posted
+
+<!--
+* [Socket.IO Lab](homework/socket-io-lab.html)
+* [Form to submit](https://forms.gle/ejC5HyQiz9FJvxy68)
+-->",
 y,,25,Apr-27,Tue,* Frontend Framework Continued,* See slides from previous class,"
 
 Practice Questions
