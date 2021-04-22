@@ -11,11 +11,14 @@ title: CSCI-UA.0480 - Socket IO Lab
 
 ## Submission Process
 
-* work in groups of 3 or 4 
-* __submit using [the form on the schedule](../#class22)__
+* work in groups of 2 or 3 
+* __submit using [the form on the schedule](../#class24)__
 * __each person on the team should submit their own individual form__
 
-If you'd like, you can work directly in glitch.com. Additionally, if you want to collaboratively edit, you'll likely have to create an account (though you're not required to).
+Note about collaborative editing and deployment:
+
+* it's possible to work directly in glitch.com, however I __recommend a working local copy__ as fallback (occasionally, heavy usage on glitch causes long app update times)
+* additionally, if you want to collaboratively edit, you'll likely have to create an account (though you're not required to).
 
 ## Scoring
 
@@ -33,8 +36,13 @@ You'll be using the following concepts:
 * some simple dom manipulation
 * absolute or fixed positioning
 
-### Description
+### Requirements
 
+Again, work in groups:
+
+1. introduce yourself to each other!
+	* name, major, favorite breakfast food
+2. choose someone in the group to share screen
 
 Make a real time web app that:
 
@@ -47,30 +55,44 @@ Make a real time web app that:
 5. everyone connected to the game can click either button
 6. everyone connected to the game can see the emoji move in real time
 7. when someone new connects to the game, the should see the current position of both emoji
-8. try playing your game / looking over your code
+8. when one of the emoji crosses the finish line, show a message on all screens saying that there is a winner
+9. try playing your game / looking over your code
 	* 👀 does your game handle the case where two clients click on the same emoji... and it's registered as two movements (rather than 1) on the server?
 	* 🤔 can you reduce your client side code so that there's only one click handler that's used for both buttons?
-9. try to deploy to glitch.com
-
-Finished already? 
-
-* end game and show a message when one emoji crosses the finish line
-* end game and show a message when one emoji wins, then show a reset button; when pressed, it will bring both emoji back to the start
-* same as above, but when brining emoji back to start, animate with one of our JavaScript timing functions!
+10. try to deploy to glitch.com
+	* see instructions for deploying at the end
+	* create an account (you can use a throwaway email address if you like) to make sure the project is not automatically removed in 5 days
 
 
+__Remember to submit the [form for the workshop](../#class24)__
 
+* one submission per group member
+* ok to use the same code / glitch.com link
 
 <img src="../resources/img/hw09-screen.gif" alt="example emoji racer animation">
 
+Finished already? 
 
-## Instructions
+* in addition to showing a win message, show a reset button; when pressed, it will bring both emoji back to the start (for all screens)
+* same as above, but when brining emoji back to start, animate with one of our JavaScript timing functions!
+* __Challenge!__
+	* this will require a lot of refactoring, but it might be a fun problem to try out 
+	* add rooms to the above game
+	* as players join rooms, update the main rooms page
+		<img src="../resources/img/lab02-room-racer-ec.gif" alt="example emoji racer animation with rooms">
+
+
+## Details
 
 ### Setup
 
 Use the _one-page_ version of the slides to guide you through socket.io:
 
-[https://cs.nyu.edu/courses/fall20/CSCI-UA.0480-034/_site/slides/23/socketio.html?print-pdf](https://cs.nyu.edu/courses/fall20/CSCI-UA.0480-034/_site/slides/23/socketio.html?print-pdf)
+[https://cs.nyu.edu/courses/spring21/CSCI-UA.0480-034/_site/slides/23/socketio.html?print-pdf](https://cs.nyu.edu/courses/fall20/CSCI-UA.0480-034/_site/slides/23/socketio.html?print-pdf)
+
+{% comment %}
+end_
+{% endcomment %}
 
 1. create a directory to store your project
 2. create your `package.json` and install these packages:
@@ -120,21 +142,24 @@ server.listen(3000);
 ### Deploying to glitch.com
 
 1. [go to glitch.com/edit](https://glitch.com/edit/)
-2. modify the existing `package.json` so that it has both socket.io and express as requirements (but __keep everything else the same__)
+	* create an account (you can use a throwaway email address if you like) 
+	* this prevents the project from being automatically deleted after somem time
+2. modify the existing `package.json` so that it includes socket.io as a requirement
+	* use the add package button
+	* or copy and paste __only__ the dependencies  (but __keep everything else the same__)
 3. add/modify necessary files!
     * for example...
     * modify `server.js` 
-		* make sure you're listening with server obj
-		* change the port to `process.env.PORT`
+		* make sure you're listening with the `server` obj
+		* change the port you're listening on to `process.env.PORT`
     * add the html from your `public/racer.html` to `public/index.html`
 		* do this by clicking on `New File`
 		* type in `public/index.html`
 		* this will create a file in the `public` folder
-    * change the name of `public/client.js` to `public/racer.js`
-    * etc.
+    * change the name of `public/client.js` to `public/racer.js` and copy over your code
 4. __again, change the port so that it looks in the env for the port number!__
     * `server.listen(process.env.PORT);`
-5. click on the look link...  
+5. click on the "Show" (glasses) link...  
     * instantly deployed app!
     * (click on logs link to see server output)
 
