@@ -1,7 +1,14 @@
 ---
 layout: slides
-title: ""
+title: "Using Webpack to Serve React Through Express"
 ---
+<section markdown="block" class="intro-slide">
+# {{ page.title }}
+
+### {{ site.vars.course_number}}-{{ site.vars.course_section }}
+
+<p><small></small></p>
+</section>
 
 
 <section markdown="block">
@@ -20,7 +27,7 @@ This would normally be a straightforward task:
 
 1. just serve up our client side JavaScript from the public/javascripts directory using express static
 2. do the same with the react library... 
-	* download it or use some sort of client side package manager like bower... and, again, serve it from our public/javascripts folder 
+	* download it or use some a package manager ... and, again, serve it from our `public/javascripts` folder 
 	* or just include the file from someone else that's hosting it (like a [content delivery network / cdn](https://cdnjs.com/libraries/react)... [or from facebook](https://facebook.github.io/react/downloads.html))
 </section>
 

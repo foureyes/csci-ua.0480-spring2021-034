@@ -32,7 +32,7 @@ pre {
 	<div class="panel-heading">Final Project</div>
 	<div class="panel-body" markdown="block">
 
-# Final Project, __Final Milestone Due__ 4/29 at 11pm
+# Final Project, __Final Milestone Due__ <strike>4/29</strike> 4/30 at 11pm
 
 Earlier milestones due every one or two weeks leading up to final milestone due date.
 
@@ -300,7 +300,7 @@ OLD
 <br>
 <br>
 
-### Due Date  __4/29 at 11PM__ - Final Project Complete and Code is fully  _Deployed_ (40 points)
+### Due Date  <strike>4/29</strike> __4/30 at 11PM__ - Final Project Complete and Code is fully  _Deployed_ (40 points)
 
 
 {% comment %}

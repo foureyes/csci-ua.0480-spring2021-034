@@ -621,19 +621,19 @@ __Due Tuesday 04/28 at 11pm:__
 ,,23,Apr-20,Tue,"
 
 * Realtime Web App Addendum
-* Frontend Framework","* [React Basics](slides/26/react.html)
+* Frontend Framework","React
+
+* [React Basics](slides/react/react.html)
 * Final Exam Reminder
-* [React Revisited](slides/26/react-state-parent.html)
+* [React Revisited](slides/react/react-state-parent.html)
 * Example Code: [index.js / Sum of Counters, Text Input](examples/react/demo/src/index.js) (Parent and Child Components, Text Input)
-* Example with React and fetch
+
+Example with React and fetch
+
 * [index.js](examples/react-parents/demo/src/index.js) (React)
 * [app.js](examples/react-parents/api/app.js) (Express API)
 * [db.js](examples/react-parents/api/db.js) (Mongoose Schema)
- 
-<!--React review, multiple child clickers and forms
-* [React and Express / Using Webpack](slides/26/react-webpack-continued.html)
- * React lab demo
--->","* [React Hello World](https://facebook.github.io/react/docs/hello-world.html) and [React Official Tutorial](https://facebook.github.io/react/tutorial/tutorial.html)
+ ","* [React Hello World](https://facebook.github.io/react/docs/hello-world.html) and [React Official Tutorial](https://facebook.github.io/react/tutorial/tutorial.html)
 * [Build With React](http://buildwithreact.com/)
 * [React Events](https://facebook.github.io/react/docs/events.html#supported-events)
 * [React Using create-react-app](https://github.com/facebookincubator/create-react-app/blob/master/README.md#getting-started)",,m3 due
@@ -641,8 +641,13 @@ __Due Tuesday 04/28 at 11pm:__
  
 
 * [Socket.IO Lab](homework/socket-io-lab.html)
-* [Form to submit](https://forms.gle/Dfo3X1EE8U91SucW8)",
-y,,25,Apr-27,Tue,* Frontend Framework Continued,* See slides from previous class,"
+* [Form to submit](https://forms.gle/Dfo3X1EE8U91SucW8)
+
+__Final Project__ 
+
+* Due date moved to 4/30 at 11pm",
+,,25,Apr-27,Tue,* Frontend Framework Continued,"* See slides from previous class
+* (Optional) [React and Express / Using Webpack](slides/react/react-webpack-continued.html)","
 
 Practice Questions
  
@@ -662,7 +667,7 @@ y,,26,Apr-29,Thu,"* Frontend Framework Continued
 -->","* See lab instructions
 
 <!--
-* (Optional) [React and Express / Using Webpack](slides/26/react-webpack-continued.html)
+
 -->",,"Due __today__ (12/2) while you're in class:
 
  * [React Lab](homework/react-lab.html)",
