@@ -303,12 +303,11 @@ OLD
 ### Due Date  <strike>4/29</strike> __4/30 at 11PM__ - Final Project Complete and Code is fully  _Deployed_ (40 points)
 
 
-{% comment %}
 * __all commits must be in by Nov 30th__ 
 * __project must be deployed__ on cims servers (or other platform, such as Heroku, gomix, zeit, etc.)     
 	* if your application needs to be restarted while being graded; I will contact you     
 	* you will not receive a penalty for restarting after the due date 
-* __the [final project form submission](https://forms.gle/hJjezpycjV4WPTib6) must be filled out__ (if a form is not submitted, you will receive a 0 for your project)
+* __the [final project form submission](https://forms.gle/33UqnspLKHByT1qH7) must be filled out__ (if a form is not submitted, you will receive a 0 for your project)
 * __Research Topic Notes__
 	* if you require a __specific user to be logged in__, please add the username and password in the form submission above
 	* if you used __unit testing__ or __functional testing__, upload a screen shot or an animated gif of your tests running to the documentation folder of your project; link to it in your form submission
@@ -318,7 +317,6 @@ OLD
 <br>
 <br>
 <br>
-{% endcomment %}
 
 
 
