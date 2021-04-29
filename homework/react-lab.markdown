@@ -1,6 +1,7 @@
 ---
 layout: homework
 title: CSCI-UA.0480 -  React Lab
+form_url: https://forms.gle/baTDS8Ey2fm4EoCG7
 ---
 
 
@@ -10,12 +11,15 @@ title: CSCI-UA.0480 -  React Lab
 
 # React Lab - MemorEmoji 
 
+## TODO
+
 ## Submission Process
 
-* work in groups of 3 or 4 students
-* choose one of the applications described below in the Overview &rarr; Description and implement it
-* __submit using [this form](https://forms.gle/qM5uzeQmrMfJtQXcA)__
+* work in groups of 4 or 5 students
+* __submit using [this form]({{page.form_url}})__
+* __please take note of your breakout room number__
 * __each person on the team should submit their own individual form__
+
 
 {% comment %}
 * once you've submitted:
@@ -34,7 +38,11 @@ Total Score
 * __+70 points__ attending and submitting _any_ code
 * __+15 points__ (Part 2) _reasonable_ amount of code for part 2 present (comment out non-working code if deploying)
 * __+10 points__ (Part 3) _reasonable_ amount of code for part 3 present (comment out non-working code if deploying)
-* __+5 points__ (Part 1) any (1, 2 or 3) working code deployed on [codepen.io](https://codepen.io), [glitch](glitch.com)
+* __+5 points__ (Part 1) any (1, 2 or 3) working code deployed on [glitch](glitch.com)
+
+{% comment %}
+[codepen.io](https://codepen.io), 
+{% endcomment %}
 
 {% comment %}
 Extra Credit 
@@ -78,24 +86,30 @@ Start by using `create-react-app` and developing locally. ⚠️ __Choose one pe
 
 To use `create-react-app` to develop locally:
 
-* [see the instructions on setting up create-react-app in the slides](../slides/26/react-state-parent.html#/15)
+* [see the instructions from the docs](https://create-react-app.dev/docs/getting-started/)
 * 👀 the instructions and reference solution may refer to class-based components; if you're comfortable doing so, you can use functional components + `useState` and `useEffect` hooks
 
+To deploy:
+
+*  remix a react starter boilerplate using [glitch.com](https://glitch.com/edit/#!/remix/starter-react)
+* add your code to `app.jsx` and inline your css in `index.html` (see end of instructions for details)
 
 {% comment %}
     * [but also, __if you are having path issues, especially on windows__, see this github ticket](https://github.com/facebookincubator/create-react-app/issues/138#issuecomment-334316575)
 {% endcomment %}
 
-Then deploy using one of the options below:
 
-1. remix a react starter boilerplate using [glitch.com](https://glitch.com/edit/#!/remix/starter-react)
-    * add your code to `app.jsx`
+
+{% comment %}
+Then deploy using one of the options below:
 2. create a new project (pen) in [codepen.io](https://codepen.io)
     * debugging might be difficult
     * ...but your application will already be deployed!
     * to setup, configure babel as your JavaScript pre-processor and add React and ReactDOM Libraries:
         <br>
         ![codepen](../resources/img/codepen.gif)
+
+{% endcomment %}
 
 ### Part 1 - Single Card
 
@@ -145,8 +159,14 @@ To deploy your app on glitch.com...
 	* __Do not bring in `import` statements__
     * (it's already done at the top of `index.js` with `require`)
     * only add your components and your call to `ReactDOM.render`
+	* if you're using hooks like `useState`, prefix with `React` (`React.useState`)
 3. add styles easily by adding a `style` tag in `index.html` and writing your css directly there
 
+### Submission
+
+* __Submit using [this form]({{page.form_url}})__
+
+{% comment %}
 To deploy your app in codepen.io...
 
 1. configure babel, React and React DOM as shown in the gif above (see Instructions &rarr; setup)
@@ -155,3 +175,4 @@ To deploy your app in codepen.io...
 4. use ```ReactDom.render``` at the very end to render your main/root component:
     ```ReactDOM.render(<App />, document.body);```
 
+{% endcomment %}
